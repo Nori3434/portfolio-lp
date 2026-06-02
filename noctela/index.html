@@ -1,0 +1,3385 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      NOCTÉLA リンクルナイトリペアセラム｜眠っている間に、ハリ宣言。
+    </title>
+    <meta
+      name="description"
+      content="夜用エイジングケア美容液 NOCTÉLA（ノクテラ）。純粋レチノール×ヒト幹細胞培養液エキス。乾燥による小じわを目立たなくし、キメを整える夜のスキンケア。定期初回¥1,980。※架空商品・自主制作ポートフォリオサンプル"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fbf8f3;
+        --sand: #ede4d6;
+        --line: #dccfbd;
+        --ink: #20202a;
+        --navy: #2a2a3d;
+        --gold: #b0894e;
+        --gold-soft: #c9a86a;
+        --white: #ffffff;
+        --ink-60: rgba(32, 32, 42, 0.62);
+        --ink-45: rgba(32, 32, 42, 0.45);
+        --serif-jp: "Shippori Mincho B1", serif;
+        --serif-lt: "Cormorant Garamond", Georgia, serif;
+        --sans: "Noto Sans JP", sans-serif;
+        --maxw: 1180px;
+        --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        font-family: var(--sans);
+        color: var(--ink);
+        background: var(--bg);
+        line-height: 1.85;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        overflow-x: hidden;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        padding-bottom: 0;
+      }
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ::selection {
+        background: var(--gold-soft);
+        color: var(--white);
+      }
+
+      /* ============ TYPE SCALE / HELPERS ============ */
+      .wrap {
+        max-width: var(--maxw);
+        margin-inline: auto;
+        padding-inline: 24px;
+      }
+      .wrap-narrow {
+        max-width: 760px;
+        margin-inline: auto;
+        padding-inline: 24px;
+      }
+      .label {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        font-size: clamp(0.8rem, 2.4vw, 1rem);
+        letter-spacing: 0.04em;
+        color: var(--gold);
+      }
+      .eyebrow {
+        font-family: var(--sans);
+        font-weight: 500;
+        font-size: 0.7rem;
+        letter-spacing: 0.42em;
+        text-transform: uppercase;
+        color: var(--gold);
+        display: inline-block;
+      }
+      h2.section-title {
+        font-family: var(--serif-jp);
+        font-weight: 700;
+        font-size: clamp(1.55rem, 5.4vw, 2.5rem);
+        line-height: 1.42;
+        letter-spacing: 0.02em;
+        color: var(--ink);
+        word-break: auto-phrase;
+      }
+      .section-title em {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        font-weight: 500;
+        color: var(--gold);
+      }
+      .lede {
+        font-size: clamp(0.95rem, 2.6vw, 1.05rem);
+        color: var(--ink-60);
+        line-height: 2;
+      }
+      .num-lt {
+        font-family: var(--serif-lt);
+        font-weight: 500;
+        line-height: 1;
+      }
+      .hr-hair {
+        height: 1px;
+        background: var(--line);
+        border: 0;
+        width: 100%;
+      }
+      section {
+        position: relative;
+      }
+
+      /* ============ SCROLL REVEAL ============ */
+      .reveal {
+        opacity: 0;
+        transform: translateY(26px);
+        transition:
+          opacity 1s var(--ease),
+          transform 1s var(--ease);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      .reveal.d1 {
+        transition-delay: 0.08s;
+      }
+      .reveal.d2 {
+        transition-delay: 0.16s;
+      }
+      .reveal.d3 {
+        transition-delay: 0.24s;
+      }
+      .reveal.d4 {
+        transition-delay: 0.32s;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+      }
+
+      /* ============ TOP SAMPLE BAR ============ */
+      .topbar {
+        background: var(--navy);
+        color: #efe9de;
+        font-size: 0.66rem;
+        letter-spacing: 0.18em;
+        text-align: center;
+        padding: 7px 16px;
+        font-weight: 500;
+        position: relative;
+        z-index: 60;
+      }
+      .topbar b {
+        color: var(--gold-soft);
+        font-weight: 600;
+        letter-spacing: 0.16em;
+      }
+
+      /* ============ HEADER / NAV ============ */
+      header.site {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(251, 248, 243, 0.82);
+        backdrop-filter: blur(12px) saturate(1.2);
+        -webkit-backdrop-filter: blur(12px) saturate(1.2);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 62px;
+      }
+      .wordmark {
+        font-family: var(--serif-lt);
+        font-weight: 600;
+        font-size: 1.5rem;
+        letter-spacing: 0.32em;
+        color: var(--ink);
+        padding-left: 0.32em;
+      }
+      .wordmark span {
+        display: block;
+        font-family: var(--sans);
+        font-size: 0.52rem;
+        letter-spacing: 0.46em;
+        color: var(--gold);
+        font-weight: 500;
+        margin-top: -2px;
+        padding-left: 0.05em;
+      }
+      .nav-cta {
+        font-family: var(--sans);
+        font-weight: 500;
+        font-size: 0.78rem;
+        letter-spacing: 0.06em;
+        background: var(--navy);
+        color: #fff;
+        padding: 11px 20px;
+        border-radius: 1px;
+        transition: background 0.4s var(--ease);
+        white-space: nowrap;
+      }
+      .nav-cta:hover {
+        background: var(--gold);
+      }
+      @media (max-width: 600px) {
+        .nav-cta {
+          display: none;
+        }
+      }
+
+      /* ============ HERO ============ */
+      .hero {
+        background:
+          radial-gradient(
+            120% 80% at 78% 0%,
+            rgba(176, 137, 78, 0.07),
+            transparent 60%
+          ),
+          linear-gradient(180deg, var(--bg) 0%, #f7f1e7 100%);
+        overflow: hidden;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.04fr 0.96fr;
+        gap: 40px;
+        align-items: center;
+        min-height: calc(100svh - 62px - 30px);
+        padding-block: 32px 40px;
+      }
+      .hero-copy {
+        max-width: 560px;
+      }
+      .hero-rank {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.5);
+        padding: 7px 14px 7px 9px;
+        border-radius: 2px;
+        margin-bottom: 22px;
+      }
+      .hero-rank svg {
+        width: 26px;
+        height: 26px;
+        flex: none;
+      }
+      .hero-rank .rk {
+        font-family: var(--sans);
+        font-size: 0.66rem;
+        letter-spacing: 0.1em;
+        line-height: 1.5;
+        color: var(--ink-60);
+      }
+      .hero-rank .rk b {
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .hero h1 {
+        font-family: var(--serif-jp);
+        font-weight: 800;
+        font-size: clamp(2.15rem, 7.6vw, 3.7rem);
+        line-height: 1.34;
+        letter-spacing: 0.015em;
+        color: var(--ink);
+        margin-bottom: 20px;
+        word-break: auto-phrase;
+      }
+      .hero h1 .gl {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        font-weight: 500;
+        color: var(--gold);
+      }
+      .hero h1 .ndrop {
+        position: relative;
+      }
+      .hero h1 .ndrop:after {
+        content: "";
+        position: absolute;
+        right: -2px;
+        top: 0.05em;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--gold);
+      }
+      .hero-sub {
+        font-family: var(--serif-jp);
+        font-weight: 500;
+        font-size: clamp(1rem, 3vw, 1.15rem);
+        color: var(--navy);
+        margin-bottom: 8px;
+        letter-spacing: 0.04em;
+      }
+      .hero-prod {
+        font-size: 0.82rem;
+        letter-spacing: 0.12em;
+        color: var(--ink-60);
+        margin-bottom: 26px;
+      }
+      .hero-prod b {
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .key-claim {
+        display: flex;
+        gap: 14px;
+        align-items: baseline;
+        border-left: 2px solid var(--gold);
+        padding: 2px 0 2px 16px;
+        margin-bottom: 30px;
+      }
+      .key-claim .kc-x {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        color: var(--gold);
+        font-size: 1.3rem;
+        line-height: 1;
+      }
+      .key-claim p {
+        font-size: 0.92rem;
+        line-height: 1.95;
+        color: var(--ink);
+      }
+      .key-claim p b {
+        font-weight: 700;
+      }
+      .cta-primary {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        background: var(--navy);
+        color: #fff;
+        padding: 17px 40px;
+        border-radius: 2px;
+        border: 0;
+        cursor: pointer;
+        font-family: var(--sans);
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.5s var(--ease),
+          box-shadow 0.5s var(--ease);
+        box-shadow: 0 12px 34px -16px rgba(42, 42, 61, 0.6);
+        width: auto;
+      }
+      .cta-primary .cta-main {
+        font-weight: 700;
+        font-size: 1.02rem;
+        letter-spacing: 0.04em;
+        position: relative;
+        z-index: 2;
+      }
+      .cta-primary .cta-main em {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        font-weight: 600;
+        color: var(--gold-soft);
+        font-size: 1.15em;
+        margin: 0 0.15em;
+      }
+      .cta-primary .cta-sub {
+        font-size: 0.62rem;
+        letter-spacing: 0.14em;
+        color: rgba(255, 255, 255, 0.62);
+        position: relative;
+        z-index: 2;
+      }
+      .cta-primary:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          110deg,
+          transparent,
+          rgba(201, 168, 106, 0.35),
+          transparent
+        );
+        transform: translateX(-100%);
+        transition: transform 0.8s var(--ease);
+      }
+      .cta-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 40px -16px rgba(42, 42, 61, 0.7);
+      }
+      .cta-primary:hover:before {
+        transform: translateX(100%);
+      }
+      .cta-primary:focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 3px;
+      }
+      .hero-cta-note {
+        font-size: 0.7rem;
+        color: var(--ink-45);
+        margin-top: 12px;
+        letter-spacing: 0.04em;
+      }
+
+      .trust-row {
+        display: flex;
+        gap: 0;
+        margin-top: 34px;
+        border-top: 1px solid var(--line);
+        padding-top: 22px;
+      }
+      .trust-row .ti {
+        flex: 1;
+        text-align: center;
+        padding-inline: 6px;
+        position: relative;
+      }
+      .trust-row .ti + .ti:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        bottom: 6px;
+        width: 1px;
+        background: var(--line);
+      }
+      .trust-row .ti svg {
+        width: 27px;
+        height: 27px;
+        margin: 0 auto 8px;
+        stroke: var(--gold);
+        fill: none;
+      }
+      .trust-row .ti span {
+        font-size: 0.7rem;
+        letter-spacing: 0.04em;
+        color: var(--ink);
+        font-weight: 500;
+        line-height: 1.5;
+        display: block;
+      }
+
+      /* HERO VISUAL — SVG bottle */
+      .hero-visual {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .bottle-stage {
+        position: relative;
+        width: min(100%, 420px);
+        aspect-ratio: 1/1.18;
+      }
+      .bottle-halo {
+        position: absolute;
+        inset: 4% 8%;
+        background: radial-gradient(
+          circle at 50% 42%,
+          rgba(201, 168, 106, 0.22),
+          transparent 62%
+        );
+        filter: blur(8px);
+      }
+      .bottle-svg {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        filter: drop-shadow(0 26px 40px rgba(42, 42, 61, 0.18));
+      }
+      .bottle-float {
+        animation: floaty 7s var(--ease) infinite;
+      }
+      @keyframes floaty {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .bottle-float {
+          animation: none;
+        }
+      }
+      .v-caption {
+        position: absolute;
+        right: -2px;
+        bottom: 6%;
+        writing-mode: vertical-rl;
+        font-family: var(--serif-jp);
+        font-size: 0.74rem;
+        letter-spacing: 0.5em;
+        color: var(--ink-45);
+      }
+
+      @media (max-width: 880px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 8px;
+          min-height: auto;
+          padding-block: 24px 36px;
+          text-align: left;
+        }
+        .hero-copy {
+          max-width: none;
+          order: 2;
+        }
+        .hero-visual {
+          order: 1;
+          margin-bottom: 6px;
+        }
+        .bottle-stage {
+          width: min(76%, 300px);
+        }
+        .v-caption {
+          display: none;
+        }
+        .trust-row {
+          margin-top: 28px;
+        }
+      }
+      @media (max-width: 430px) {
+        .trust-row .ti span {
+          font-size: 0.64rem;
+        }
+        .cta-primary {
+          width: 100%;
+        }
+      }
+
+      /* ============ MARQUEE / INGREDIENT STRIP ============ */
+      .ing-strip {
+        background: var(--navy);
+        color: #e7dfcf;
+        overflow: hidden;
+        border-block: 1px solid rgba(201, 168, 106, 0.2);
+      }
+      .ing-track {
+        display: flex;
+        gap: 48px;
+        white-space: nowrap;
+        padding-block: 15px;
+        animation: marq 38s linear infinite;
+        will-change: transform;
+      }
+      .ing-track span {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        font-size: 1.05rem;
+        letter-spacing: 0.06em;
+        display: inline-flex;
+        align-items: center;
+        gap: 48px;
+      }
+      .ing-track span:after {
+        content: "◆";
+        color: var(--gold);
+        font-style: normal;
+        font-size: 0.5rem;
+      }
+      @keyframes marq {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .ing-track {
+          animation: none;
+          flex-wrap: wrap;
+          white-space: normal;
+          justify-content: center;
+        }
+      }
+
+      /* ============ WORRIES ============ */
+      .worries {
+        background: var(--bg);
+        padding-block: clamp(64px, 10vw, 108px);
+      }
+      .sec-head {
+        text-align: center;
+        margin-bottom: clamp(40px, 6vw, 64px);
+      }
+      .sec-head .eyebrow {
+        margin-bottom: 18px;
+      }
+      .worry-list {
+        max-width: 660px;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .worry-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 24px 4px;
+        border-bottom: 1px solid var(--line);
+      }
+      .worry-item:first-child {
+        border-top: 1px solid var(--line);
+      }
+      .worry-check {
+        flex: none;
+        width: 30px;
+        height: 30px;
+        border: 1px solid var(--gold);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+      }
+      .worry-check svg {
+        width: 15px;
+        height: 15px;
+        stroke: var(--gold);
+        fill: none;
+        stroke-width: 2.2;
+      }
+      .worry-item p {
+        font-family: var(--serif-jp);
+        font-weight: 500;
+        font-size: clamp(1rem, 3.2vw, 1.22rem);
+        color: var(--ink);
+        line-height: 1.6;
+      }
+      .worry-tail {
+        text-align: center;
+        margin-top: 40px;
+        font-family: var(--serif-jp);
+        font-weight: 500;
+        font-size: clamp(1.05rem, 3.4vw, 1.35rem);
+        color: var(--navy);
+        line-height: 1.8;
+      }
+      .worry-tail em {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        color: var(--gold);
+      }
+
+      /* ============ EMPATHY / PROPOSAL ============ */
+      .empathy {
+        background: linear-gradient(180deg, #f4ecdf, #efe6d7);
+        padding-block: clamp(72px, 11vw, 128px);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .empathy:before,
+      .empathy:after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        background: var(--line);
+        top: 40px;
+        bottom: 40px;
+      }
+      .empathy:before {
+        left: 50%;
+        display: none;
+      }
+      .empathy .eyebrow {
+        margin-bottom: 24px;
+      }
+      .empathy h2 {
+        font-family: var(--serif-jp);
+        font-weight: 700;
+        font-size: clamp(1.7rem, 6vw, 2.9rem);
+        line-height: 1.5;
+        letter-spacing: 0.03em;
+        color: var(--ink);
+        margin-bottom: 28px;
+        word-break: auto-phrase;
+      }
+      .empathy h2 .nm {
+        font-family: var(--serif-lt);
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        color: var(--gold);
+        white-space: nowrap;
+      }
+      .empathy p {
+        max-width: 600px;
+        margin: 0 auto;
+        color: var(--ink-60);
+        font-size: clamp(0.95rem, 2.7vw, 1.08rem);
+        line-height: 2.1;
+      }
+      .empathy .glyph {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        font-size: 2.2rem;
+        color: var(--gold-soft);
+        margin-bottom: 18px;
+        line-height: 1;
+      }
+
+      /* ============ REASONS / INGREDIENTS ============ */
+      .reasons {
+        padding-block: clamp(64px, 10vw, 112px);
+        background: var(--bg);
+      }
+      .reason-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        max-width: 980px;
+        margin-inline: auto;
+      }
+      .reason-row {
+        display: grid;
+        grid-template-columns: 74px 1fr;
+        gap: 28px;
+        align-items: start;
+        padding: 38px 0;
+        border-top: 1px solid var(--line);
+      }
+      .reason-row:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+      .reason-ico {
+        position: relative;
+        width: 74px;
+        height: 74px;
+      }
+      .reason-ico .rn {
+        position: absolute;
+        top: -6px;
+        left: -4px;
+        font-family: var(--serif-lt);
+        font-size: 0.95rem;
+        color: var(--gold);
+        font-style: italic;
+      }
+      .reason-ico svg {
+        width: 74px;
+        height: 74px;
+        stroke: var(--navy);
+        fill: none;
+        stroke-width: 1.3;
+      }
+      .reason-body .r-tag {
+        font-family: var(--sans);
+        font-weight: 500;
+        font-size: 0.64rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--gold);
+        display: block;
+        margin-bottom: 9px;
+      }
+      .reason-body h3 {
+        font-family: var(--serif-jp);
+        font-weight: 700;
+        font-size: clamp(1.25rem, 4vw, 1.62rem);
+        line-height: 1.5;
+        color: var(--ink);
+        margin-bottom: 12px;
+        letter-spacing: 0.02em;
+      }
+      .reason-body h3 .en {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        font-weight: 500;
+        font-size: 0.78em;
+        color: var(--gold);
+        margin-left: 0.4em;
+      }
+      .reason-body p {
+        font-size: 0.92rem;
+        color: var(--ink-60);
+        line-height: 2;
+        max-width: 620px;
+      }
+      @media (max-width: 560px) {
+        .reason-row {
+          grid-template-columns: 56px 1fr;
+          gap: 18px;
+          padding: 30px 0;
+        }
+        .reason-ico {
+          width: 56px;
+          height: 56px;
+        }
+        .reason-ico svg {
+          width: 56px;
+          height: 56px;
+        }
+      }
+
+      /* ============ SCIENCE ============ */
+      .science {
+        background: var(--navy);
+        color: #ede6d7;
+        padding-block: clamp(68px, 11vw, 120px);
+        overflow: hidden;
+      }
+      .science .eyebrow {
+        color: var(--gold-soft);
+      }
+      .science .sec-head h2,
+      .science .section-title {
+        color: #fff;
+      }
+      .sci-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(36px, 6vw, 72px);
+        align-items: center;
+        margin-top: clamp(40px, 6vw, 56px);
+      }
+      .sci-diagram {
+        position: relative;
+      }
+      .sci-diagram svg {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+      }
+      .sci-copy h3 {
+        font-family: var(--serif-jp);
+        font-weight: 600;
+        font-size: clamp(1.3rem, 4vw, 1.7rem);
+        line-height: 1.5;
+        color: #fff;
+        margin-bottom: 18px;
+        letter-spacing: 0.02em;
+      }
+      .sci-copy p {
+        color: rgba(237, 230, 215, 0.72);
+        font-size: 0.92rem;
+        line-height: 2.05;
+        margin-bottom: 24px;
+        max-width: 520px;
+      }
+      .graph-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(201, 168, 106, 0.22);
+        border-radius: 3px;
+        padding: 26px 24px 20px;
+      }
+      .graph-card .gc-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 18px;
+      }
+      .graph-card .gc-head .gt {
+        font-family: var(--serif-jp);
+        font-weight: 500;
+        font-size: 0.95rem;
+        color: #fff;
+        letter-spacing: 0.03em;
+      }
+      .graph-card .gc-head .gimg {
+        font-size: 0.6rem;
+        letter-spacing: 0.1em;
+        color: var(--gold-soft);
+      }
+      .graph-svg {
+        width: 100%;
+        height: auto;
+      }
+      .sci-disc {
+        font-size: 0.66rem;
+        color: rgba(237, 230, 215, 0.45);
+        margin-top: 16px;
+        letter-spacing: 0.03em;
+        line-height: 1.7;
+      }
+      @media (max-width: 760px) {
+        .sci-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .sci-diagram {
+          max-width: 360px;
+          margin-inline: auto;
+        }
+      }
+
+      /* ============ STEPS ============ */
+      .steps {
+        padding-block: clamp(64px, 10vw, 112px);
+        background: linear-gradient(180deg, var(--bg), #f6f0e6);
+      }
+      .step-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(20px, 3vw, 38px);
+        max-width: 980px;
+        margin-inline: auto;
+      }
+      .step-card {
+        text-align: center;
+        position: relative;
+        padding-top: 14px;
+      }
+      .step-card .s-no {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        font-size: 2.6rem;
+        color: var(--gold-soft);
+        line-height: 1;
+        margin-bottom: 10px;
+        display: block;
+      }
+      .step-card .s-no small {
+        font-size: 0.42em;
+        letter-spacing: 0.2em;
+        display: block;
+        color: var(--gold);
+        font-style: normal;
+        font-family: var(--sans);
+        font-weight: 500;
+        margin-top: 2px;
+      }
+      .step-ico {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 18px;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: rgba(255, 255, 255, 0.5);
+      }
+      .step-ico svg {
+        width: 32px;
+        height: 32px;
+        stroke: var(--navy);
+        fill: none;
+        stroke-width: 1.3;
+      }
+      .step-card h4 {
+        font-family: var(--serif-jp);
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: var(--ink);
+        margin-bottom: 10px;
+        letter-spacing: 0.03em;
+      }
+      .step-card p {
+        font-size: 0.82rem;
+        color: var(--ink-60);
+        line-height: 1.9;
+        max-width: 240px;
+        margin-inline: auto;
+      }
+      .step-connect {
+        display: none;
+      }
+      @media (max-width: 680px) {
+        .step-grid {
+          grid-template-columns: 1fr;
+          gap: 14px;
+          max-width: 380px;
+        }
+        .step-card {
+          display: grid;
+          grid-template-columns: auto 1fr;
+          text-align: left;
+          gap: 20px;
+          align-items: center;
+          padding: 18px 0;
+          border-bottom: 1px solid var(--line);
+        }
+        .step-card:first-child {
+          border-top: 1px solid var(--line);
+        }
+        .step-ico {
+          margin: 0;
+          width: 54px;
+          height: 54px;
+        }
+        .step-card .s-no {
+          position: absolute;
+          top: 14px;
+          right: 0;
+          font-size: 1.6rem;
+          margin: 0;
+        }
+        .step-card .s-no small {
+          display: none;
+        }
+        .step-card .s-txt {
+          grid-column: 2;
+        }
+        .step-card p {
+          margin: 0;
+          max-width: none;
+        }
+      }
+
+      /* ============ VOICES ============ */
+      .voices {
+        padding-block: clamp(64px, 10vw, 112px);
+        background: var(--bg);
+      }
+      .voice-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(20px, 3vw, 30px);
+        max-width: 980px;
+        margin-inline: auto;
+      }
+      .voice-card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 3px;
+        padding: 30px 28px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+      .voice-card:before {
+        content: "\201C";
+        font-family: var(--serif-lt);
+        font-size: 4rem;
+        color: var(--sand);
+        position: absolute;
+        top: 8px;
+        right: 20px;
+        line-height: 1;
+      }
+      .voice-stars {
+        display: flex;
+        gap: 3px;
+        margin-bottom: 14px;
+      }
+      .voice-stars svg {
+        width: 15px;
+        height: 15px;
+        fill: var(--gold);
+      }
+      .voice-card .vq {
+        font-family: var(--serif-jp);
+        font-weight: 500;
+        font-size: 1.02rem;
+        line-height: 1.85;
+        color: var(--ink);
+        margin-bottom: 18px;
+        letter-spacing: 0.02em;
+        position: relative;
+        z-index: 2;
+      }
+      .voice-card .vq b {
+        color: var(--navy);
+        font-weight: 700;
+        background: linear-gradient(
+          transparent 60%,
+          rgba(201, 168, 106, 0.28) 60%
+        );
+      }
+      .voice-meta {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        margin-top: auto;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+      }
+      .avatar {
+        flex: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-family: var(--serif-lt);
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #fff;
+      }
+      .voice-meta .vinfo span {
+        display: block;
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--ink);
+      }
+      .voice-meta .vinfo small {
+        font-size: 0.68rem;
+        color: var(--ink-45);
+        letter-spacing: 0.04em;
+      }
+      .voices-disc {
+        text-align: center;
+        font-size: 0.68rem;
+        color: var(--ink-45);
+        margin-top: 30px;
+        letter-spacing: 0.05em;
+      }
+      @media (max-width: 620px) {
+        .voice-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+      }
+
+      /* ============ STATS / AWARDS ============ */
+      .awards {
+        background: var(--navy);
+        color: #ede6d7;
+        padding-block: clamp(60px, 9vw, 100px);
+        text-align: center;
+      }
+      .awards .eyebrow {
+        color: var(--gold-soft);
+        margin-bottom: 14px;
+      }
+      .awards .aw-sub {
+        color: rgba(237, 230, 215, 0.6);
+        font-size: 0.84rem;
+        margin-bottom: clamp(40px, 6vw, 56px);
+        letter-spacing: 0.05em;
+      }
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        max-width: 880px;
+        margin-inline: auto;
+      }
+      .stat-cell {
+        padding: 18px 12px;
+        position: relative;
+      }
+      .stat-cell + .stat-cell:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 18%;
+        bottom: 18%;
+        width: 1px;
+        background: rgba(201, 168, 106, 0.28);
+      }
+      .stat-badge {
+        width: 58px;
+        height: 58px;
+        margin: 0 auto 14px;
+      }
+      .stat-num {
+        font-family: var(--serif-lt);
+        font-weight: 500;
+        font-size: clamp(2.6rem, 9vw, 3.6rem);
+        line-height: 1;
+        color: #fff;
+      }
+      .stat-num .u {
+        font-size: 0.4em;
+        color: var(--gold-soft);
+        margin-left: 0.08em;
+      }
+      .stat-cell .st-label {
+        font-size: 0.74rem;
+        letter-spacing: 0.1em;
+        color: rgba(237, 230, 215, 0.7);
+        margin-top: 10px;
+        line-height: 1.6;
+      }
+      .awards-disc {
+        font-size: 0.64rem;
+        color: rgba(237, 230, 215, 0.42);
+        margin-top: 32px;
+        letter-spacing: 0.06em;
+      }
+      @media (max-width: 600px) {
+        .stat-grid {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+        .stat-cell {
+          padding: 26px 12px;
+          border-bottom: 1px solid rgba(201, 168, 106, 0.18);
+        }
+        .stat-cell:first-child {
+          border-top: 1px solid rgba(201, 168, 106, 0.18);
+        }
+        .stat-cell + .stat-cell:before {
+          display: none;
+        }
+      }
+
+      /* ============ GUARANTEE ============ */
+      .guarantee {
+        padding-block: clamp(64px, 10vw, 112px);
+        background: var(--bg);
+      }
+      .guar-inner {
+        max-width: 880px;
+        margin-inline: auto;
+        border: 1px solid var(--gold);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.6),
+          rgba(237, 228, 214, 0.3)
+        );
+        border-radius: 4px;
+        padding: clamp(36px, 6vw, 60px) clamp(24px, 5vw, 56px);
+        text-align: center;
+        position: relative;
+      }
+      .guar-seal {
+        width: 96px;
+        height: 96px;
+        margin: 0 auto 22px;
+      }
+      .guarantee .eyebrow {
+        margin-bottom: 14px;
+      }
+      .guarantee h2 {
+        font-family: var(--serif-jp);
+        font-weight: 700;
+        font-size: clamp(1.5rem, 5vw, 2.3rem);
+        line-height: 1.45;
+        color: var(--ink);
+        margin-bottom: 18px;
+        letter-spacing: 0.02em;
+      }
+      .guarantee h2 em {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        color: var(--gold);
+        font-weight: 500;
+      }
+      .guarantee .g-lede {
+        color: var(--ink-60);
+        font-size: 0.95rem;
+        line-height: 2.05;
+        max-width: 540px;
+        margin: 0 auto 28px;
+      }
+      .guar-points {
+        display: flex;
+        justify-content: center;
+        gap: 0;
+        flex-wrap: wrap;
+        border-top: 1px solid var(--line);
+        padding-top: 26px;
+      }
+      .guar-points .gp {
+        padding: 4px 26px;
+        position: relative;
+      }
+      .guar-points .gp + .gp:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        bottom: 8px;
+        width: 1px;
+        background: var(--line);
+      }
+      .guar-points .gp .gp-n {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        font-size: 1.5rem;
+        color: var(--gold);
+        display: block;
+        line-height: 1.2;
+      }
+      .guar-points .gp span {
+        font-size: 0.74rem;
+        color: var(--ink);
+        letter-spacing: 0.04em;
+        font-weight: 500;
+      }
+      @media (max-width: 520px) {
+        .guar-points {
+          flex-direction: column;
+          gap: 0;
+          border: 0;
+          padding-top: 10px;
+        }
+        .guar-points .gp {
+          padding: 14px 0;
+          border-top: 1px solid var(--line);
+          width: 100%;
+        }
+        .guar-points .gp + .gp:before {
+          display: none;
+        }
+      }
+
+      /* ============ OFFER / PRICE ============ */
+      .offer {
+        padding-block: clamp(64px, 10vw, 116px);
+        background: linear-gradient(180deg, #f5eee2, #efe6d7);
+        overflow: hidden;
+      }
+      .offer-card {
+        max-width: 740px;
+        margin-inline: auto;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 40px 80px -50px rgba(42, 42, 61, 0.5);
+      }
+      .offer-top {
+        background: var(--navy);
+        color: #fff;
+        text-align: center;
+        padding: 26px 24px 22px;
+      }
+      .offer-top .eyebrow {
+        color: var(--gold-soft);
+        margin-bottom: 12px;
+      }
+      .offer-top h2 {
+        font-family: var(--serif-jp);
+        font-weight: 700;
+        font-size: clamp(1.4rem, 4.6vw, 1.95rem);
+        line-height: 1.45;
+        letter-spacing: 0.03em;
+      }
+      .offer-top h2 em {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        color: var(--gold-soft);
+      }
+      .price-body {
+        padding: clamp(30px, 5vw, 44px) clamp(22px, 5vw, 48px);
+      }
+      .price-compare {
+        display: flex;
+        align-items: stretch;
+        gap: 14px;
+        margin-bottom: 26px;
+        flex-wrap: wrap;
+      }
+      .price-was,
+      .price-now {
+        flex: 1 1 180px;
+        text-align: center;
+        padding: 20px 12px;
+        border-radius: 3px;
+      }
+      .price-was {
+        background: var(--bg);
+        border: 1px solid var(--line);
+      }
+      .price-now {
+        background: linear-gradient(180deg, #fbf6ec, #f6edda);
+        border: 1.5px solid var(--gold);
+        position: relative;
+      }
+      .price-now .off-flag {
+        position: absolute;
+        top: -13px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--gold);
+        color: #fff;
+        font-size: 0.66rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        padding: 5px 16px;
+        border-radius: 2px;
+        white-space: nowrap;
+      }
+      .price-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+        color: var(--ink-60);
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+      .price-was .pv {
+        font-family: var(--serif-lt);
+        font-weight: 500;
+        font-size: 1.9rem;
+        color: var(--ink-45);
+        text-decoration: line-through;
+        text-decoration-color: var(--gold-soft);
+        line-height: 1;
+      }
+      .price-was .ptax {
+        font-size: 0.64rem;
+        color: var(--ink-45);
+        margin-top: 4px;
+      }
+      .price-now .pv {
+        font-family: var(--serif-lt);
+        font-weight: 600;
+        color: var(--navy);
+        line-height: 0.9;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 2px;
+        flex-wrap: wrap;
+      }
+      .price-now .pv .yen {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+      .price-now .pv .big {
+        font-size: clamp(3rem, 12vw, 4.2rem);
+      }
+      .price-now .pv .tax {
+        font-size: 0.7rem;
+        color: var(--ink-60);
+        align-self: flex-end;
+        margin-bottom: 0.4em;
+        width: 100%;
+        margin-top: 2px;
+      }
+      .price-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gold);
+        flex: 0 0 28px;
+      }
+      .price-arrow svg {
+        width: 24px;
+        height: 24px;
+        stroke: var(--gold);
+        fill: none;
+        stroke-width: 1.5;
+      }
+      .price-terms {
+        border-top: 1px dashed var(--line);
+        border-bottom: 1px dashed var(--line);
+        padding: 18px 4px;
+        margin-bottom: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+      }
+      .price-terms .pt {
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        font-size: 0.82rem;
+        line-height: 1.6;
+        align-items: baseline;
+      }
+      .price-terms .pt dt {
+        color: var(--ink-60);
+        flex: none;
+        letter-spacing: 0.04em;
+      }
+      .price-terms .pt dd {
+        color: var(--ink);
+        text-align: right;
+        font-weight: 500;
+        overflow-wrap: anywhere;
+      }
+      .price-terms .pt dd b {
+        color: var(--gold);
+        font-weight: 700;
+      }
+      .offer-note {
+        font-size: 0.7rem;
+        color: var(--ink-45);
+        line-height: 1.8;
+        text-align: center;
+        margin-top: 18px;
+        letter-spacing: 0.02em;
+      }
+      @media (max-width: 520px) {
+        .price-compare {
+          flex-direction: column;
+        }
+        .price-arrow {
+          flex: none;
+          transform: rotate(90deg);
+          padding: 2px 0;
+        }
+        .price-was,
+        .price-now {
+          flex: none;
+        }
+      }
+
+      /* ============ FAQ ============ */
+      .faq {
+        padding-block: clamp(64px, 10vw, 112px);
+        background: var(--bg);
+      }
+      .faq-list {
+        max-width: 760px;
+        margin-inline: auto;
+        border-top: 1px solid var(--line);
+      }
+      .faq-item {
+        border-bottom: 1px solid var(--line);
+      }
+      .faq-q {
+        width: 100%;
+        background: none;
+        border: 0;
+        cursor: pointer;
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 24px 4px;
+        font-family: var(--sans);
+        color: var(--ink);
+      }
+      .faq-q:focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 2px;
+      }
+      .faq-q .qm {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        font-size: 1.3rem;
+        color: var(--gold);
+        flex: none;
+        line-height: 1.3;
+      }
+      .faq-q .qt {
+        flex: 1;
+        font-family: var(--serif-jp);
+        font-weight: 500;
+        font-size: clamp(0.98rem, 3vw, 1.12rem);
+        line-height: 1.6;
+        letter-spacing: 0.02em;
+        padding-top: 1px;
+      }
+      .faq-q .qi {
+        flex: none;
+        width: 22px;
+        height: 22px;
+        position: relative;
+        margin-top: 5px;
+        transition: transform 0.45s var(--ease);
+      }
+      .faq-q .qi:before,
+      .faq-q .qi:after {
+        content: "";
+        position: absolute;
+        background: var(--gold);
+        transition: opacity 0.3s;
+      }
+      .faq-q .qi:before {
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: 1.5px;
+        transform: translateY(-50%);
+      }
+      .faq-q .qi:after {
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 1.5px;
+        transform: translateX(-50%);
+      }
+      .faq-q[aria-expanded="true"] .qi {
+        transform: rotate(135deg);
+      }
+      .faq-a {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s var(--ease);
+      }
+      .faq-a-inner {
+        padding: 0 4px 26px 50px;
+        color: var(--ink-60);
+        font-size: 0.88rem;
+        line-height: 2.05;
+      }
+      .faq-a-inner b {
+        color: var(--ink);
+        font-weight: 500;
+      }
+      @media (max-width: 480px) {
+        .faq-a-inner {
+          padding-left: 38px;
+        }
+      }
+
+      /* ============ FINAL CTA ============ */
+      .final {
+        background:
+          radial-gradient(
+            100% 90% at 50% 0%,
+            rgba(176, 137, 78, 0.1),
+            transparent 55%
+          ),
+          var(--navy);
+        color: #fff;
+        padding-block: clamp(72px, 12vw, 130px);
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+      }
+      .final .eyebrow {
+        color: var(--gold-soft);
+        margin-bottom: 20px;
+      }
+      .final h2 {
+        font-family: var(--serif-jp);
+        font-weight: 700;
+        font-size: clamp(1.9rem, 7vw, 3.2rem);
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+        margin-bottom: 16px;
+        word-break: auto-phrase;
+      }
+      .final h2 .gl {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        font-weight: 500;
+        color: var(--gold-soft);
+      }
+      .final p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.95rem;
+        line-height: 2;
+        max-width: 480px;
+        margin: 0 auto 16px;
+      }
+      .final-price {
+        font-family: var(--serif-lt);
+        margin: 30px 0 8px;
+        line-height: 1;
+      }
+      .final-price .fp-was {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: line-through;
+        margin-right: 14px;
+      }
+      .final-price .fp-now {
+        font-size: clamp(2.6rem, 10vw, 3.4rem);
+        font-weight: 600;
+        color: #fff;
+      }
+      .final-price .fp-now .yen {
+        font-size: 0.5em;
+        margin-right: 2px;
+      }
+      .final-price .fp-now .tax {
+        font-size: 0.28em;
+        color: var(--gold-soft);
+        margin-left: 6px;
+        letter-spacing: 0.1em;
+      }
+      .final .cta-primary {
+        background: var(--white);
+        margin-top: 14px;
+        box-shadow: 0 18px 50px -20px rgba(0, 0, 0, 0.6);
+      }
+      .final .cta-primary .cta-main {
+        color: var(--navy);
+      }
+      .final .cta-primary .cta-main em {
+        color: var(--gold);
+      }
+      .final .cta-primary .cta-sub {
+        color: var(--ink-45);
+      }
+      .final .cta-primary:before {
+        background: linear-gradient(
+          110deg,
+          transparent,
+          rgba(176, 137, 78, 0.3),
+          transparent
+        );
+      }
+      .final-note {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.45);
+        margin-top: 16px;
+        letter-spacing: 0.04em;
+      }
+
+      /* ============ FOOTER ============ */
+      footer.site {
+        background: #181821;
+        color: rgba(237, 230, 215, 0.62);
+        padding-block: 56px 40px;
+        font-size: 0.8rem;
+      }
+      .foot-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+        padding-bottom: 34px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .foot-brand .fw {
+        font-family: var(--serif-lt);
+        font-weight: 600;
+        font-size: 1.5rem;
+        letter-spacing: 0.3em;
+        color: #fff;
+        padding-left: 0.3em;
+      }
+      .foot-brand .fw span {
+        display: block;
+        font-family: var(--sans);
+        font-size: 0.5rem;
+        letter-spacing: 0.4em;
+        color: var(--gold-soft);
+        margin-top: 2px;
+        font-weight: 500;
+      }
+      .foot-brand p {
+        margin-top: 14px;
+        max-width: 300px;
+        line-height: 1.9;
+        font-size: 0.74rem;
+        color: rgba(237, 230, 215, 0.5);
+      }
+      .foot-links {
+        display: flex;
+        gap: 48px;
+        flex-wrap: wrap;
+      }
+      .foot-col h5 {
+        font-size: 0.66rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--gold-soft);
+        margin-bottom: 16px;
+        font-weight: 600;
+      }
+      .foot-col a,
+      .foot-col span {
+        display: block;
+        font-size: 0.78rem;
+        line-height: 2.2;
+        color: rgba(237, 230, 215, 0.62);
+        transition: color 0.3s;
+      }
+      .foot-col a:hover {
+        color: #fff;
+      }
+      .tokusho {
+        margin-top: 32px;
+        padding-top: 24px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 0.7rem;
+        line-height: 1.95;
+        color: rgba(237, 230, 215, 0.42);
+      }
+      .tokusho dl {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 4px 22px;
+        max-width: 760px;
+      }
+      .tokusho dt {
+        color: rgba(237, 230, 215, 0.6);
+        white-space: nowrap;
+      }
+      .tokusho dd {
+        overflow-wrap: anywhere;
+      }
+      .foot-sample {
+        margin-top: 28px;
+        padding: 14px 18px;
+        border: 1px solid rgba(201, 168, 106, 0.3);
+        border-radius: 2px;
+        background: rgba(201, 168, 106, 0.05);
+        font-size: 0.72rem;
+        line-height: 1.8;
+        color: var(--gold-soft);
+        letter-spacing: 0.04em;
+      }
+      .foot-sample b {
+        color: #e7d9b8;
+        font-weight: 600;
+      }
+      .foot-base {
+        margin-top: 26px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 0.68rem;
+        color: rgba(237, 230, 215, 0.35);
+        letter-spacing: 0.04em;
+      }
+      @media (max-width: 560px) {
+        .foot-top {
+          flex-direction: column;
+          gap: 30px;
+        }
+        .tokusho dl {
+          grid-template-columns: 1fr;
+          gap: 2px;
+        }
+        .tokusho dt {
+          margin-top: 8px;
+        }
+      }
+
+      /* ============ STICKY MOBILE CTA ============ */
+      .sticky-cta {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 80;
+        background: rgba(251, 248, 243, 0.94);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-top: 1px solid var(--line);
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0));
+        transform: translateY(110%);
+        transition: transform 0.5s var(--ease);
+        display: none;
+      }
+      .sticky-cta.show {
+        transform: translateY(0);
+      }
+      .sticky-inner {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        max-width: 600px;
+        margin-inline: auto;
+      }
+      .sticky-price {
+        flex: none;
+        line-height: 1.1;
+      }
+      .sticky-price .sp-l {
+        font-size: 0.58rem;
+        color: var(--ink-60);
+        letter-spacing: 0.08em;
+        display: block;
+      }
+      .sticky-price .sp-v {
+        font-family: var(--serif-lt);
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: var(--navy);
+      }
+      .sticky-price .sp-v .yen {
+        font-size: 0.6em;
+      }
+      .sticky-btn {
+        flex: 1;
+        background: var(--navy);
+        color: #fff;
+        border: 0;
+        border-radius: 2px;
+        padding: 13px 10px;
+        cursor: pointer;
+        font-family: var(--sans);
+        font-weight: 700;
+        font-size: 0.92rem;
+        letter-spacing: 0.04em;
+        text-align: center;
+        line-height: 1.3;
+        transition: background 0.4s var(--ease);
+      }
+      .sticky-btn em {
+        font-family: var(--serif-lt);
+        font-style: italic;
+        color: var(--gold-soft);
+        margin: 0 0.1em;
+      }
+      .sticky-btn:active {
+        background: var(--gold);
+      }
+      @media (max-width: 880px) {
+        .sticky-cta {
+          display: block;
+        }
+        body {
+          padding-bottom: 74px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. TOP SAMPLE BAR -->
+    <div class="topbar" role="note">
+      ◆ <b>架空商品・自主制作ポートフォリオサンプル</b> ／
+      実在の商品・効能を示すものではありません
+    </div>
+
+    <!-- HEADER -->
+    <header class="site">
+      <div class="wrap nav">
+        <a href="#top" class="wordmark" aria-label="NOCTÉLA ホーム"
+          >NOCTÉLA<span>ノクテラ</span></a
+        >
+        <a href="#offer" class="nav-cta">初回 ¥1,980 で試す</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- 2. HERO -->
+      <section class="hero" aria-labelledby="hero-h">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <div class="hero-rank reveal">
+              <svg viewBox="0 0 32 32" aria-hidden="true">
+                <circle
+                  cx="16"
+                  cy="16"
+                  r="14.5"
+                  fill="none"
+                  stroke="#C9A86A"
+                  stroke-width="1"
+                />
+                <path
+                  d="M16 7l2.3 4.9 5.4.6-4 3.7 1.1 5.3L16 19.4 11.2 21.5l1.1-5.3-4-3.7 5.4-.6z"
+                  fill="#B0894E"
+                />
+              </svg>
+              <span class="rk"
+                >夜用エイジングケア美容液<br /><b>EC売上ランキング 第1位</b>
+                ※イメージ</span
+              >
+            </div>
+            <div class="label reveal d1">Night Repair Serum</div>
+            <h1 id="hero-h" class="reveal d1">
+              眠っている間に、<br /><span class="gl">ハリ</span>宣言<span
+                class="ndrop"
+                >。</span
+              >
+            </h1>
+            <p class="hero-sub reveal d2">NOCTÉLA リンクルナイトリペアセラム</p>
+            <p class="hero-prod reveal d2">
+              純粋レチノール ×
+              ヒト幹細胞培養液エキス（整肌）配合・<b>夜用美容液</b>／30mL
+            </p>
+            <div class="key-claim reveal d2">
+              <span class="kc-x">夜</span>
+              <p>
+                うるおいを与えてキメを整え、<b>乾燥による小じわを目立たなくする</b>。<br />明日の肌を、夜のうちに仕込む濃密ナイトケア。
+              </p>
+            </div>
+            <a href="#offer" class="cta-primary reveal d3">
+              <span class="cta-main">初回<em>¥1,980</em>で試す</span>
+              <span class="cta-sub">通常 ¥8,800 → 77%OFF ／ 送料無料</span>
+            </a>
+            <p class="hero-cta-note reveal d3">
+              いつでも解約OK ／ 30日間全額返金保証つき
+            </p>
+
+            <div class="trust-row reveal d4">
+              <div class="ti">
+                <svg viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.3">
+                  <path d="M3 7h13v8H3z" />
+                  <path d="M16 9h3l2 2.5V15h-5z" />
+                  <circle cx="7" cy="17" r="1.6" />
+                  <circle cx="17.5" cy="17" r="1.6" />
+                </svg>
+                <span>全国 送料無料</span>
+              </div>
+              <div class="ti">
+                <svg viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.3">
+                  <path d="M12 3l7 3v5c0 4.4-3 7.7-7 9-4-1.3-7-4.6-7-9V6z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+                <span>30日間 返金保証</span>
+              </div>
+              <div class="ti">
+                <svg viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.3">
+                  <path d="M5 12a7 7 0 1 1 2.5 5.4" />
+                  <path d="M5 12H3m2 0V9" />
+                  <path d="M5 12l2.5 2.5" />
+                </svg>
+                <span>解約 いつでも自由</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal d2">
+            <div class="bottle-stage bottle-float">
+              <div class="bottle-halo"></div>
+              <svg
+                class="bottle-svg"
+                viewBox="0 0 240 300"
+                aria-labelledby="bottle-title"
+                role="img"
+              >
+                <title id="bottle-title">
+                  NOCTÉLA
+                  リンクルナイトリペアセラムの美容液ボトル（フロストガラス・ゴールドキャップのドロッパー型）のイラスト
+                </title>
+                <defs>
+                  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#FBF8F3" />
+                    <stop offset=".45" stop-color="#EDE4D6" />
+                    <stop offset="1" stop-color="#DCCFBD" />
+                  </linearGradient>
+                  <linearGradient id="serum" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#3A3A52" />
+                    <stop offset="1" stop-color="#2A2A3D" />
+                  </linearGradient>
+                  <linearGradient id="cap" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#E3C589" />
+                    <stop offset=".5" stop-color="#B0894E" />
+                    <stop offset="1" stop-color="#8E6B38" />
+                  </linearGradient>
+                  <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#fff" stop-opacity=".75" />
+                    <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <!-- dropper cap -->
+                <rect
+                  x="100"
+                  y="18"
+                  width="40"
+                  height="40"
+                  rx="6"
+                  fill="url(#cap)"
+                />
+                <rect
+                  x="103"
+                  y="22"
+                  width="10"
+                  height="32"
+                  rx="4"
+                  fill="url(#shine)"
+                  opacity=".6"
+                />
+                <rect
+                  x="108"
+                  y="54"
+                  width="24"
+                  height="14"
+                  rx="3"
+                  fill="#9A7740"
+                />
+                <!-- neck -->
+                <rect x="104" y="66" width="32" height="20" fill="#D8C9B2" />
+                <rect
+                  x="104"
+                  y="66"
+                  width="32"
+                  height="6"
+                  fill="#C9A86A"
+                  opacity=".5"
+                />
+                <!-- bottle body -->
+                <path
+                  d="M70 92c0-4 3-7 7-7h86c4 0 7 3 7 7v176c0 9-7 16-16 16H86c-9 0-16-7-16-16z"
+                  fill="url(#glass)"
+                  stroke="#C9A86A"
+                  stroke-width="1.2"
+                  stroke-opacity=".5"
+                />
+                <!-- serum fill -->
+                <path
+                  d="M78 168h84v100c0 7-6 12-13 12H91c-7 0-13-5-13-12z"
+                  fill="url(#serum)"
+                />
+                <path d="M78 168h84v10H78z" fill="#4A4A66" opacity=".5" />
+                <!-- glass shine -->
+                <rect
+                  x="82"
+                  y="100"
+                  width="12"
+                  height="150"
+                  rx="6"
+                  fill="url(#shine)"
+                  opacity=".55"
+                />
+                <!-- label -->
+                <rect
+                  x="74"
+                  y="190"
+                  width="92"
+                  height="84"
+                  rx="2"
+                  fill="#FBF8F3"
+                  opacity=".96"
+                />
+                <text
+                  x="120"
+                  y="218"
+                  text-anchor="middle"
+                  font-family="Cormorant Garamond, serif"
+                  font-size="14"
+                  font-style="italic"
+                  letter-spacing="1.5"
+                  fill="#20202A"
+                >
+                  NOCTÉLA
+                </text>
+                <line
+                  x1="96"
+                  y1="228"
+                  x2="144"
+                  y2="228"
+                  stroke="#C9A86A"
+                  stroke-width="1"
+                />
+                <text
+                  x="120"
+                  y="244"
+                  text-anchor="middle"
+                  font-family="Noto Sans JP, sans-serif"
+                  font-size="5"
+                  letter-spacing="1.4"
+                  fill="#B0894E"
+                >
+                  NIGHT REPAIR SERUM
+                </text>
+                <text
+                  x="120"
+                  y="263"
+                  text-anchor="middle"
+                  font-family="Shippori Mincho B1, serif"
+                  font-size="6"
+                  letter-spacing="0.5"
+                  fill="#2A2A3D"
+                >
+                  夜用美容液 ※サンプル
+                </text>
+                <!-- gold base ring -->
+                <rect
+                  x="74"
+                  y="276"
+                  width="92"
+                  height="4"
+                  rx="2"
+                  fill="#C9A86A"
+                  opacity=".4"
+                />
+              </svg>
+            </div>
+            <span class="v-caption">RETINOL × STEM-CELL</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- INGREDIENT MARQUEE -->
+      <div class="ing-strip" aria-hidden="true">
+        <div class="ing-track">
+          <span>純粋レチノール</span><span>ヒト幹細胞培養液エキス</span
+          ><span>ナイアシンアミド</span><span>5種のヒト型セラミド</span
+          ><span>スクワラン</span> <span>純粋レチノール</span
+          ><span>ヒト幹細胞培養液エキス</span><span>ナイアシンアミド</span
+          ><span>5種のヒト型セラミド</span><span>スクワラン</span>
+        </div>
+      </div>
+
+      <!-- 3. WORRIES -->
+      <section class="worries" aria-labelledby="worry-h">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="eyebrow reveal">Your Concerns</span>
+            <h2 class="section-title reveal d1" id="worry-h">
+              こんなお悩み、<em>ありませんか</em>？
+            </h2>
+          </div>
+          <div class="worry-list">
+            <div class="worry-item reveal">
+              <span class="worry-check"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 12l5 5L20 6" /></svg
+              ></span>
+              <p>
+                夕方になると気になる、目もと・口もとの<strong
+                  >乾燥による小じわ</strong
+                >
+              </p>
+            </div>
+            <div class="worry-item reveal d1">
+              <span class="worry-check"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 12l5 5L20 6" /></svg
+              ></span>
+              <p>
+                うるおい不足で感じる、<strong
+                  >ハリのなさ・余裕のない印象</strong
+                >
+              </p>
+            </div>
+            <div class="worry-item reveal d2">
+              <span class="worry-check"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 12l5 5L20 6" /></svg
+              ></span>
+              <p>キメの乱れからくる、<strong>くすんで見える肌印象</strong></p>
+            </div>
+            <div class="worry-item reveal d3">
+              <span class="worry-check"
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 12l5 5L20 6" /></svg
+              ></span>
+              <p>
+                忙しい毎日で、<strong>夜のスキンケアがつい後まわし</strong>になりがち
+              </p>
+            </div>
+          </div>
+          <p class="worry-tail reveal d1">
+            その答えは、<em>眠っている時間</em>にありました。
+          </p>
+        </div>
+      </section>
+
+      <!-- 4. EMPATHY / PROPOSAL -->
+      <section class="empathy" aria-labelledby="emp-h">
+        <div class="wrap-narrow">
+          <span class="glyph reveal">✦</span>
+          <span class="eyebrow reveal">The Night Ritual</span>
+          <h2 class="reveal d1" id="emp-h">
+            その夜のケア、<br /><span class="nm">NOCTÉLA</span> へ。
+          </h2>
+          <p class="reveal d2">
+            肌が一日のダメージを整えるのは、わたしたちが眠っている夜。<br />NOCTÉLA
+            は、その時間にうるおいと整肌成分をすみずみまで届けるために生まれた夜用美容液です。朝、鏡に映る自分を少し好きになれる——そんな毎晩のリチュアルを。
+          </p>
+        </div>
+      </section>
+
+      <!-- 5. REASONS / INGREDIENTS -->
+      <section class="reasons" aria-labelledby="reason-h">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="eyebrow reveal">Why NOCTÉLA</span>
+            <h2 class="section-title reveal d1" id="reason-h">
+              選ばれる、<em>3つ</em>の理由
+            </h2>
+          </div>
+          <div class="reason-stack">
+            <article class="reason-row reveal">
+              <div class="reason-ico">
+                <span class="rn">01</span>
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                  <circle cx="32" cy="32" r="22" />
+                  <path d="M32 16c5 6 5 12 0 16s-5 10 0 16" />
+                  <path d="M20 26c8 2 16 2 24 0M20 40c8-2 16-2 24 0" />
+                </svg>
+              </div>
+              <div class="reason-body">
+                <span class="r-tag">Pure Retinol</span>
+                <h3>
+                  夜にうれしい、純粋レチノール<span class="en">Retinol</span>
+                </h3>
+                <p>
+                  ハリのある印象へ導く、夜のエイジングケア成分・純粋レチノールを配合。デリケートな成分だからこそ光の影響を受けにくい夜のケアに着目し、なめらかに肌へなじむ濃密なテクスチャーで仕上げました。乾燥による小じわを目立たなくし、キメの整ったすこやかな肌印象へ。
+                </p>
+              </div>
+            </article>
+
+            <article class="reason-row reveal">
+              <div class="reason-ico">
+                <span class="rn">02</span>
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                  <circle cx="32" cy="32" r="9" />
+                  <circle cx="32" cy="32" r="20" />
+                  <circle cx="32" cy="12" r="3" />
+                  <circle cx="52" cy="32" r="3" />
+                  <circle cx="32" cy="52" r="3" />
+                  <circle cx="12" cy="32" r="3" />
+                  <path d="M32 21v-6M43 32h6M32 43v6M21 32h-6" />
+                </svg>
+              </div>
+              <div class="reason-body">
+                <span class="r-tag">Stem-Cell Culture</span>
+                <h3>
+                  うるおいで満たす、ヒト幹細胞培養液エキス<span class="en"
+                    >Conditioning</span
+                  >
+                </h3>
+                <p>
+                  整肌成分としてヒト幹細胞培養液エキスを贅沢に配合。年齢を重ねた肌にうるおいとなめらかさを与え、ふっくらとしたハリのある印象へ。乾燥しがちな肌のキメを整え、すこやかなコンディションへ導きます。
+                </p>
+              </div>
+            </article>
+
+            <article class="reason-row reveal">
+              <div class="reason-ico">
+                <span class="rn">03</span>
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                  <path
+                    d="M32 12l4 8 9 1-6.5 6 1.5 9-8-4.2-8 4.2 1.5-9L19 21l9-1z"
+                  />
+                  <circle cx="32" cy="32" r="23" />
+                </svg>
+              </div>
+              <div class="reason-body">
+                <span class="r-tag">Multi Conditioning</span>
+                <h3>
+                  うるおいを守り抜く、5つの厳選保湿成分<span class="en"
+                    >Barrier Care</span
+                  >
+                </h3>
+                <p>
+                  ナイアシンアミド、5種のヒト型セラミド、スクワランを配合。肌のうるおいバリアをサポートし、乾燥を防いでなめらかに整えます。重ねるほどに満たされる、すこやかでハリのある肌印象へ。
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. SCIENCE -->
+      <section class="science" aria-labelledby="sci-h">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="eyebrow reveal">The Science</span>
+            <h2 class="section-title reveal d1" id="sci-h">
+              うるおいが、巡る夜。
+            </h2>
+          </div>
+          <div class="sci-grid">
+            <div class="sci-diagram reveal">
+              <svg
+                viewBox="0 0 360 280"
+                aria-labelledby="sci-diagram-title"
+                role="img"
+              >
+                <title id="sci-diagram-title">
+                  うるおい成分が角層のすみずみへ浸透していくイメージ図（角層の範囲まで）
+                </title>
+                <!-- skin layers -->
+                <rect
+                  x="20"
+                  y="20"
+                  width="320"
+                  height="44"
+                  rx="3"
+                  fill="#3A3A52"
+                />
+                <rect
+                  x="20"
+                  y="68"
+                  width="320"
+                  height="58"
+                  rx="3"
+                  fill="#43435E"
+                />
+                <rect
+                  x="20"
+                  y="130"
+                  width="320"
+                  height="130"
+                  rx="3"
+                  fill="#4D4D6B"
+                />
+                <text
+                  x="332"
+                  y="100"
+                  text-anchor="end"
+                  font-family="Noto Sans JP"
+                  font-size="9"
+                  fill="#C9A86A"
+                  letter-spacing="1"
+                >
+                  角層
+                </text>
+                <text
+                  x="332"
+                  y="200"
+                  text-anchor="end"
+                  font-family="Noto Sans JP"
+                  font-size="9"
+                  fill="rgba(201,168,106,.6)"
+                  letter-spacing="1"
+                >
+                  肌のキメ ※イメージ
+                </text>
+                <!-- droplets penetrating -->
+                <g fill="#C9A86A">
+                  <circle cx="70" cy="40" r="6" />
+                  <circle cx="70" cy="90" r="5" opacity=".8" />
+                  <circle cx="70" cy="150" r="4" opacity=".55" />
+                  <circle cx="150" cy="36" r="7" />
+                  <circle cx="150" cy="96" r="5.5" opacity=".8" />
+                  <circle cx="150" cy="170" r="4" opacity=".5" />
+                  <circle cx="230" cy="42" r="6" />
+                  <circle cx="230" cy="100" r="5" opacity=".8" />
+                  <circle cx="230" cy="160" r="4" opacity=".55" />
+                  <circle cx="300" cy="38" r="6.5" />
+                  <circle cx="300" cy="92" r="5" opacity=".8" />
+                  <circle cx="300" cy="150" r="3.5" opacity=".5" />
+                </g>
+                <g
+                  stroke="#C9A86A"
+                  stroke-width="1"
+                  stroke-dasharray="2 4"
+                  opacity=".5"
+                >
+                  <path d="M70 46v98" />
+                  <path d="M150 43v120" />
+                  <path d="M230 48v105" />
+                  <path d="M300 44v100" />
+                </g>
+                <!-- dropper top -->
+                <path d="M180 4l8 14h-16z" fill="#B0894E" />
+                <!-- top-band label painted last so droplets don't obscure it -->
+                <text
+                  x="332"
+                  y="46"
+                  text-anchor="end"
+                  font-family="Noto Sans JP"
+                  font-size="9"
+                  fill="#C9A86A"
+                  letter-spacing="1"
+                  paint-order="stroke"
+                  stroke="#2A2A3E"
+                  stroke-width="2.5"
+                  stroke-linejoin="round"
+                >
+                  うるおいの膜
+                </text>
+              </svg>
+            </div>
+            <div class="sci-copy">
+              <h3 class="reveal d1">
+                夜の角層を、うるおいで満たすという発想。
+              </h3>
+              <p class="reveal d2">
+                純粋レチノールと整肌成分を、なじみのよい処方で角層のすみずみへ。うるおいの膜が乾燥から肌を守り、翌朝までしっとりと、キメの整った肌印象を保ちます。
+              </p>
+              <div class="graph-card reveal d2">
+                <div class="gc-head">
+                  <span class="gt">うるおい持続 イメージ</span>
+                  <span class="gimg">※イメージ図</span>
+                </div>
+                <svg
+                  class="graph-svg"
+                  viewBox="0 0 320 150"
+                  aria-labelledby="graph-title"
+                  role="img"
+                >
+                  <title id="graph-title">
+                    使用後の時間経過にともなううるおいの持続イメージを示した折れ線グラフ（NOCTÉLA使用時と通常ケア時の比較イメージ）
+                  </title>
+                  <!-- axes -->
+                  <line
+                    x1="36"
+                    y1="14"
+                    x2="36"
+                    y2="118"
+                    stroke="rgba(201,168,106,.4)"
+                    stroke-width="1"
+                  />
+                  <line
+                    x1="36"
+                    y1="118"
+                    x2="310"
+                    y2="118"
+                    stroke="rgba(201,168,106,.4)"
+                    stroke-width="1"
+                  />
+                  <!-- y labels -->
+                  <text
+                    x="30"
+                    y="22"
+                    text-anchor="end"
+                    font-family="Cormorant Garamond,serif"
+                    font-size="11"
+                    fill="rgba(237,230,215,.5)"
+                  >
+                    高
+                  </text>
+                  <text
+                    x="30"
+                    y="115"
+                    text-anchor="end"
+                    font-family="Cormorant Garamond,serif"
+                    font-size="11"
+                    fill="rgba(237,230,215,.5)"
+                  >
+                    低
+                  </text>
+                  <!-- baseline (normal care) -->
+                  <path
+                    d="M40 50 C100 70 170 96 300 108"
+                    fill="none"
+                    stroke="rgba(237,230,215,.32)"
+                    stroke-width="2"
+                    stroke-dasharray="4 4"
+                  />
+                  <text
+                    x="232"
+                    y="100"
+                    font-family="Noto Sans JP"
+                    font-size="8"
+                    fill="rgba(237,230,215,.45)"
+                  >
+                    通常ケア
+                  </text>
+                  <!-- NOCTELA line -->
+                  <path
+                    d="M40 46 C110 44 200 50 300 56"
+                    fill="none"
+                    stroke="#C9A86A"
+                    stroke-width="2.6"
+                  />
+                  <circle cx="40" cy="46" r="3.4" fill="#C9A86A" />
+                  <circle cx="170" cy="48" r="3.4" fill="#C9A86A" />
+                  <circle cx="300" cy="56" r="3.4" fill="#C9A86A" />
+                  <text
+                    x="210"
+                    y="44"
+                    font-family="Noto Sans JP"
+                    font-size="8.5"
+                    fill="#E3C589"
+                    font-weight="500"
+                  >
+                    NOCTÉLA 使用時
+                  </text>
+                  <!-- x labels -->
+                  <text
+                    x="40"
+                    y="132"
+                    text-anchor="middle"
+                    font-family="Noto Sans JP"
+                    font-size="8"
+                    fill="rgba(237,230,215,.5)"
+                  >
+                    使用直後
+                  </text>
+                  <text
+                    x="170"
+                    y="132"
+                    text-anchor="middle"
+                    font-family="Noto Sans JP"
+                    font-size="8"
+                    fill="rgba(237,230,215,.5)"
+                  >
+                    6時間後
+                  </text>
+                  <text
+                    x="300"
+                    y="132"
+                    text-anchor="middle"
+                    font-family="Noto Sans JP"
+                    font-size="8"
+                    fill="rgba(237,230,215,.5)"
+                  >
+                    翌朝
+                  </text>
+                </svg>
+              </div>
+              <p class="sci-disc reveal d2">
+                ※グラフはイメージであり、効果効能や実際の測定値を示すものではありません。乾燥による小じわを目立たなくする効果は効能評価試験済み（※本サンプルでは架空の表記です）。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. STEPS -->
+      <section class="steps" aria-labelledby="step-h">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="eyebrow reveal">How to Use</span>
+            <h2 class="section-title reveal d1" id="step-h">
+              夜の<em>3STEP</em>スキンケア
+            </h2>
+          </div>
+          <div class="step-grid">
+            <div class="step-card reveal">
+              <span class="s-no">01<small>CLEANSE</small></span>
+              <div class="step-ico">
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <path d="M8 6h16l-2 8H10z" />
+                  <path d="M11 14v10a2 2 0 002 2h6a2 2 0 002-2V14" />
+                  <path d="M14 18h4" />
+                </svg>
+              </div>
+              <div class="s-txt">
+                <h4>洗顔・化粧水</h4>
+                <p>
+                  洗顔後、いつもの化粧水で肌を整え、うるおいを与えておきます。
+                </p>
+              </div>
+            </div>
+            <div class="step-card reveal d1">
+              <span class="s-no">02<small>SERUM</small></span>
+              <div class="step-ico">
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <rect x="13" y="4" width="6" height="6" rx="1.5" />
+                  <path
+                    d="M14 10h4v4l2 3v9a2 2 0 01-2 2h-4a2 2 0 01-2-2v-9l2-3z"
+                  />
+                  <path d="M14 19h4" />
+                </svg>
+              </div>
+              <div class="s-txt">
+                <h4>NOCTÉLA を3〜4滴</h4>
+                <p>
+                  手のひらに伸ばし、顔全体にやさしくなじませます。気になる目もと・口もとは重ねづけを。
+                </p>
+              </div>
+            </div>
+            <div class="step-card reveal d2">
+              <span class="s-no">03<small>SEAL</small></span>
+              <div class="step-ico">
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <path d="M16 5c5 5 8 9 8 13a8 8 0 01-16 0c0-4 3-8 8-13z" />
+                  <path d="M13 18a3 3 0 003 3" />
+                </svg>
+              </div>
+              <div class="s-txt">
+                <h4>クリームでフタ</h4>
+                <p>
+                  最後にクリームや乳液でうるおいを閉じ込め、翌朝までしっとりキープ。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. VOICES -->
+      <section class="voices" aria-labelledby="voice-h">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="eyebrow reveal">Customer Voices</span>
+            <h2 class="section-title reveal d1" id="voice-h">
+              夜のケアが、<em>愉しみ</em>になる声
+            </h2>
+          </div>
+          <div class="voice-grid">
+            <article class="voice-card reveal">
+              <div class="voice-stars" aria-label="5段階評価で5">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  />
+                </svg>
+              </div>
+              <p class="vq">
+                朝起きたときの肌が、なんだか<b>しっとり満たされている</b>感じ。夜のお手入れがちょっとした贅沢な時間になりました。
+              </p>
+              <div class="voice-meta">
+                <span class="avatar" style="background: #b0894e">A</span>
+                <div class="vinfo">
+                  <span>A.K さん（40代）</span
+                  ><small>使用2ヶ月 ／ ※個人の感想・サンプル</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="voice-card reveal d1">
+              <div class="voice-stars" aria-label="5段階評価で5">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  />
+                </svg>
+              </div>
+              <p class="vq">
+                レチノール初心者で刺激が不安でしたが、なめらかなテクスチャーで<b>肌になじみやすい</b>のが気に入っています。乾燥が気になる季節の必需品。
+              </p>
+              <div class="voice-meta">
+                <span class="avatar" style="background: #2a2a3d">M</span>
+                <div class="vinfo">
+                  <span>M.S さん（30代）</span
+                  ><small>使用3ヶ月 ／ ※個人の感想・サンプル</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="voice-card reveal d2">
+              <div class="voice-stars" aria-label="5段階評価で4">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24" style="opacity: 0.28">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  />
+                </svg>
+              </div>
+              <p class="vq">
+                スポイトタイプで量の調整がしやすく、衛生的なのも好印象。<b>キメが整ってきた</b>気がして、メイクのりも楽しみになりました。
+              </p>
+              <div class="voice-meta">
+                <span class="avatar" style="background: #8e6b38">Y</span>
+                <div class="vinfo">
+                  <span>Y.T さん（50代）</span
+                  ><small>使用1ヶ月 ／ ※個人の感想・サンプル</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="voice-card reveal d3">
+              <div class="voice-stars" aria-label="5段階評価で5">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  /></svg
+                ><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.9 6.3L22 9.3l-5 4.6 1.3 6.9L12 17.5 5.7 20.8 7 13.9 2 9.3l7.1-1z"
+                  />
+                </svg>
+              </div>
+              <p class="vq">
+                定期便だから買い忘れがなく、続けやすい価格なのもうれしい。ハリのある印象に近づけている気がして、<b>鏡を見るのが楽しみ</b>です。
+              </p>
+              <div class="voice-meta">
+                <span class="avatar" style="background: #c9a86a">H</span>
+                <div class="vinfo">
+                  <span>H.N さん（40代）</span
+                  ><small>使用4ヶ月 ／ ※個人の感想・サンプル</small>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="voices-disc reveal">
+            ※
+            掲載のお客様の声はすべて架空のサンプルであり、個人の感想です。効果には個人差があります。
+          </p>
+        </div>
+      </section>
+
+      <!-- 9. STATS / AWARDS -->
+      <section class="awards" aria-labelledby="award-h">
+        <div class="wrap">
+          <span class="eyebrow reveal">Recognition</span>
+          <h2 class="section-title reveal d1" id="award-h" style="color: #fff">
+            数字が物語る、NOCTÉLA
+          </h2>
+          <p class="aw-sub reveal d1">
+            ※ 下記はすべてイメージ・サンプル表記です
+          </p>
+          <div class="stat-grid">
+            <div class="stat-cell reveal">
+              <svg class="stat-badge" viewBox="0 0 64 64" aria-hidden="true">
+                <circle
+                  cx="32"
+                  cy="28"
+                  r="18"
+                  fill="none"
+                  stroke="#C9A86A"
+                  stroke-width="1.4"
+                />
+                <path
+                  d="M22 42l-3 14 13-7 13 7-3-14"
+                  fill="none"
+                  stroke="#C9A86A"
+                  stroke-width="1.4"
+                />
+                <text
+                  x="32"
+                  y="34"
+                  text-anchor="middle"
+                  font-family="Cormorant Garamond,serif"
+                  font-size="20"
+                  font-style="italic"
+                  fill="#E3C589"
+                >
+                  1
+                </text>
+              </svg>
+              <div class="stat-num">No.<span class="num-lt">1</span></div>
+              <div class="st-label">
+                夜用美容液 EC売上<br />ランキング 第1位 ※イメージ
+              </div>
+            </div>
+            <div class="stat-cell reveal d1">
+              <svg class="stat-badge" viewBox="0 0 64 64" aria-hidden="true">
+                <circle
+                  cx="32"
+                  cy="32"
+                  r="22"
+                  fill="none"
+                  stroke="#C9A86A"
+                  stroke-width="1.4"
+                />
+                <path
+                  d="M20 32l8 8 16-16"
+                  fill="none"
+                  stroke="#E3C589"
+                  stroke-width="2"
+                />
+              </svg>
+              <div class="stat-num">94<span class="u">%</span></div>
+              <div class="st-label">
+                使用感に関する<br />満足度調査 ※イメージ
+              </div>
+            </div>
+            <div class="stat-cell reveal d2">
+              <svg class="stat-badge" viewBox="0 0 64 64" aria-hidden="true">
+                <circle
+                  cx="32"
+                  cy="32"
+                  r="22"
+                  fill="none"
+                  stroke="#C9A86A"
+                  stroke-width="1.4"
+                />
+                <path
+                  d="M32 18a14 14 0 11-10 4"
+                  fill="none"
+                  stroke="#E3C589"
+                  stroke-width="2"
+                />
+                <path
+                  d="M22 18v6h6"
+                  fill="none"
+                  stroke="#E3C589"
+                  stroke-width="2"
+                />
+              </svg>
+              <div class="stat-num">89<span class="u">%</span></div>
+              <div class="st-label">
+                定期便 継続率<br />（リピート率）※イメージ
+              </div>
+            </div>
+          </div>
+          <p class="awards-disc reveal">
+            ※
+            当ページの数値・順位・受賞表記はポートフォリオ制作用の架空データであり、実在の調査・実績に基づくものではありません。
+          </p>
+        </div>
+      </section>
+
+      <!-- 10. GUARANTEE -->
+      <section class="guarantee" aria-labelledby="guar-h">
+        <div class="wrap">
+          <div class="guar-inner reveal">
+            <svg class="guar-seal" viewBox="0 0 96 96" aria-hidden="true">
+              <circle
+                cx="48"
+                cy="48"
+                r="44"
+                fill="none"
+                stroke="#B0894E"
+                stroke-width="1"
+              />
+              <circle
+                cx="48"
+                cy="48"
+                r="37"
+                fill="none"
+                stroke="#C9A86A"
+                stroke-width="1"
+                stroke-dasharray="2 3"
+              />
+              <path
+                d="M34 48l9 9 19-19"
+                fill="none"
+                stroke="#B0894E"
+                stroke-width="2.4"
+                stroke-linecap="round"
+              />
+              <text
+                x="48"
+                y="78"
+                text-anchor="middle"
+                font-family="Cormorant Garamond,serif"
+                font-size="9"
+                font-style="italic"
+                letter-spacing="2"
+                fill="#B0894E"
+              >
+                30 DAYS
+              </text>
+            </svg>
+            <span class="eyebrow">Our Promise</span>
+            <h2 id="guar-h">はじめての方へ、<br /><em>安心</em>のお約束。</h2>
+            <p class="g-lede">
+              お肌に合うか不安な方も、まずは気軽にお試しいただけるように。NOCTÉLA
+              は3つの約束で、あなたの夜のケア習慣をやさしく後押しします。
+            </p>
+            <div class="guar-points">
+              <div class="gp">
+                <span class="gp-n"
+                  >30<small style="font-size: 0.5em">日間</small></span
+                ><span>全額返金保証</span>
+              </div>
+              <div class="gp">
+                <span class="gp-n">¥0</span><span>全国送料無料</span>
+              </div>
+              <div class="gp">
+                <span class="gp-n">自由</span><span>解約はいつでも</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. OFFER / PRICE -->
+      <section class="offer" id="offer" aria-labelledby="offer-h">
+        <div class="wrap">
+          <div class="offer-card reveal">
+            <div class="offer-top">
+              <span class="eyebrow">Special Offer</span>
+              <h2 id="offer-h">夜のリチュアル、<em>¥1,980</em> から。</h2>
+            </div>
+            <div class="price-body">
+              <div class="price-compare">
+                <div class="price-was">
+                  <div class="price-label">通常価格</div>
+                  <div class="pv">¥8,800</div>
+                  <div class="ptax">(税込)</div>
+                </div>
+                <div class="price-arrow">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </div>
+                <div class="price-now">
+                  <span class="off-flag">定期初回 77%OFF</span>
+                  <div class="price-label" style="color: var(--gold)">
+                    定期コース 初回特別価格
+                  </div>
+                  <div class="pv">
+                    <span class="yen">¥</span><span class="big">1,980</span
+                    ><span class="tax">(税込) ／ 送料無料</span>
+                  </div>
+                </div>
+              </div>
+
+              <dl class="price-terms">
+                <div class="pt">
+                  <dt>2回目以降</dt>
+                  <dd>毎回 <b>¥6,980</b>（税込）／ 送料無料</dd>
+                </div>
+                <div class="pt">
+                  <dt>お届け周期</dt>
+                  <dd>30日ごとに1本（変更・休止OK）</dd>
+                </div>
+                <div class="pt">
+                  <dt>解約条件</dt>
+                  <dd>回数しばりなし・<b>いつでも解約OK</b></dd>
+                </div>
+                <div class="pt">
+                  <dt>保証</dt>
+                  <dd>初回 <b>30日間 全額返金保証</b>つき</dd>
+                </div>
+              </dl>
+
+              <a
+                href="#"
+                class="cta-primary"
+                style="width: 100%"
+                onclick="return false;"
+              >
+                <span class="cta-main"
+                  >初回<em>¥1,980</em>でこの夜から始める</span
+                >
+                <span class="cta-sub"
+                  >＼ いつでも解約OK ／ 30日間返金保証 ＼ 送料無料</span
+                >
+              </a>
+              <p class="offer-note">
+                ※ 定期コースは2回目以降
+                ¥6,980（税込）で継続されます。お届け周期の変更・休止・解約はマイページまたはお電話からいつでも承ります。<br />※
+                本ページは架空商品のポートフォリオサンプルです。実際のご購入はできません。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12. FAQ -->
+      <section class="faq" aria-labelledby="faq-h">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="eyebrow reveal">Q & A</span>
+            <h2 class="section-title reveal d1" id="faq-h">
+              よくある<em>ご質問</em>
+            </h2>
+          </div>
+          <div class="faq-list reveal d1">
+            <div class="faq-item">
+              <button
+                class="faq-q"
+                aria-expanded="false"
+                aria-controls="fa1"
+                id="fq1"
+              >
+                <span class="qm">Q.</span>
+                <span class="qt"
+                  >定期コースの解約に、回数のしばりはありますか？</span
+                >
+                <span class="qi" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" id="fa1" role="region" aria-labelledby="fq1">
+                <div class="faq-a-inner">
+                  回数のしばりは<b>ございません</b>。初回のみのご利用でも解約可能です。次回お届け予定日の10日前までに、マイページまたはお電話にてお手続きください。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button
+                class="faq-q"
+                aria-expanded="false"
+                aria-controls="fa2"
+                id="fq2"
+              >
+                <span class="qm">Q.</span>
+                <span class="qt"
+                  >どのくらいの頻度で使うのがおすすめですか？</span
+                >
+                <span class="qi" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" id="fa2" role="region" aria-labelledby="fq2">
+                <div class="faq-a-inner">
+                  夜のスキンケアの一部として、<b>毎晩のご使用</b>がおすすめです。レチノール配合製品がはじめての方は、まず2〜3日に1回から始め、肌の様子を見ながら徐々に頻度を上げてください。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button
+                class="faq-q"
+                aria-expanded="false"
+                aria-controls="fa3"
+                id="fq3"
+              >
+                <span class="qm">Q.</span>
+                <span class="qt">敏感肌ですが、肌に合うか不安です。</span>
+                <span class="qi" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" id="fa3" role="region" aria-labelledby="fq3">
+                <div class="faq-a-inner">
+                  肌へのやさしさに配慮した処方ですが、すべての方に肌トラブルが起こらないわけではありません。ご使用前のパッチテストをおすすめします。万一お肌に合わない場合は<b>30日間全額返金保証</b>をご利用いただけますので、安心してお試しください。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button
+                class="faq-q"
+                aria-expanded="false"
+                aria-controls="fa4"
+                id="fq4"
+              >
+                <span class="qm">Q.</span>
+                <span class="qt">配送や支払い方法について教えてください。</span>
+                <span class="qi" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" id="fa4" role="region" aria-labelledby="fq4">
+                <div class="faq-a-inner">
+                  ご注文から通常3〜5営業日で発送し、<b>全国送料無料</b>でお届けします。お支払いはクレジットカード・後払い・各種スマホ決済に対応（※本サンプルでは架空の記載です）。
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button
+                class="faq-q"
+                aria-expanded="false"
+                aria-controls="fa5"
+                id="fq5"
+              >
+                <span class="qm">Q.</span>
+                <span class="qt">レチノール特有の刺激が心配です。</span>
+                <span class="qi" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" id="fa5" role="region" aria-labelledby="fq5">
+                <div class="faq-a-inner">
+                  肌なじみのよいテクスチャーと保湿成分の組み合わせで、毎晩のケアに取り入れやすい設計です。使い始めに乾燥やつっぱりを感じた場合は、使用頻度を控えめにし、クリームでしっかりうるおいを補ってください。気になる症状が続く場合はご使用を中止してください。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13. FINAL CTA -->
+      <section class="final" id="final-cta" aria-labelledby="final-h">
+        <div class="wrap-narrow">
+          <span class="eyebrow reveal">Begin Tonight</span>
+          <h2 class="reveal d1" id="final-h">
+            今夜から、<br /><span class="gl">ハリ</span>のある明日へ。
+          </h2>
+          <p class="reveal d2">
+            眠っている時間を味方に。NOCTÉLA
+            のある夜が、あなたの毎日を少しだけ豊かにします。
+          </p>
+          <div class="final-price reveal d2">
+            <span class="fp-was">¥8,800</span>
+            <span class="fp-now"
+              ><span class="yen">¥</span>1,980<span class="tax"
+                >税込 77%OFF</span
+              ></span
+            >
+          </div>
+          <a href="#" class="cta-primary reveal d2" onclick="return false;">
+            <span class="cta-main">初回<em>¥1,980</em>で試す</span>
+            <span class="cta-sub"
+              >送料無料 ／ 30日間返金保証 ／ いつでも解約OK</span
+            >
+          </a>
+          <p class="final-note reveal d2">
+            ※ 本ページは架空商品・自主制作ポートフォリオサンプルです。
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- 14. FOOTER -->
+    <footer class="site">
+      <div class="wrap">
+        <div class="foot-top">
+          <div class="foot-brand">
+            <div class="fw">NOCTÉLA<span>ノクテラ</span></div>
+            <p>
+              眠っている間に整える、夜用エイジングケア美容液。うるおいとともに、明日のハリのある印象へ。
+            </p>
+          </div>
+          <div class="foot-links">
+            <div class="foot-col">
+              <h5>Product</h5>
+              <a href="#offer" onclick="return false;">商品について</a>
+              <a href="#offer" onclick="return false;">価格・定期コース</a>
+              <a href="#faq" onclick="return false;">よくある質問</a>
+            </div>
+            <div class="foot-col">
+              <h5>Support</h5>
+              <a href="#" onclick="return false;">特定商取引法に基づく表記</a>
+              <a href="#" onclick="return false;">プライバシーポリシー</a>
+              <a href="#" onclick="return false;">お問い合わせ</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="tokusho"
+          aria-label="特定商取引法に基づく表記（架空・サンプル）"
+        >
+          <dl>
+            <dt>販売事業者</dt>
+            <dd>株式会社ノクテラ（架空・サンプル）</dd>
+            <dt>運営責任者</dt>
+            <dd>野口 照（架空）</dd>
+            <dt>所在地</dt>
+            <dd>
+              〒000-0000 東京都〇〇区〇〇 0-0-0 〇〇ビル0F（プレースホルダ）
+            </dd>
+            <dt>電話番号</dt>
+            <dd>00-0000-0000（受付 平日10:00-18:00 ／ 架空）</dd>
+            <dt>販売価格</dt>
+            <dd>
+              各商品ページに記載（定期初回 ¥1,980 税込／2回目以降 ¥6,980 税込）
+            </dd>
+            <dt>送料</dt>
+            <dd>全国一律 無料</dd>
+            <dt>お支払い方法</dt>
+            <dd>クレジットカード・後払い・スマホ決済（架空）</dd>
+            <dt>返品・返金</dt>
+            <dd>初回30日間全額返金保証（条件は商品ページに準ずる ※架空）</dd>
+          </dl>
+        </div>
+
+        <div class="foot-sample">
+          <b>◆ 本サイトについて</b
+          >　当ランディングページは、Webコーディングのスキルを示すための<b>自主制作ポートフォリオサンプル</b>です。「NOCTÉLA」をはじめ、掲載の商品・会社・価格・お客様の声・ランキング・実績数値はすべて<b>架空</b>であり、実在の商品や効能・効果を示すものではありません。記載の表現は薬機法に配慮したサンプル表記です。
+        </div>
+
+        <div class="foot-base">
+          <span>© 2026 NOCTÉLA (Fictional Brand) — Portfolio Sample</span>
+          <span>Design &amp; Code Sample / 架空商品</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- STICKY MOBILE CTA -->
+    <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+      <div class="sticky-inner">
+        <div class="sticky-price">
+          <span class="sp-l">定期初回 77%OFF</span>
+          <span class="sp-v"><span class="yen">¥</span>1,980</span>
+        </div>
+        <button
+          class="sticky-btn"
+          onclick="
+            document
+              .getElementById('offer')
+              .scrollIntoView({ behavior: 'smooth' })
+          "
+        >
+          初回<em>¥1,980</em>で試す
+        </button>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+        var reduce = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+
+        /* ---- Scroll reveal ---- */
+        var reveals = document.querySelectorAll(".reveal");
+        if (reduce || !("IntersectionObserver" in window)) {
+          reveals.forEach(function (el) {
+            el.classList.add("in");
+          });
+        } else {
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                  e.target.classList.add("in");
+                  io.unobserve(e.target);
+                }
+              });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+          );
+          reveals.forEach(function (el) {
+            io.observe(el);
+          });
+          /* Fallback: reveal above-the-fold elements on load.
+             IntersectionObserver's initial callback can miss already-in-view
+             items, leaving the hero blank until the first scroll. */
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              reveals.forEach(function (el) {
+                var r = el.getBoundingClientRect();
+                if (r.top < window.innerHeight && r.bottom > 0) {
+                  el.classList.add("in");
+                }
+              });
+            });
+          });
+        }
+
+        /* ---- FAQ accordion ---- */
+        var qs = document.querySelectorAll(".faq-q");
+        qs.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var open = btn.getAttribute("aria-expanded") === "true";
+            var panel = document.getElementById(
+              btn.getAttribute("aria-controls"),
+            );
+            btn.setAttribute("aria-expanded", String(!open));
+            if (open) {
+              panel.style.maxHeight = "0px";
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+          });
+        });
+        // recompute open panel heights on resize
+        window.addEventListener("resize", function () {
+          document
+            .querySelectorAll('.faq-q[aria-expanded="true"]')
+            .forEach(function (btn) {
+              var panel = document.getElementById(
+                btn.getAttribute("aria-controls"),
+              );
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            });
+        });
+
+        /* ---- Sticky mobile CTA: show after hero, hide at final CTA ---- */
+        var sticky = document.getElementById("stickyCta");
+        var hero = document.querySelector(".hero");
+        var finalCta = document.getElementById("final-cta");
+        var pastHero = false,
+          atFinal = false;
+
+        function syncSticky() {
+          if (window.innerWidth > 880) {
+            sticky.classList.remove("show");
+            return;
+          }
+          if (pastHero && !atFinal) {
+            sticky.classList.add("show");
+            sticky.setAttribute("aria-hidden", "false");
+          } else {
+            sticky.classList.remove("show");
+            sticky.setAttribute("aria-hidden", "true");
+          }
+        }
+        if ("IntersectionObserver" in window) {
+          new IntersectionObserver(
+            function (es) {
+              pastHero = !es[0].isIntersecting;
+              syncSticky();
+            },
+            { threshold: 0 },
+          ).observe(hero);
+          new IntersectionObserver(
+            function (es) {
+              atFinal = es[0].isIntersecting;
+              syncSticky();
+            },
+            { threshold: 0.05 },
+          ).observe(finalCta);
+        }
+        window.addEventListener("resize", syncSticky);
+      })();
+    </script>
+  </body>
+</html>
