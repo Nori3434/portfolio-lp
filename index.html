@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumo｜LP・HP制作 ポートフォリオ</title>
+    <meta
+      name="description"
+      content="Lumo（ルモ）— 中小事業者・個人事業主向けに、速く・手頃に・成果につながる LP / ホームページを、デザインからコーディング・公開まで一括制作。自主制作サンプル5業種。"
+    />
+    <meta name="robots" content="noindex" />
+    <meta property="og:title" content="Lumo｜LP・HP制作 ポートフォリオ" />
+    <meta
+      property="og:description"
+      content="デザイン〜コーディング〜公開まで一括。LP制作サンプル5業種。"
+    />
+    <meta property="og:type" content="website" />
+    <style>
+      :root {
+        --bg: #faf8f3;
+        --panel: #fffdf9;
+        --ink: #1c1a17;
+        --muted: #6f6a62;
+        --line: #e7e1d6;
+        --accent: #c47d2c;
+        --accent-ink: #9a5f18;
+        --shadow:
+          0 1px 2px rgba(28, 26, 23, 0.04),
+          0 12px 32px -12px rgba(28, 26, 23, 0.18);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+          "Hiragino Sans", "Noto Sans JP", "Segoe UI", sans-serif;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      .wrap {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* header */
+      header {
+        padding: 30px 0 8px;
+      }
+      .brand {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+      }
+      .brand .mark {
+        font-weight: 800;
+        font-size: 26px;
+        letter-spacing: -0.01em;
+        background: linear-gradient(
+          100deg,
+          var(--accent),
+          #e0a14e 60%,
+          var(--accent)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .brand .role {
+        font-size: 13px;
+        color: var(--muted);
+        letter-spacing: 0.04em;
+      }
+
+      /* hero */
+      .hero {
+        padding: 48px 0 40px;
+        border-bottom: 1px solid var(--line);
+      }
+      .hero h1 {
+        font-size: clamp(28px, 5vw, 46px);
+        line-height: 1.25;
+        letter-spacing: -0.02em;
+        font-weight: 800;
+        max-width: 18ch;
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--accent-ink);
+      }
+      .hero p {
+        margin-top: 18px;
+        font-size: clamp(15px, 2vw, 17px);
+        color: var(--muted);
+        max-width: 60ch;
+      }
+      .tags {
+        margin-top: 22px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .tags span {
+        font-size: 12.5px;
+        color: var(--accent-ink);
+        background: #f6ecdc;
+        border: 1px solid #ecdcc2;
+        border-radius: 999px;
+        padding: 5px 13px;
+        letter-spacing: 0.02em;
+      }
+
+      /* gallery */
+      .gallery {
+        padding: 44px 0 8px;
+      }
+      .sec-label {
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        color: var(--muted);
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      .grid {
+        margin-top: 20px;
+        display: grid;
+        gap: 22px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        box-shadow: var(--shadow);
+        transition:
+          transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+          box-shadow 0.35s,
+          border-color 0.35s;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow:
+          0 1px 2px rgba(28, 26, 23, 0.05),
+          0 28px 50px -18px rgba(28, 26, 23, 0.32);
+        border-color: #dcd2c1;
+      }
+      .thumb {
+        position: relative;
+        aspect-ratio: 16/10;
+        overflow: hidden;
+        background: #efe9df;
+      }
+      .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+      .card:hover .thumb img {
+        transform: scale(1.045);
+      }
+      /* fluxa fallback (no cover image) */
+      .thumb.fallback {
+        display: grid;
+        place-content: center;
+        text-align: center;
+        background: radial-gradient(120% 120% at 20% 0%, #2a3550, #161d2e 70%);
+      }
+      .thumb.fallback .fx {
+        font-weight: 800;
+        font-size: 44px;
+        letter-spacing: -0.02em;
+        color: #eaf0ff;
+      }
+      .thumb.fallback .fx b {
+        color: #7fa6ff;
+      }
+      .thumb.fallback small {
+        display: block;
+        margin-top: 6px;
+        color: #9fb0d4;
+        font-size: 12.5px;
+        letter-spacing: 0.08em;
+      }
+      .meta {
+        padding: 16px 18px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .meta .name {
+        font-weight: 800;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+      }
+      .meta .ind {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .meta .go {
+        margin-top: 8px;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--accent-ink);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .meta .go .ar {
+        transition: transform 0.3s;
+      }
+      .card:hover .meta .go .ar {
+        transform: translateX(4px);
+      }
+
+      /* footer */
+      footer {
+        margin-top: 52px;
+        border-top: 1px solid var(--line);
+        padding: 30px 0 56px;
+        color: var(--muted);
+        font-size: 13.5px;
+      }
+      footer .note {
+        max-width: 64ch;
+      }
+      footer .cta {
+        margin-top: 14px;
+        color: var(--ink);
+        font-weight: 700;
+      }
+      @media (max-width: 560px) {
+        .hero {
+          padding: 34px 0 30px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="brand">
+          <span class="mark">Lumo</span>
+          <span class="role">ルモ｜LP・HP制作</span>
+        </div>
+      </header>
+
+      <section class="hero">
+        <h1>速く、手頃に、<em>成果につながる</em><br />LP／ホームページを。</h1>
+        <p>
+          中小事業者・個人事業主さま向けに、企画構成からデザイン・コーディング・公開まで一括で制作します。スマホ対応（レスポンシブ）標準。下記は業種に合わせて作った自主制作サンプルです。
+        </p>
+        <div class="tags">
+          <span>企画・構成</span><span>デザイン</span><span>コーディング</span
+          ><span>レスポンシブ</span><span>公開・納品</span>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="sec-label">Works — 制作サンプル（5業種）</div>
+        <div class="grid">
+          <a class="card" href="noctela/">
+            <div class="thumb">
+              <img
+                src="noctela/_cover/cover-wide.png"
+                alt="NOCTÉLA 美容・健康食品 高単価LP"
+                loading="lazy"
+              />
+            </div>
+            <div class="meta">
+              <div class="name">NOCTÉLA</div>
+              <div class="ind">美容・健康食品／高単価 LP</div>
+              <div class="go">サンプルを見る <span class="ar">→</span></div>
+            </div>
+          </a>
+
+          <a class="card" href="greena-aojiru/">
+            <div class="thumb">
+              <img
+                src="_covers/GREENA-LP-cover.png"
+                alt="GREENA 青汁 健康食品D2C LP"
+                loading="lazy"
+              />
+            </div>
+            <div class="meta">
+              <div class="name">GREENA</div>
+              <div class="ind">健康食品D2C・青汁 LP</div>
+              <div class="go">サンプルを見る <span class="ar">→</span></div>
+            </div>
+          </a>
+
+          <a class="card" href="grynd-gym/">
+            <div class="thumb">
+              <img
+                src="_covers/GRYND-LP-cover.png"
+                alt="GRYND パーソナルジム LP"
+                loading="lazy"
+              />
+            </div>
+            <div class="meta">
+              <div class="name">GRYND</div>
+              <div class="ind">パーソナルジム LP</div>
+              <div class="go">サンプルを見る <span class="ar">→</span></div>
+            </div>
+          </a>
+
+          <a class="card" href="move-academy/">
+            <div class="thumb">
+              <img
+                src="_covers/MOVE-LP-cover.png"
+                alt="MOVE 動画編集スクール LP"
+                loading="lazy"
+              />
+            </div>
+            <div class="meta">
+              <div class="name">MOVE</div>
+              <div class="ind">動画編集スクール LP</div>
+              <div class="go">サンプルを見る <span class="ar">→</span></div>
+            </div>
+          </a>
+
+          <a class="card" href="fluxa-saas/">
+            <div class="thumb fallback">
+              <div>
+                <span class="fx">flu<b>x</b>a</span
+                ><small>SAAS / STARTUP</small>
+              </div>
+            </div>
+            <div class="meta">
+              <div class="name">fluxa</div>
+              <div class="ind">SaaS・スタートアップ LP</div>
+              <div class="go">サンプルを見る <span class="ar">→</span></div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <footer>
+        <div class="note">
+          ※
+          掲載はすべて、実在ブランドの無断掲載を避けるため<strong>架空商品</strong>で制作した自主制作サンプルです。実案件の実績は順次掲載します。
+        </div>
+        <div class="cta">
+          LP・HP制作のご相談は CrowdWorks／ランサーズ「Lumo」まで。
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
