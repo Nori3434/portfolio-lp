@@ -1,0 +1,3052 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      GRYND（グラインド）｜3ヶ月後の自分に、賭ける。完全個室パーソナルジム
+    </title>
+    <meta
+      name="description"
+      content="完全個室・専属トレーナー・食事サポートのパーソナルトレーニングジム GRYND（グラインド）。無料カウンセリング受付中。※架空サービス・自主制作ポートフォリオサンプル。実在のサービス・成果を示すものではありません。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0b0b0f;
+        --bg-2: #121218;
+        --bg-3: #16161d;
+        --panel: #1b1b23;
+        --line: rgba(255, 255, 255, 0.1);
+        --line-strong: rgba(255, 255, 255, 0.2);
+        --ink: #f2f2ef;
+        --ink-70: rgba(242, 242, 239, 0.7);
+        --ink-50: rgba(242, 242, 239, 0.5);
+        --ink-35: rgba(242, 242, 239, 0.35);
+        --lime: #c6f432;
+        --lime-dim: #a6cf25;
+        --orange: #ff5a1f;
+        --orange-dim: #e64a14;
+        --display: "Anton", "Noto Sans JP", sans-serif;
+        --sans: "Archivo", "Noto Sans JP", sans-serif;
+        --jp: "Noto Sans JP", sans-serif;
+        --maxw: 1200px;
+        --ease: cubic-bezier(0.16, 0.84, 0.36, 1);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        font-family: var(--jp);
+        color: var(--ink);
+        background: var(--bg);
+        line-height: 1.8;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        overflow-x: hidden;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ::selection {
+        background: var(--lime);
+        color: #000;
+      }
+      :focus-visible {
+        outline: 3px solid var(--lime);
+        outline-offset: 3px;
+        border-radius: 2px;
+      }
+
+      /* ============ HELPERS ============ */
+      .wrap {
+        max-width: var(--maxw);
+        margin-inline: auto;
+        padding-inline: 22px;
+      }
+      .wrap-narrow {
+        max-width: 820px;
+        margin-inline: auto;
+        padding-inline: 22px;
+      }
+      .eyebrow {
+        font-family: var(--display);
+        font-size: clamp(0.78rem, 2.4vw, 0.95rem);
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--lime);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7em;
+        line-height: 1.2;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 26px;
+        height: 3px;
+        background: var(--lime);
+        transform: skewX(-22deg);
+      }
+      .eyebrow.orange {
+        color: var(--orange);
+      }
+      .eyebrow.orange::before {
+        background: var(--orange);
+      }
+      h2.sec-title {
+        font-family: var(--jp);
+        font-weight: 900;
+        font-size: clamp(1.7rem, 6.2vw, 3rem);
+        line-height: 1.18;
+        letter-spacing: 0.005em;
+        word-break: auto-phrase;
+      }
+      .sec-title .mark {
+        color: var(--lime);
+      }
+      .sec-title .mark-o {
+        color: var(--orange);
+      }
+      .lede {
+        font-size: clamp(0.95rem, 2.5vw, 1.08rem);
+        color: var(--ink-70);
+        line-height: 1.95;
+        font-weight: 400;
+      }
+      .num {
+        font-family: var(--display);
+        line-height: 1.04;
+        letter-spacing: 0.01em;
+        font-weight: 400;
+      }
+      .disc {
+        font-size: clamp(0.68rem, 1.9vw, 0.74rem);
+        color: var(--ink-35);
+        line-height: 1.7;
+        letter-spacing: 0.02em;
+      }
+      section {
+        position: relative;
+      }
+      .sec-pad {
+        padding-block: clamp(64px, 11vw, 124px);
+      }
+
+      /* diagonal slash divider between dark blocks */
+      .slash-top {
+        position: relative;
+      }
+      .slash-top::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: -10%;
+        width: 120%;
+        height: 64px;
+        background: inherit;
+        transform: skewY(-2.6deg);
+        transform-origin: top left;
+        z-index: 0;
+      }
+      .slash-top > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* reveal */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.9s var(--ease),
+          transform 0.9s var(--ease);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      .reveal.d1 {
+        transition-delay: 0.08s;
+      }
+      .reveal.d2 {
+        transition-delay: 0.16s;
+      }
+      .reveal.d3 {
+        transition-delay: 0.24s;
+      }
+      .reveal.d4 {
+        transition-delay: 0.32s;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+        }
+        .pulse,
+        .marq-track {
+          animation: none !important;
+        }
+      }
+
+      /* ============ BUTTONS ============ */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6em;
+        font-family: var(--sans);
+        font-weight: 800;
+        font-size: clamp(0.92rem, 2.4vw, 1.02rem);
+        letter-spacing: 0.04em;
+        padding: 17px 30px;
+        line-height: 1.1;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        clip-path: polygon(0 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
+        transition:
+          transform 0.25s var(--ease),
+          filter 0.25s var(--ease),
+          background 0.25s var(--ease);
+        text-align: center;
+      }
+      .btn-lime {
+        background: var(--lime);
+        color: #0a0a0a;
+      }
+      .btn-lime:hover {
+        transform: translate(2px, -2px);
+        filter: brightness(1.08);
+      }
+      .btn-orange {
+        background: var(--orange);
+        color: #fff;
+      }
+      .btn-orange:hover {
+        transform: translate(2px, -2px);
+        filter: brightness(1.07);
+      }
+      .btn-ghost {
+        background: transparent;
+        color: var(--ink);
+        border: 2px solid var(--line-strong);
+        clip-path: none;
+      }
+      .btn-ghost:hover {
+        border-color: var(--lime);
+        color: var(--lime);
+        transform: translateY(-2px);
+      }
+      .btn .arr {
+        font-family: var(--display);
+        font-size: 1.1em;
+        transition: transform 0.25s var(--ease);
+      }
+      .btn:hover .arr {
+        transform: translateX(4px);
+      }
+
+      /* ============ 1. SAMPLE BAR ============ */
+      .sample-bar {
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        background: var(--lime);
+        color: #0a0a0a;
+        font-family: var(--sans);
+        font-weight: 700;
+        font-size: clamp(0.64rem, 2.3vw, 0.78rem);
+        letter-spacing: 0.01em;
+        text-align: center;
+        padding: 7px 14px;
+        line-height: 1.45;
+        border-bottom: 2px solid #0a0a0a;
+      }
+      .sample-bar b {
+        font-weight: 800;
+      }
+
+      /* ============ 2. HEADER ============ */
+      header.site {
+        position: sticky;
+        top: 0;
+        z-index: 190;
+        background: rgba(11, 11, 15, 0.82);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        height: 64px;
+      }
+      .logo {
+        font-family: var(--display);
+        font-size: 1.62rem;
+        letter-spacing: 0.06em;
+        color: var(--ink);
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        line-height: 1;
+      }
+      .logo .dot {
+        width: 11px;
+        height: 11px;
+        background: var(--lime);
+        transform: skewX(-18deg);
+        display: inline-block;
+      }
+      .nav-cta {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .nav-links {
+        display: none;
+        gap: 26px;
+        font-family: var(--sans);
+        font-weight: 600;
+        font-size: 0.86rem;
+        letter-spacing: 0.05em;
+        color: var(--ink-70);
+      }
+      .nav-links a:hover {
+        color: var(--lime);
+      }
+      .nav .btn {
+        padding: 11px 20px;
+        font-size: 0.84rem;
+      }
+      @media (min-width: 920px) {
+        .nav-links {
+          display: flex;
+        }
+      }
+
+      /* ============ 3. HERO ============ */
+      .hero {
+        position: relative;
+        background:
+          radial-gradient(
+            120% 80% at 82% 8%,
+            rgba(198, 244, 50, 0.12),
+            transparent 55%
+          ),
+          radial-gradient(
+            90% 70% at 4% 100%,
+            rgba(255, 90, 31, 0.14),
+            transparent 52%
+          ),
+          var(--bg);
+        overflow: hidden;
+      }
+      /* faint grid scaffolding */
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(var(--line) 1px, transparent 1px),
+          linear-gradient(90deg, var(--line) 1px, transparent 1px);
+        background-size: 64px 64px;
+        mask-image: radial-gradient(
+          120% 100% at 60% 30%,
+          #000 30%,
+          transparent 78%
+        );
+        opacity: 0.5;
+        z-index: 0;
+      }
+      .hero-inner {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 38px;
+        padding-block: clamp(48px, 9vw, 92px) clamp(40px, 7vw, 72px);
+        align-items: center;
+      }
+      .hero-tag {
+        font-family: var(--sans);
+        font-weight: 700;
+        font-size: 0.78rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--ink-70);
+        margin-bottom: 22px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .hero-tag .pulse {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--lime);
+        box-shadow: 0 0 0 0 rgba(198, 244, 50, 0.6);
+        animation: pulse 2.2s infinite;
+      }
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(198, 244, 50, 0.55);
+        }
+        70% {
+          box-shadow: 0 0 0 13px rgba(198, 244, 50, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(198, 244, 50, 0);
+        }
+      }
+      h1.hero-h1 {
+        font-family: var(--jp);
+        font-weight: 900;
+        font-size: clamp(2.6rem, 11.5vw, 5.6rem);
+        line-height: 1.08;
+        letter-spacing: 0.002em;
+        margin-bottom: 26px;
+      }
+      h1.hero-h1 .l2 {
+        display: inline-block;
+      }
+      h1.hero-h1 .bet {
+        color: var(--lime);
+        position: relative;
+        white-space: nowrap;
+      }
+      h1.hero-h1 .bet::after {
+        content: "";
+        position: absolute;
+        left: -2%;
+        right: -2%;
+        bottom: 0.06em;
+        height: 0.13em;
+        background: var(--orange);
+        transform: skewX(-12deg);
+      }
+      .hero-sub {
+        font-size: clamp(0.98rem, 2.7vw, 1.16rem);
+        color: var(--ink-70);
+        line-height: 1.9;
+        max-width: 30em;
+        margin-bottom: 34px;
+      }
+      .hero-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        align-items: center;
+      }
+      .hero-note {
+        margin-top: 18px;
+        font-family: var(--sans);
+        font-weight: 600;
+        font-size: 0.8rem;
+        letter-spacing: 0.04em;
+        color: var(--ink-50);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .hero-note .tick {
+        color: var(--lime);
+        font-weight: 800;
+      }
+
+      /* hero stat strip */
+      .hero-stats {
+        position: relative;
+        z-index: 2;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .hstat {
+        padding: 24px 8px;
+        text-align: center;
+        border-right: 1px solid var(--line);
+        min-width: 0;
+      }
+      .hstat:last-child {
+        border-right: none;
+      }
+      .hstat .num {
+        font-size: clamp(1.5rem, 5.7vw, 3.4rem);
+        color: var(--ink);
+        display: block;
+        white-space: nowrap;
+        letter-spacing: 0;
+      }
+      .hstat .num .u {
+        font-size: 0.42em;
+        color: var(--lime);
+        margin-left: 0.1em;
+        letter-spacing: 0.02em;
+      }
+      .hstat.o .num .u {
+        color: var(--orange);
+      }
+      .hstat .lbl {
+        font-family: var(--sans);
+        font-weight: 600;
+        font-size: clamp(0.66rem, 2vw, 0.78rem);
+        letter-spacing: 0.08em;
+        color: var(--ink-50);
+        margin-top: 4px;
+        line-height: 1.4;
+      }
+      .hero-stats-note {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 10px 14px 0;
+      }
+
+      @media (min-width: 940px) {
+        .hero-inner {
+          grid-template-columns: 1.12fr 0.88fr;
+          gap: 56px;
+          padding-block: clamp(70px, 8vw, 120px) clamp(60px, 6vw, 96px);
+        }
+        .hero-figure-wrap {
+          display: block;
+        }
+      }
+
+      /* hero athlete silhouette figure */
+      .hero-figure-wrap {
+        display: none;
+        position: relative;
+      }
+      .hero-figure {
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 24px 50px rgba(0, 0, 0, 0.5));
+      }
+
+      /* ============ MARQUEE ============ */
+      .marq {
+        background: var(--lime);
+        color: #0a0a0a;
+        overflow: hidden;
+        padding: 13px 0;
+        border-block: 2px solid #0a0a0a;
+        white-space: nowrap;
+      }
+      .marq-track {
+        display: inline-flex;
+        gap: 0;
+        animation: marq 26s linear infinite;
+        will-change: transform;
+      }
+      .marq-track span {
+        font-family: var(--display);
+        font-size: clamp(1.05rem, 3.2vw, 1.5rem);
+        letter-spacing: 0.06em;
+        padding-inline: 26px;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 26px;
+      }
+      .marq-track span::after {
+        content: "◆";
+        font-size: 0.6em;
+        color: var(--orange);
+      }
+      @keyframes marq {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* ============ 4. 悩み (PAIN) ============ */
+      .pain {
+        background: var(--bg-2);
+      }
+      .pain-head {
+        text-align: center;
+        max-width: 760px;
+        margin: 0 auto clamp(38px, 6vw, 60px);
+      }
+      .pain-head .lede {
+        margin-top: 18px;
+      }
+      .pain-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .pain-card {
+        background: var(--bg-3);
+        border: 1px solid var(--line);
+        border-left: 3px solid var(--orange);
+        padding: 24px 24px 24px 22px;
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+      }
+      .pain-card .qn {
+        font-family: var(--display);
+        font-size: 1.9rem;
+        color: var(--orange);
+        line-height: 1;
+        flex: none;
+        margin-top: 2px;
+      }
+      .pain-card p {
+        font-size: clamp(0.96rem, 2.5vw, 1.06rem);
+        font-weight: 500;
+        color: var(--ink);
+        line-height: 1.7;
+      }
+      .pain-bridge {
+        text-align: center;
+        margin-top: clamp(36px, 6vw, 56px);
+      }
+      .pain-bridge .big {
+        font-family: var(--jp);
+        font-weight: 900;
+        font-size: clamp(1.4rem, 5.2vw, 2.3rem);
+        line-height: 1.35;
+      }
+      .pain-bridge .big .mark {
+        color: var(--lime);
+      }
+      @media (min-width: 720px) {
+        .pain-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      /* ============ 5. 選ばれる理由 (REASONS) ============ */
+      .reasons {
+        background: var(--bg);
+      }
+      .reasons-head {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        margin-bottom: clamp(40px, 6vw, 60px);
+      }
+      .reasons-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .rcard {
+        background: linear-gradient(180deg, var(--bg-3), var(--bg-2));
+        border: 1px solid var(--line);
+        padding: 32px 26px 30px;
+        position: relative;
+        overflow: hidden;
+        transition:
+          border-color 0.3s var(--ease),
+          transform 0.3s var(--ease);
+      }
+      .rcard:hover {
+        border-color: var(--line-strong);
+        transform: translateY(-4px);
+      }
+      .rcard::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--lime);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s var(--ease);
+      }
+      .rcard:hover::before {
+        transform: scaleX(1);
+      }
+      .rcard .rno {
+        font-family: var(--display);
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+        color: var(--ink-35);
+        margin-bottom: 18px;
+        display: block;
+      }
+      .ricon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 20px;
+      }
+      .rcard h3 {
+        font-family: var(--jp);
+        font-weight: 900;
+        font-size: clamp(1.18rem, 3.6vw, 1.4rem);
+        line-height: 1.35;
+        margin-bottom: 12px;
+      }
+      .rcard p {
+        font-size: 0.94rem;
+        color: var(--ink-70);
+        line-height: 1.85;
+      }
+      @media (min-width: 880px) {
+        .reasons-head {
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: space-between;
+        }
+        .reasons-head .lede {
+          max-width: 30em;
+        }
+        .reasons-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* ============ 6. BEFORE/AFTER ============ */
+      .ba {
+        background: var(--bg-2);
+      }
+      .ba-head {
+        text-align: center;
+        max-width: 760px;
+        margin: 0 auto clamp(36px, 6vw, 54px);
+      }
+      .ba-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .ba-card {
+        background: var(--bg-3);
+        border: 1px solid var(--line);
+        padding: 22px 20px 20px;
+      }
+      .ba-fig {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(180deg, #101016, #0c0c11);
+        border: 1px solid var(--line);
+        padding: 18px 10px;
+        margin-bottom: 16px;
+      }
+      .ba-col {
+        text-align: center;
+      }
+      .ba-col svg {
+        width: 100%;
+        max-width: 116px;
+        height: auto;
+        margin: 0 auto;
+      }
+      .ba-state {
+        font-family: var(--display);
+        font-size: 0.92rem;
+        letter-spacing: 0.16em;
+        margin-top: 8px;
+        line-height: 1.2;
+      }
+      .ba-state.before {
+        color: var(--ink-50);
+      }
+      .ba-state.after {
+        color: var(--lime);
+      }
+      .ba-arrow {
+        font-family: var(--display);
+        font-size: 1.5rem;
+        color: var(--orange);
+        line-height: 1;
+      }
+      .ba-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .ba-meta .who {
+        font-family: var(--sans);
+        font-weight: 700;
+        font-size: 0.92rem;
+        letter-spacing: 0.03em;
+        color: var(--ink);
+      }
+      .ba-meta .who span {
+        color: var(--ink-50);
+        font-weight: 600;
+        font-size: 0.84rem;
+      }
+      .ba-meta .span {
+        font-family: var(--display);
+        font-size: 1.05rem;
+        color: var(--orange);
+        letter-spacing: 0.04em;
+      }
+      .ba-note {
+        margin-top: 20px;
+        text-align: center;
+      }
+      @media (min-width: 760px) {
+        .ba-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* ============ 7. PRICING ============ */
+      .pricing {
+        background: var(--bg);
+      }
+      .pricing-head {
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto clamp(40px, 6vw, 58px);
+      }
+      .plans {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        align-items: stretch;
+      }
+      .plan {
+        background: var(--bg-3);
+        border: 1px solid var(--line);
+        padding: 30px 26px 30px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+      .plan.feat {
+        border: 2px solid var(--lime);
+        background: linear-gradient(
+          180deg,
+          rgba(198, 244, 50, 0.06),
+          var(--bg-3) 40%
+        );
+      }
+      .plan-badge {
+        position: absolute;
+        top: 0;
+        right: 22px;
+        transform: translateY(-50%);
+        background: var(--lime);
+        color: #0a0a0a;
+        font-family: var(--sans);
+        font-weight: 800;
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        padding: 6px 14px;
+        clip-path: polygon(0 0, 100% 0, calc(100% - 9px) 100%, 0 100%);
+      }
+      .plan .pname {
+        font-family: var(--display);
+        font-size: 1.6rem;
+        letter-spacing: 0.06em;
+        color: var(--ink);
+        line-height: 1.1;
+      }
+      .plan .ptag {
+        font-size: 0.86rem;
+        color: var(--ink-50);
+        margin: 6px 0 22px;
+        line-height: 1.5;
+        min-height: 2.4em;
+      }
+      .plan .pprice {
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
+        flex-wrap: wrap;
+        line-height: 1.14;
+      }
+      .plan .pprice .yen {
+        font-family: var(--display);
+        font-size: 1.2rem;
+        color: var(--ink-70);
+        align-self: flex-start;
+        margin-top: 0.3em;
+      }
+      .plan .pprice .amt {
+        font-family: var(--display);
+        font-size: clamp(2.6rem, 9vw, 3.4rem);
+        color: var(--ink);
+        line-height: 1.12;
+      }
+      .plan.feat .pprice .amt {
+        color: var(--lime);
+      }
+      .plan .pprice .per {
+        font-family: var(--sans);
+        font-weight: 600;
+        font-size: 0.84rem;
+        color: var(--ink-50);
+      }
+      .plan .punit {
+        font-size: 0.78rem;
+        color: var(--ink-35);
+        margin-top: 4px;
+        letter-spacing: 0.02em;
+      }
+      .plan ul {
+        list-style: none;
+        margin: 22px 0 26px;
+        display: grid;
+        gap: 11px;
+      }
+      .plan li {
+        font-size: 0.9rem;
+        color: var(--ink-70);
+        line-height: 1.55;
+        display: flex;
+        gap: 11px;
+        align-items: flex-start;
+      }
+      .plan li svg {
+        flex: none;
+        margin-top: 3px;
+      }
+      .plan .btn {
+        margin-top: auto;
+        width: 100%;
+      }
+      .pricing-note {
+        text-align: center;
+        margin-top: clamp(26px, 4vw, 38px);
+      }
+      @media (min-width: 880px) {
+        .plans {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .plan.feat {
+          transform: scale(1.035);
+        }
+      }
+
+      /* ============ 8. TRAINERS ============ */
+      .trainers {
+        background: var(--bg-2);
+      }
+      .tr-head {
+        margin-bottom: clamp(38px, 6vw, 56px);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .tr-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .tcard {
+        background: var(--bg-3);
+        border: 1px solid var(--line);
+        overflow: hidden;
+        transition:
+          transform 0.3s var(--ease),
+          border-color 0.3s var(--ease);
+      }
+      .tcard:hover {
+        transform: translateY(-4px);
+        border-color: var(--line-strong);
+      }
+      .tavatar {
+        position: relative;
+        background:
+          radial-gradient(
+            80% 80% at 50% 18%,
+            rgba(198, 244, 50, 0.16),
+            transparent 60%
+          ),
+          linear-gradient(180deg, #14141b, #0e0e13);
+        aspect-ratio: 4 / 3;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .tavatar svg {
+        width: 70%;
+        max-width: 180px;
+        height: auto;
+      }
+      .tinit {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        font-family: var(--display);
+        font-size: 2.4rem;
+        line-height: 0.9;
+        color: var(--lime);
+        letter-spacing: 0.04em;
+      }
+      .tbody {
+        padding: 20px 22px 24px;
+      }
+      .tbody .trole {
+        font-family: var(--sans);
+        font-weight: 700;
+        font-size: 0.74rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--orange);
+        margin-bottom: 8px;
+      }
+      .tbody h3 {
+        font-family: var(--jp);
+        font-weight: 900;
+        font-size: 1.28rem;
+        line-height: 1.3;
+        margin-bottom: 4px;
+      }
+      .tbody h3 .en {
+        font-family: var(--sans);
+        font-weight: 600;
+        font-size: 0.82rem;
+        color: var(--ink-50);
+        letter-spacing: 0.06em;
+        margin-left: 8px;
+      }
+      .tbody p {
+        font-size: 0.9rem;
+        color: var(--ink-70);
+        line-height: 1.8;
+        margin-top: 12px;
+      }
+      .ttags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin-top: 16px;
+      }
+      .ttag {
+        font-family: var(--sans);
+        font-weight: 600;
+        font-size: 0.72rem;
+        letter-spacing: 0.03em;
+        color: var(--ink-70);
+        border: 1px solid var(--line);
+        padding: 4px 11px;
+      }
+      @media (min-width: 820px) {
+        .tr-head {
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: space-between;
+        }
+        .tr-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* ============ 9. VOICE ============ */
+      .voice {
+        background: var(--bg);
+      }
+      .voice-head {
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto clamp(38px, 6vw, 56px);
+      }
+      .v-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .vcard {
+        background: var(--bg-3);
+        border: 1px solid var(--line);
+        padding: 28px 26px 26px;
+        position: relative;
+      }
+      .vcard .quote {
+        font-family: var(--display);
+        font-size: 3rem;
+        line-height: 0.7;
+        color: var(--lime);
+        opacity: 0.4;
+        margin-bottom: 10px;
+      }
+      .vcard p {
+        font-size: 0.98rem;
+        color: var(--ink);
+        line-height: 1.85;
+        font-weight: 400;
+      }
+      .vmeta {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        margin-top: 22px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+      }
+      .vmeta .av {
+        width: 42px;
+        height: 42px;
+        flex: none;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--orange), var(--orange-dim));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--display);
+        font-size: 1.05rem;
+        color: #fff;
+        line-height: 1;
+      }
+      .vmeta .av.lime {
+        background: linear-gradient(135deg, var(--lime), var(--lime-dim));
+        color: #0a0a0a;
+      }
+      .vmeta .vn {
+        font-family: var(--sans);
+        font-weight: 700;
+        font-size: 0.88rem;
+        color: var(--ink);
+        line-height: 1.35;
+      }
+      .vmeta .vn span {
+        display: block;
+        font-weight: 600;
+        font-size: 0.78rem;
+        color: var(--ink-50);
+      }
+      .voice-note {
+        text-align: center;
+        margin-top: clamp(24px, 4vw, 36px);
+      }
+      @media (min-width: 860px) {
+        .v-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* ============ 10. ACCESS ============ */
+      .access {
+        background: var(--bg-2);
+      }
+      .access-wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        align-items: stretch;
+      }
+      .access-info .eyebrow {
+        margin-bottom: 18px;
+      }
+      .access-info h2 {
+        margin-bottom: 22px;
+      }
+      .access-list {
+        list-style: none;
+        display: grid;
+        gap: 0;
+        border-top: 1px solid var(--line);
+        margin-top: 6px;
+      }
+      .access-list li {
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        gap: 14px;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 0.94rem;
+        line-height: 1.6;
+        align-items: start;
+      }
+      .access-list .k {
+        font-family: var(--sans);
+        font-weight: 700;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--lime);
+        padding-top: 2px;
+      }
+      .access-list .v {
+        color: var(--ink-70);
+      }
+      .access-map {
+        background: var(--bg-3);
+        border: 1px solid var(--line);
+        min-height: 240px;
+        position: relative;
+        overflow: hidden;
+      }
+      .access-map svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .map-badge {
+        position: absolute;
+        left: 14px;
+        bottom: 14px;
+        background: rgba(11, 11, 15, 0.86);
+        border: 1px solid var(--line);
+        padding: 7px 13px;
+        font-family: var(--sans);
+        font-weight: 700;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        color: var(--ink-70);
+      }
+      @media (min-width: 860px) {
+        .access-wrap {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      /* ============ 11. FAQ ============ */
+      .faq {
+        background: var(--bg);
+      }
+      .faq-head {
+        text-align: center;
+        margin-bottom: clamp(34px, 5vw, 50px);
+      }
+      .faq-list {
+        max-width: 800px;
+        margin: 0 auto;
+        border-top: 1px solid var(--line);
+      }
+      .faq-item {
+        border-bottom: 1px solid var(--line);
+      }
+      .faq-q {
+        width: 100%;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 22px 4px;
+        color: var(--ink);
+        font-family: var(--jp);
+        font-weight: 700;
+        font-size: clamp(0.96rem, 2.6vw, 1.08rem);
+        line-height: 1.55;
+        transition: color 0.25s var(--ease);
+      }
+      .faq-q:hover {
+        color: var(--lime);
+      }
+      .faq-q .qmark {
+        font-family: var(--display);
+        font-size: 1.05rem;
+        color: var(--lime);
+        flex: none;
+        line-height: 1;
+      }
+      .faq-q .qtext {
+        flex: 1;
+      }
+      .faq-q .ico {
+        flex: none;
+        width: 22px;
+        height: 22px;
+        position: relative;
+        transition: transform 0.35s var(--ease);
+      }
+      .faq-q .ico::before,
+      .faq-q .ico::after {
+        content: "";
+        position: absolute;
+        background: currentColor;
+        left: 50%;
+        top: 50%;
+      }
+      .faq-q .ico::before {
+        width: 16px;
+        height: 2.5px;
+        transform: translate(-50%, -50%);
+      }
+      .faq-q .ico::after {
+        width: 2.5px;
+        height: 16px;
+        transform: translate(-50%, -50%);
+        transition: transform 0.35s var(--ease);
+      }
+      .faq-q[aria-expanded="true"] .ico::after {
+        transform: translate(-50%, -50%) scaleY(0);
+      }
+      .faq-q[aria-expanded="true"] .ico {
+        color: var(--orange);
+      }
+      .faq-a {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s var(--ease);
+      }
+      .faq-a-inner {
+        padding: 0 4px 24px 38px;
+        font-size: 0.94rem;
+        color: var(--ink-70);
+        line-height: 1.9;
+      }
+
+      /* ============ 12. FINAL CTA ============ */
+      .final {
+        position: relative;
+        background:
+          radial-gradient(
+            90% 90% at 80% 0%,
+            rgba(255, 90, 31, 0.16),
+            transparent 55%
+          ),
+          radial-gradient(
+            80% 80% at 0% 100%,
+            rgba(198, 244, 50, 0.14),
+            transparent 55%
+          ),
+          var(--bg-2);
+        overflow: hidden;
+        text-align: center;
+      }
+      .final::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(var(--line) 1px, transparent 1px),
+          linear-gradient(90deg, var(--line) 1px, transparent 1px);
+        background-size: 56px 56px;
+        opacity: 0.4;
+        mask-image: radial-gradient(
+          120% 90% at 50% 50%,
+          #000 35%,
+          transparent 80%
+        );
+        z-index: 0;
+      }
+      .final-inner {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .final h2 {
+        font-family: var(--jp);
+        font-weight: 900;
+        font-size: clamp(2rem, 8vw, 3.6rem);
+        line-height: 1.16;
+        margin: 16px 0 18px;
+      }
+      .final h2 .mark {
+        color: var(--lime);
+      }
+      .final p {
+        font-size: clamp(0.98rem, 2.6vw, 1.12rem);
+        color: var(--ink-70);
+        line-height: 1.9;
+        max-width: 34em;
+        margin: 0 auto 32px;
+      }
+      .final-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+      }
+      .final .btn {
+        padding: 19px 36px;
+        font-size: clamp(1rem, 2.6vw, 1.12rem);
+      }
+      .final-reassure {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 24px;
+        justify-content: center;
+        margin-top: 30px;
+      }
+      .final-reassure span {
+        font-family: var(--sans);
+        font-weight: 600;
+        font-size: 0.82rem;
+        color: var(--ink-70);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        letter-spacing: 0.02em;
+      }
+      .final-reassure .tick {
+        color: var(--lime);
+        font-weight: 800;
+      }
+
+      /* ============ 13. FOOTER ============ */
+      footer.site-foot {
+        background: #08080b;
+        border-top: 1px solid var(--line);
+      }
+      .foot-top {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-block: clamp(44px, 7vw, 64px) 36px;
+      }
+      .foot-brand .logo {
+        font-size: 1.9rem;
+        margin-bottom: 16px;
+      }
+      .foot-brand p {
+        font-size: 0.88rem;
+        color: var(--ink-50);
+        line-height: 1.85;
+        max-width: 30em;
+      }
+      .foot-cols {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .foot-col h4 {
+        font-family: var(--sans);
+        font-weight: 700;
+        font-size: 0.74rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--lime);
+        margin-bottom: 14px;
+      }
+      .foot-col ul {
+        list-style: none;
+        display: grid;
+        gap: 9px;
+      }
+      .foot-col a,
+      .foot-col li {
+        font-size: 0.88rem;
+        color: var(--ink-70);
+        line-height: 1.5;
+      }
+      .foot-col a:hover {
+        color: var(--lime);
+      }
+      .tokushoho {
+        border-top: 1px solid var(--line);
+        padding-block: 30px;
+      }
+      .tokushoho h4 {
+        font-family: var(--sans);
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        color: var(--ink-70);
+        margin-bottom: 16px;
+      }
+      .tk-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .tk-grid dl {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 12px;
+        padding: 9px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 0.8rem;
+        line-height: 1.6;
+      }
+      .tk-grid dt {
+        color: var(--ink-50);
+        font-weight: 500;
+      }
+      .tk-grid dd {
+        color: var(--ink-70);
+      }
+      .foot-legal {
+        border-top: 1px solid var(--line);
+        padding-block: 22px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .foot-legal .disc {
+        color: var(--ink-50);
+      }
+      .foot-legal .copy {
+        font-family: var(--sans);
+        font-weight: 600;
+        font-size: 0.76rem;
+        letter-spacing: 0.06em;
+        color: var(--ink-35);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 16px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      @media (min-width: 760px) {
+        .foot-top {
+          grid-template-columns: 1.4fr 1fr;
+        }
+        .foot-cols {
+          grid-template-columns: 1fr 1fr;
+        }
+        .tk-grid {
+          grid-template-columns: 1fr 1fr;
+          column-gap: 40px;
+        }
+      }
+
+      /* ============ STICKY MOBILE CTA ============ */
+      .sticky-cta {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 180;
+        background: rgba(11, 11, 15, 0.94);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-top: 2px solid var(--lime);
+        padding: 11px 16px calc(11px + env(safe-area-inset-bottom, 0px));
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        transform: translateY(115%);
+        transition: transform 0.4s var(--ease);
+      }
+      .sticky-cta.show {
+        transform: translateY(0);
+      }
+      .sticky-cta .scopy {
+        flex: 1;
+        min-width: 0;
+        font-family: var(--sans);
+        font-weight: 700;
+        font-size: 0.78rem;
+        line-height: 1.3;
+        color: var(--ink);
+      }
+      .sticky-cta .scopy span {
+        display: block;
+        font-weight: 600;
+        font-size: 0.68rem;
+        color: var(--lime);
+        letter-spacing: 0.04em;
+      }
+      .sticky-cta .btn {
+        flex: none;
+        padding: 13px 18px;
+        font-size: 0.84rem;
+      }
+      @media (min-width: 880px) {
+        .sticky-cta {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ============ 1. SAMPLE BAR ============ -->
+    <div class="sample-bar" role="note">
+      ◆ <b>架空サービス・自主制作ポートフォリオサンプル</b> ／
+      実在のサービス・成果を示すものではありません
+    </div>
+
+    <!-- ============ 2. HEADER ============ -->
+    <header class="site">
+      <div class="wrap nav">
+        <a href="#top" class="logo" aria-label="GRYND ホーム">
+          <span class="dot" aria-hidden="true"></span>GRYND
+        </a>
+        <nav class="nav-links" aria-label="メインナビゲーション">
+          <a href="#reasons">選ばれる理由</a>
+          <a href="#ba">実績</a>
+          <a href="#pricing">料金</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="nav-cta">
+          <a href="#final-cta" class="btn btn-lime">
+            無料カウンセリング<span class="arr" aria-hidden="true">›</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ 3. HERO ============ -->
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-h1">
+        <div class="wrap hero-inner">
+          <div class="hero-copy">
+            <span class="hero-tag reveal">
+              <span class="pulse" aria-hidden="true"></span>
+              完全個室 ／ 専属トレーナー ／ 食事サポート
+            </span>
+            <h1 class="hero-h1 reveal d1" id="hero-h1">
+              3ヶ月後の自分に、<br />
+              <span class="l2"><span class="bet">賭ける</span>。</span>
+            </h1>
+            <p class="hero-sub reveal d2">
+              なまった身体も、続かなかった過去も、ここで終わりにする。専属トレーナーが、あなただけの設計図で「変わる90日」を伴走します。
+            </p>
+            <div class="hero-cta reveal d3">
+              <a href="#final-cta" class="btn btn-lime">
+                無料カウンセリングを予約<span class="arr" aria-hidden="true"
+                  >›</span
+                >
+              </a>
+              <a href="#pricing" class="btn btn-ghost">料金プランを見る</a>
+            </div>
+            <p class="hero-note reveal d3">
+              <span class="tick" aria-hidden="true">✓</span
+              >所要45分・オンライン可・当日キャンセルOK
+            </p>
+          </div>
+
+          <div class="hero-figure-wrap reveal d2" aria-hidden="true">
+            <!-- 架空のアスリート・シルエット（イメージ） -->
+            <svg
+              class="hero-figure"
+              viewBox="0 0 360 420"
+              role="img"
+              aria-label="トレーニングする人物のシルエット（イメージ・架空）"
+            >
+              <defs>
+                <linearGradient id="figGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#c6f432" />
+                  <stop offset="1" stop-color="#a6cf25" />
+                </linearGradient>
+                <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#ff5a1f" />
+                  <stop offset="1" stop-color="#e64a14" />
+                </linearGradient>
+              </defs>
+              <!-- frame -->
+              <rect
+                x="20"
+                y="20"
+                width="320"
+                height="380"
+                fill="none"
+                stroke="rgba(255,255,255,0.12)"
+                stroke-width="1"
+              />
+              <line
+                x1="20"
+                y1="300"
+                x2="340"
+                y2="300"
+                stroke="rgba(255,255,255,0.1)"
+                stroke-width="1"
+              />
+              <!-- diagonal accent -->
+              <path
+                d="M20 360 L340 250"
+                stroke="rgba(198,244,50,0.22)"
+                stroke-width="2"
+              />
+              <!-- athlete doing a squat with barbell, silhouette -->
+              <g fill="url(#figGrad)">
+                <!-- head -->
+                <circle cx="180" cy="96" r="26" />
+                <!-- torso -->
+                <path d="M150 124 q30 -10 60 0 l8 70 q-38 12 -76 0 z" />
+                <!-- hips/thighs -->
+                <path
+                  d="M142 192 q38 12 76 0 l-4 56 q-7 6 -16 0 l-2 -28 q-8 4 -16 0 l-2 28 q-9 6 -16 0 z"
+                />
+                <!-- left lower leg -->
+                <path d="M150 248 l10 0 l-2 78 l-16 0 z" />
+                <!-- right lower leg -->
+                <path d="M200 248 l10 0 l8 78 l-16 0 z" />
+                <!-- left arm up to bar -->
+                <path d="M150 132 l-34 -22 l6 -10 l36 22 z" />
+                <!-- right arm up to bar -->
+                <path d="M210 132 l34 -22 l-6 -10 l-36 22 z" />
+              </g>
+              <!-- feet -->
+              <rect
+                x="132"
+                y="324"
+                width="32"
+                height="9"
+                rx="2"
+                fill="#0e0e13"
+                stroke="rgba(255,255,255,0.18)"
+              />
+              <rect
+                x="196"
+                y="324"
+                width="32"
+                height="9"
+                rx="2"
+                fill="#0e0e13"
+                stroke="rgba(255,255,255,0.18)"
+              />
+              <!-- barbell -->
+              <rect
+                x="92"
+                y="80"
+                width="176"
+                height="9"
+                rx="4"
+                fill="url(#barGrad)"
+              />
+              <rect
+                x="86"
+                y="68"
+                width="14"
+                height="33"
+                rx="3"
+                fill="#f2f2ef"
+              />
+              <rect
+                x="260"
+                y="68"
+                width="14"
+                height="33"
+                rx="3"
+                fill="#f2f2ef"
+              />
+              <rect
+                x="100"
+                y="72"
+                width="9"
+                height="25"
+                rx="2"
+                fill="#cfcfcf"
+              />
+              <rect
+                x="251"
+                y="72"
+                width="9"
+                height="25"
+                rx="2"
+                fill="#cfcfcf"
+              />
+              <!-- label inside frame -->
+              <text
+                x="32"
+                y="48"
+                font-family="Anton, sans-serif"
+                font-size="15"
+                letter-spacing="1.5"
+                fill="rgba(242,242,239,0.4)"
+              >
+                90 DAYS PROGRAM
+              </text>
+              <text
+                x="320"
+                y="388"
+                text-anchor="end"
+                font-family="Anton, sans-serif"
+                font-size="12"
+                letter-spacing="1"
+                fill="rgba(255,90,31,0.6)"
+              >
+                ※ IMAGE
+              </text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- hero stat strip -->
+        <div class="wrap">
+          <div class="hero-stats reveal">
+            <div class="hstat">
+              <span class="num">98<span class="u">%</span></span>
+              <span class="lbl">満足度 ※イメージ</span>
+            </div>
+            <div class="hstat o">
+              <span class="num">12,000<span class="u">+</span></span>
+              <span class="lbl">のべセッション ※イメージ</span>
+            </div>
+            <div class="hstat">
+              <span class="num">90<span class="u">日</span></span>
+              <span class="lbl">標準プログラム</span>
+            </div>
+          </div>
+          <p class="hero-stats-note disc">
+            ※
+            数字はすべてポートフォリオ制作用の架空データです。実在の実績・成果を示すものではありません。
+          </p>
+        </div>
+      </section>
+
+      <!-- marquee -->
+      <div class="marq" aria-hidden="true">
+        <div class="marq-track">
+          <span>COMMIT TO THE GRIND</span><span>専属トレーナー</span
+          ><span>完全個室</span><span>食事サポート</span><span>90 DAYS</span>
+          <span>COMMIT TO THE GRIND</span><span>専属トレーナー</span
+          ><span>完全個室</span><span>食事サポート</span><span>90 DAYS</span>
+        </div>
+      </div>
+
+      <!-- ============ 4. PAIN ============ -->
+      <section class="pain sec-pad" aria-labelledby="pain-title">
+        <div class="wrap">
+          <div class="pain-head">
+            <span class="eyebrow orange reveal">THE STRUGGLE</span>
+            <h2
+              class="sec-title reveal d1"
+              id="pain-title"
+              style="margin-top: 16px"
+            >
+              そのモヤモヤ、<br class="mob-br" /><span class="mark-o">独り</span
+              >で抱えてないか。
+            </h2>
+            <p class="lede reveal d2">
+              ジムに通っても続かない。自己流の食事制限でリバウンド。鏡を見るたび、目をそらす。——そんな「うまくいかない理由」は、あなたの意志の弱さではないかもしれません。
+            </p>
+          </div>
+          <div class="pain-grid">
+            <div class="pain-card reveal">
+              <span class="qn" aria-hidden="true">01</span>
+              <p>何度ダイエットしても、結局もとに戻ってしまう。</p>
+            </div>
+            <div class="pain-card reveal d1">
+              <span class="qn" aria-hidden="true">02</span>
+              <p>正しいフォームや食事が分からず、自己流で迷子になっている。</p>
+            </div>
+            <div class="pain-card reveal d2">
+              <span class="qn" aria-hidden="true">03</span>
+              <p>仕事が忙しく、運動の時間を確保できる気がしない。</p>
+            </div>
+            <div class="pain-card reveal d3">
+              <span class="qn" aria-hidden="true">04</span>
+              <p>一人だとサボってしまう。続ける仕組みが欲しい。</p>
+            </div>
+          </div>
+          <div class="pain-bridge reveal d2">
+            <p class="big">
+              ひとつでも当てはまるなら。<br />
+              GRYND は、<span class="mark">"続く理由"</span>を一緒に設計する。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5. REASONS ============ -->
+      <section
+        class="reasons sec-pad"
+        id="reasons"
+        aria-labelledby="reasons-title"
+      >
+        <div class="wrap">
+          <div class="reasons-head">
+            <div>
+              <span class="eyebrow reveal">WHY GRYND</span>
+              <h2
+                class="sec-title reveal d1"
+                id="reasons-title"
+                style="margin-top: 16px"
+              >
+                結果まで、<span class="mark">逃さない</span>仕組み。
+              </h2>
+            </div>
+            <p class="lede reveal d2">
+              モチベーションに頼らない。GRYND
+              は「環境」「人」「習慣」の3点であなたの90日を支えます。
+            </p>
+          </div>
+          <div class="reasons-grid">
+            <article class="rcard reveal">
+              <span class="rno">/ 01</span>
+              <svg
+                class="ricon"
+                viewBox="0 0 48 48"
+                fill="none"
+                aria-hidden="true"
+              >
+                <rect
+                  x="6"
+                  y="6"
+                  width="36"
+                  height="36"
+                  rx="3"
+                  stroke="#c6f432"
+                  stroke-width="2.5"
+                />
+                <path
+                  d="M6 18 H42 M18 18 V42"
+                  stroke="#c6f432"
+                  stroke-width="2.5"
+                />
+                <circle cx="30" cy="30" r="5.5" fill="#ff5a1f" />
+              </svg>
+              <h3>完全個室で、人目ゼロ。</h3>
+              <p>
+                周りの視線を気にせず、自分のトレーニングだけに集中。広々とした個室で、初心者でも安心して追い込めます。
+              </p>
+            </article>
+            <article class="rcard reveal d1">
+              <span class="rno">/ 02</span>
+              <svg
+                class="ricon"
+                viewBox="0 0 48 48"
+                fill="none"
+                aria-hidden="true"
+              >
+                <circle
+                  cx="24"
+                  cy="16"
+                  r="8"
+                  stroke="#c6f432"
+                  stroke-width="2.5"
+                />
+                <path
+                  d="M10 40 q14 -16 28 0"
+                  stroke="#c6f432"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M34 12 l4 4 l7 -8"
+                  stroke="#ff5a1f"
+                  stroke-width="2.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+              </svg>
+              <h3>専属トレーナーが伴走。</h3>
+              <p>
+                担当はずっと同じ。あなたの体質・生活・目標を深く理解したパートナーが、毎回のメニューを最適化していきます。
+              </p>
+            </article>
+            <article class="rcard reveal d2">
+              <span class="rno">/ 03</span>
+              <svg
+                class="ricon"
+                viewBox="0 0 48 48"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M14 8 h20 v8 a10 10 0 0 1 -20 0 z"
+                  stroke="#c6f432"
+                  stroke-width="2.5"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M16 40 h16 M24 26 v14"
+                  stroke="#c6f432"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
+                <circle cx="24" cy="13" r="3" fill="#ff5a1f" />
+              </svg>
+              <h3>食事も、ひとりにしない。</h3>
+              <p>
+                極端な制限はしません。専用アプリでの食事報告に毎日フィードバック。無理なく続く食習慣づくりをサポートします。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 6. BEFORE / AFTER ============ -->
+      <section class="ba sec-pad" id="ba" aria-labelledby="ba-title">
+        <div class="wrap">
+          <div class="ba-head">
+            <span class="eyebrow reveal">TRANSFORMATION</span>
+            <h2
+              class="sec-title reveal d1"
+              id="ba-title"
+              style="margin-top: 16px"
+            >
+              変化は、<span class="mark">数字</span>じゃなく姿に出る。
+            </h2>
+            <p class="lede reveal d2">
+              ※以下はすべてイメージ・架空のシルエットです。実在の方の写真・成果ではありません。効果には個人差があります。
+            </p>
+          </div>
+          <div class="ba-grid">
+            <!-- card 1 -->
+            <article class="ba-card reveal">
+              <div class="ba-fig">
+                <div class="ba-col">
+                  <svg
+                    viewBox="0 0 90 150"
+                    role="img"
+                    aria-label="ビフォーのシルエット（イメージ・架空）"
+                  >
+                    <g fill="rgba(242,242,239,0.32)">
+                      <circle cx="45" cy="24" r="15" />
+                      <path
+                        d="M28 44 q17 -7 34 0 q9 26 4 52 q-21 7 -42 0 q-5 -26 4 -52 z"
+                      />
+                      <path
+                        d="M30 96 q15 6 30 0 l-3 46 q-6 4 -11 0 l-1 -30 l-1 30 q-5 4 -11 0 z"
+                      />
+                    </g>
+                  </svg>
+                  <div class="ba-state before">BEFORE</div>
+                </div>
+                <div class="ba-arrow" aria-hidden="true">›</div>
+                <div class="ba-col">
+                  <svg
+                    viewBox="0 0 90 150"
+                    role="img"
+                    aria-label="アフターのシルエット（イメージ・架空）"
+                  >
+                    <g fill="url(#baGrad1)">
+                      <circle cx="45" cy="24" r="14" />
+                      <path d="M31 42 q14 -6 28 0 l5 16 q-19 6 -38 0 z" />
+                      <path d="M33 60 q12 5 24 0 l3 36 q-15 5 -30 0 z" />
+                      <path
+                        d="M34 96 q11 5 22 0 l-3 46 q-5 4 -9 0 l-1 -30 l-1 30 q-4 4 -9 0 z"
+                      />
+                    </g>
+                    <defs>
+                      <linearGradient id="baGrad1" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#c6f432" />
+                        <stop offset="1" stop-color="#a6cf25" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <div class="ba-state after">AFTER</div>
+                </div>
+              </div>
+              <div class="ba-meta">
+                <div class="who">K.S さん <span>／ 30代・男性</span></div>
+                <div class="span" aria-label="期間 3ヶ月">3 MO.</div>
+              </div>
+            </article>
+            <!-- card 2 -->
+            <article class="ba-card reveal d1">
+              <div class="ba-fig">
+                <div class="ba-col">
+                  <svg
+                    viewBox="0 0 90 150"
+                    role="img"
+                    aria-label="ビフォーのシルエット（イメージ・架空）"
+                  >
+                    <g fill="rgba(242,242,239,0.32)">
+                      <circle cx="45" cy="24" r="14" />
+                      <path
+                        d="M29 42 q16 -6 32 0 q8 24 5 50 q-21 7 -42 0 q-3 -26 5 -50 z"
+                      />
+                      <path
+                        d="M31 94 q14 6 28 0 l-3 48 q-5 4 -10 0 l-1 -32 l-1 32 q-5 4 -10 0 z"
+                      />
+                    </g>
+                  </svg>
+                  <div class="ba-state before">BEFORE</div>
+                </div>
+                <div class="ba-arrow" aria-hidden="true">›</div>
+                <div class="ba-col">
+                  <svg
+                    viewBox="0 0 90 150"
+                    role="img"
+                    aria-label="アフターのシルエット（イメージ・架空）"
+                  >
+                    <g fill="url(#baGrad2)">
+                      <circle cx="45" cy="24" r="13" />
+                      <path d="M33 41 q12 -5 24 0 l3 15 q-15 5 -30 0 z" />
+                      <path d="M35 58 q10 4 20 0 l2 38 q-12 4 -24 0 z" />
+                      <path
+                        d="M35 96 q10 4 20 0 l-2 46 q-4 4 -8 0 l-1 -30 l-1 30 q-4 4 -8 0 z"
+                      />
+                    </g>
+                    <defs>
+                      <linearGradient id="baGrad2" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#ff5a1f" />
+                        <stop offset="1" stop-color="#e64a14" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <div class="ba-state after" style="color: #ff7a4a">AFTER</div>
+                </div>
+              </div>
+              <div class="ba-meta">
+                <div class="who">M.T さん <span>／ 40代・女性</span></div>
+                <div class="span" aria-label="期間 4ヶ月">4 MO.</div>
+              </div>
+            </article>
+            <!-- card 3 -->
+            <article class="ba-card reveal d2">
+              <div class="ba-fig">
+                <div class="ba-col">
+                  <svg
+                    viewBox="0 0 90 150"
+                    role="img"
+                    aria-label="ビフォーのシルエット（イメージ・架空）"
+                  >
+                    <g fill="rgba(242,242,239,0.32)">
+                      <circle cx="45" cy="24" r="15" />
+                      <path
+                        d="M27 44 q18 -7 36 0 q10 25 5 52 q-23 7 -46 0 q-5 -27 5 -52 z"
+                      />
+                      <path
+                        d="M30 96 q15 6 30 0 l-3 46 q-6 4 -11 0 l-1 -30 l-1 30 q-5 4 -11 0 z"
+                      />
+                    </g>
+                  </svg>
+                  <div class="ba-state before">BEFORE</div>
+                </div>
+                <div class="ba-arrow" aria-hidden="true">›</div>
+                <div class="ba-col">
+                  <svg
+                    viewBox="0 0 90 150"
+                    role="img"
+                    aria-label="アフターのシルエット（イメージ・架空）"
+                  >
+                    <g fill="url(#baGrad3)">
+                      <circle cx="45" cy="24" r="14" />
+                      <path d="M31 42 q14 -6 28 0 l5 16 q-19 6 -38 0 z" />
+                      <path d="M33 60 q12 5 24 0 l3 36 q-15 5 -30 0 z" />
+                      <path
+                        d="M34 96 q11 5 22 0 l-3 46 q-5 4 -9 0 l-1 -30 l-1 30 q-4 4 -9 0 z"
+                      />
+                    </g>
+                    <defs>
+                      <linearGradient id="baGrad3" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#c6f432" />
+                        <stop offset="1" stop-color="#a6cf25" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <div class="ba-state after">AFTER</div>
+                </div>
+              </div>
+              <div class="ba-meta">
+                <div class="who">R.A さん <span>／ 20代・男性</span></div>
+                <div class="span" aria-label="期間 3ヶ月">3 MO.</div>
+              </div>
+            </article>
+          </div>
+          <p class="ba-note disc reveal">
+            ※
+            上記シルエット・人物・期間はすべて架空のイメージであり、効果・成果を保証するものではありません。トレーニングの結果には個人差があります。
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 7. PRICING ============ -->
+      <section
+        class="pricing sec-pad"
+        id="pricing"
+        aria-labelledby="pricing-title"
+      >
+        <div class="wrap">
+          <div class="pricing-head">
+            <span class="eyebrow reveal">PRICING</span>
+            <h2
+              class="sec-title reveal d1"
+              id="pricing-title"
+              style="margin-top: 16px"
+            >
+              本気に、<span class="mark">応える</span>プラン。
+            </h2>
+            <p class="lede reveal d2">
+              目的とペースに合わせて選べる3コース。すべて入会金・初回カウンセリングは別途、表示は税込です。※価格はすべて架空です。
+            </p>
+          </div>
+          <div class="plans">
+            <!-- plan 1 -->
+            <article class="plan reveal">
+              <div class="pname">START</div>
+              <p class="ptag">まず2ヶ月、変わる手応えを掴む</p>
+              <div class="pprice">
+                <span class="yen">¥</span><span class="amt">158,000</span>
+                <span class="per">〜 / 2ヶ月</span>
+              </div>
+              <p class="punit">週2回・1回50分 ／ 全16回（※架空）</p>
+              <ul>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8.5 L6.5 12 L13 4"
+                      stroke="#c6f432"
+                      stroke-width="2.4"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  完全個室パーソナル全16回
+                </li>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8.5 L6.5 12 L13 4"
+                      stroke="#c6f432"
+                      stroke-width="2.4"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  食事アドバイス（週1回）
+                </li>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8.5 L6.5 12 L13 4"
+                      stroke="#c6f432"
+                      stroke-width="2.4"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  ウェア・アメニティ無料貸出
+                </li>
+              </ul>
+              <a href="#final-cta" class="btn btn-ghost">このプランで相談</a>
+            </article>
+            <!-- plan 2 featured -->
+            <article class="plan feat reveal d1">
+              <span class="plan-badge">人気No.1</span>
+              <div class="pname">GRIND 90</div>
+              <p class="ptag">90日で、見た目から変える主力コース</p>
+              <div class="pprice">
+                <span class="yen">¥</span><span class="amt">228,000</span>
+                <span class="per">〜 / 3ヶ月</span>
+              </div>
+              <p class="punit">週2回・1回50分 ／ 全24回（※架空）</p>
+              <ul>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8.5 L6.5 12 L13 4"
+                      stroke="#c6f432"
+                      stroke-width="2.4"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  完全個室パーソナル全24回
+                </li>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8.5 L6.5 12 L13 4"
+                      stroke="#c6f432"
+                      stroke-width="2.4"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  毎日の食事フィードバック
+                </li>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8.5 L6.5 12 L13 4"
+                      stroke="#c6f432"
+                      stroke-width="2.4"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  LINEチャット相談 無制限
+                </li>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8.5 L6.5 12 L13 4"
+                      stroke="#c6f432"
+                      stroke-width="2.4"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  卒業後ジムプラン優待
+                </li>
+              </ul>
+              <a href="#final-cta" class="btn btn-lime"
+                >無料カウンセリングへ<span class="arr" aria-hidden="true"
+                  >›</span
+                ></a
+              >
+            </article>
+            <!-- plan 3 -->
+            <article class="plan reveal d2">
+              <div class="pname">ELITE</div>
+              <p class="ptag">妥協なく、理想の身体を極める</p>
+              <div class="pprice">
+                <span class="yen">¥</span><span class="amt">398,000</span>
+                <span class="per">〜 / 4ヶ月</span>
+              </div>
+              <p class="punit">週3回・1回60分 ／ 全48回（※架空）</p>
+              <ul>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8.5 L6.5 12 L13 4"
+                      stroke="#ff5a1f"
+                      stroke-width="2.4"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  完全個室パーソナル全48回
+                </li>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8.5 L6.5 12 L13 4"
+                      stroke="#ff5a1f"
+                      stroke-width="2.4"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  専属管理栄養士の献立設計
+                </li>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8.5 L6.5 12 L13 4"
+                      stroke="#ff5a1f"
+                      stroke-width="2.4"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  体組成測定 月2回
+                </li>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 8.5 L6.5 12 L13 4"
+                      stroke="#ff5a1f"
+                      stroke-width="2.4"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  優先予約・時間外対応
+                </li>
+              </ul>
+              <a href="#final-cta" class="btn btn-ghost">このプランで相談</a>
+            </article>
+          </div>
+          <p class="pricing-note disc reveal">
+            ※
+            表示価格・コース内容はすべてポートフォリオ制作用の架空設定です。分割払いの例・キャンペーン等を含め、実在の料金を示すものではありません。
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 8. TRAINERS ============ -->
+      <section class="trainers sec-pad" aria-labelledby="tr-title">
+        <div class="wrap">
+          <div class="tr-head">
+            <div>
+              <span class="eyebrow orange reveal">TRAINERS</span>
+              <h2
+                class="sec-title reveal d1"
+                id="tr-title"
+                style="margin-top: 16px"
+              >
+                隣にいるのは、<span class="mark-o">プロ</span>。
+              </h2>
+            </div>
+            <p class="lede reveal d2">
+              ※以下のトレーナーはすべて架空の人物です。実在の人物・経歴ではありません。
+            </p>
+          </div>
+          <div class="tr-grid">
+            <!-- trainer 1 -->
+            <article class="tcard reveal">
+              <div class="tavatar">
+                <span class="tinit" aria-hidden="true">RK</span>
+                <svg
+                  viewBox="0 0 200 150"
+                  role="img"
+                  aria-label="トレーナーのアバター（イメージ・架空）"
+                >
+                  <defs>
+                    <linearGradient id="av1" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#c6f432" />
+                      <stop offset="1" stop-color="#7fa018" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="100" cy="56" r="30" fill="url(#av1)" />
+                  <path d="M52 150 q48 -52 96 0 z" fill="url(#av1)" />
+                </svg>
+              </div>
+              <div class="tbody">
+                <div class="trole">Head Trainer</div>
+                <h3>佐藤 涼介<span class="en">R. Sato</span></h3>
+                <p>
+                  「身体は裏切らない」が口癖。一人ひとりの生活に溶け込むメニュー設計を得意とします。（※架空）
+                </p>
+                <div class="ttags">
+                  <span class="ttag">ボディメイク</span>
+                  <span class="ttag">姿勢改善</span>
+                  <span class="ttag">減量</span>
+                </div>
+              </div>
+            </article>
+            <!-- trainer 2 -->
+            <article class="tcard reveal d1">
+              <div class="tavatar">
+                <span class="tinit" style="color: #ff7a4a" aria-hidden="true"
+                  >MA</span
+                >
+                <svg
+                  viewBox="0 0 200 150"
+                  role="img"
+                  aria-label="トレーナーのアバター（イメージ・架空）"
+                >
+                  <defs>
+                    <linearGradient id="av2" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#ff5a1f" />
+                      <stop offset="1" stop-color="#a83410" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="100" cy="56" r="30" fill="url(#av2)" />
+                  <path d="M52 150 q48 -52 96 0 z" fill="url(#av2)" />
+                </svg>
+              </div>
+              <div class="tbody">
+                <div class="trole">Nutrition Coach</div>
+                <h3>三浦 あかり<span class="en">A. Miura</span></h3>
+                <p>
+                  管理栄養士の視点で「食べて変わる」を伴走。無理のない食習慣づくりが信条です。（※架空）
+                </p>
+                <div class="ttags">
+                  <span class="ttag">食事指導</span>
+                  <span class="ttag">栄養管理</span>
+                  <span class="ttag">習慣化</span>
+                </div>
+              </div>
+            </article>
+            <!-- trainer 3 -->
+            <article class="tcard reveal d2">
+              <div class="tavatar">
+                <span class="tinit" aria-hidden="true">YT</span>
+                <svg
+                  viewBox="0 0 200 150"
+                  role="img"
+                  aria-label="トレーナーのアバター（イメージ・架空）"
+                >
+                  <defs>
+                    <linearGradient id="av3" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#c6f432" />
+                      <stop offset="1" stop-color="#7fa018" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="100" cy="56" r="30" fill="url(#av3)" />
+                  <path d="M52 150 q48 -52 96 0 z" fill="url(#av3)" />
+                </svg>
+              </div>
+              <div class="tbody">
+                <div class="trole">Personal Trainer</div>
+                <h3>髙橋 優太<span class="en">Y. Takahashi</span></h3>
+                <p>
+                  運動初心者の担当数が多く、丁寧なフォーム指導に定評。安心して追い込める空気づくりが上手。（※架空）
+                </p>
+                <div class="ttags">
+                  <span class="ttag">初心者歓迎</span>
+                  <span class="ttag">体力づくり</span>
+                  <span class="ttag">機能改善</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 9. VOICE ============ -->
+      <section class="voice sec-pad" aria-labelledby="voice-title">
+        <div class="wrap">
+          <div class="voice-head">
+            <span class="eyebrow reveal">VOICE</span>
+            <h2
+              class="sec-title reveal d1"
+              id="voice-title"
+              style="margin-top: 16px"
+            >
+              続けられた、という<span class="mark">声</span>。
+            </h2>
+            <p class="lede reveal d2">
+              ※以下はすべて架空・個人の感想です。効果には個人差があり、成果を保証するものではありません。
+            </p>
+          </div>
+          <div class="v-grid">
+            <article class="vcard reveal">
+              <div class="quote" aria-hidden="true">“</div>
+              <p>
+                三日坊主の常連だった私が、初めて3ヶ月続きました。毎回メニューが変わるので飽きず、トレーナーさんの一言で踏ん張れた。鏡を見るのが少し楽しみになりました。
+              </p>
+              <div class="vmeta">
+                <span class="av lime" aria-hidden="true">K</span>
+                <span class="vn"
+                  >K.S さん<span>30代・会社員 ／ 架空</span></span
+                >
+              </div>
+            </article>
+            <article class="vcard reveal d1">
+              <div class="quote" aria-hidden="true">“</div>
+              <p>
+                完全個室なのが本当にありがたい。人の目が苦手で続かなかったけど、ここなら集中できました。食事も「これ食べていい」と教えてくれるので、気持ちが楽でした。
+              </p>
+              <div class="vmeta">
+                <span class="av" aria-hidden="true">M</span>
+                <span class="vn"
+                  >M.T さん<span>40代・自営業 ／ 架空</span></span
+                >
+              </div>
+            </article>
+            <article class="vcard reveal d2">
+              <div class="quote" aria-hidden="true">“</div>
+              <p>
+                仕事が不規則で諦めていましたが、時間の融通がきくので通えました。数字より「服のサイズが変わった」のが嬉しい。自分に賭けてよかったと思えました。
+              </p>
+              <div class="vmeta">
+                <span class="av lime" aria-hidden="true">R</span>
+                <span class="vn"
+                  >R.A さん<span>20代・エンジニア ／ 架空</span></span
+                >
+              </div>
+            </article>
+          </div>
+          <p class="voice-note disc reveal">
+            ※
+            掲載の声はすべてポートフォリオ用の架空サンプルです。実在の利用者の体験・成果を示すものではありません。
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 10. ACCESS ============ -->
+      <section class="access sec-pad" aria-labelledby="access-title">
+        <div class="wrap">
+          <div class="access-wrap">
+            <div class="access-info">
+              <span class="eyebrow reveal">STUDIO / ACCESS</span>
+              <h2 class="sec-title reveal d1" id="access-title">
+                通いやすさも、<br /><span class="mark">続ける</span>理由に。
+              </h2>
+              <ul class="access-list reveal d2">
+                <li>
+                  <span class="k">Studio</span
+                  ><span class="v">GRYND 渋谷スタジオ（架空）</span>
+                </li>
+                <li>
+                  <span class="k">Address</span
+                  ><span class="v"
+                    >東京都渋谷区架空町1-2-3 グラインドビル 5F（架空）</span
+                  >
+                </li>
+                <li>
+                  <span class="k">Access</span
+                  ><span class="v"
+                    >各線「渋谷」駅 徒歩6分（※架空の所在地です）</span
+                  >
+                </li>
+                <li>
+                  <span class="k">Hours</span
+                  ><span class="v"
+                    >平日 7:00–23:00 ／ 土日祝 9:00–21:00（架空）</span
+                  >
+                </li>
+                <li>
+                  <span class="k">Tel</span
+                  ><span class="v">00-0000-0000（架空 ／ 受付のみ）</span>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="access-map reveal d2"
+              role="img"
+              aria-label="店舗周辺の簡易マップ（イメージ・架空）"
+            >
+              <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice">
+                <rect width="400" height="320" fill="#101016" />
+                <!-- blocks -->
+                <g fill="#16161d" stroke="rgba(255,255,255,0.06)">
+                  <rect x="24" y="24" width="130" height="90" />
+                  <rect x="170" y="24" width="90" height="90" />
+                  <rect x="276" y="24" width="100" height="120" />
+                  <rect x="24" y="200" width="110" height="96" />
+                  <rect x="276" y="200" width="100" height="96" />
+                </g>
+                <!-- roads -->
+                <g stroke="#2a2a33" stroke-width="14">
+                  <line x1="0" y1="160" x2="400" y2="160" />
+                  <line x1="160" y1="0" x2="160" y2="320" />
+                </g>
+                <g
+                  stroke="rgba(255,255,255,0.22)"
+                  stroke-width="1.5"
+                  stroke-dasharray="8 8"
+                >
+                  <line x1="0" y1="160" x2="400" y2="160" />
+                  <line x1="160" y1="0" x2="160" y2="320" />
+                </g>
+                <!-- station -->
+                <rect
+                  x="56"
+                  y="128"
+                  width="58"
+                  height="32"
+                  rx="3"
+                  fill="#1f1f28"
+                  stroke="rgba(255,255,255,0.18)"
+                />
+                <text
+                  x="85"
+                  y="149"
+                  text-anchor="middle"
+                  font-family="Anton, sans-serif"
+                  font-size="12"
+                  letter-spacing="0.5"
+                  fill="rgba(242,242,239,0.6)"
+                >
+                  STATION
+                </text>
+                <!-- route -->
+                <path
+                  d="M114 144 L160 144 L160 220 L210 220"
+                  fill="none"
+                  stroke="#ff5a1f"
+                  stroke-width="3"
+                  stroke-dasharray="2 7"
+                  stroke-linecap="round"
+                />
+                <!-- pin -->
+                <g transform="translate(210,206)">
+                  <path
+                    d="M0 28 C-15 8 -12 -8 0 -8 C12 -8 15 8 0 28 Z"
+                    fill="#c6f432"
+                  />
+                  <circle cx="0" cy="2" r="6" fill="#0b0b0f" />
+                </g>
+                <text
+                  x="220"
+                  y="200"
+                  font-family="Anton, sans-serif"
+                  font-size="13"
+                  letter-spacing="0.5"
+                  fill="#c6f432"
+                >
+                  GRYND
+                </text>
+              </svg>
+              <span class="map-badge">※ 簡易マップ・イメージ（架空）</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 11. FAQ ============ -->
+      <section class="faq sec-pad" id="faq" aria-labelledby="faq-title">
+        <div class="wrap">
+          <div class="faq-head">
+            <span class="eyebrow reveal">FAQ</span>
+            <h2
+              class="sec-title reveal d1"
+              id="faq-title"
+              style="margin-top: 16px"
+            >
+              不安は、<span class="mark">先に</span>つぶす。
+            </h2>
+          </div>
+          <div class="faq-list reveal d1">
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" aria-controls="fa1">
+                <span class="qmark" aria-hidden="true">Q</span>
+                <span class="qtext"
+                  >運動が全くの初心者ですが、ついていけますか？</span
+                >
+                <span class="ico" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" id="fa1" role="region">
+                <div class="faq-a-inner">
+                  はい、ご利用者の多くが運動初心者からのスタートです（※架空設定）。専属トレーナーが体力や可動域に合わせてメニューを組むため、ご自身のペースで無理なく進められます。フォームも一から丁寧にお伝えします。
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" aria-controls="fa2">
+                <span class="qmark" aria-hidden="true">Q</span>
+                <span class="qtext">必ず痩せたり、結果が出たりしますか？</span>
+                <span class="ico" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" id="fa2" role="region">
+                <div class="faq-a-inner">
+                  トレーニングの成果には個人差があり、効果を保証するものではありません。GRYND
+                  は結果を約束するのではなく、続けやすい環境とサポートをご提供することで、お一人おひとりの目標達成を後押しします。（※本ページは架空サービスのサンプルです）
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" aria-controls="fa3">
+                <span class="qmark" aria-hidden="true">Q</span>
+                <span class="qtext">仕事が忙しく、続けられるか不安です。</span>
+                <span class="ico" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" id="fa3" role="region">
+                <div class="faq-a-inner">
+                  早朝・夜間の枠もご用意し（※架空の営業時間）、ライフスタイルに合わせて予約できます。1回50分から取り組めるため、忙しい方でも続けやすい設計です。急な予定変更にも、当日キャンセル対応で柔軟にサポートします。
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" aria-controls="fa4">
+                <span class="qmark" aria-hidden="true">Q</span>
+                <span class="qtext">食事はすべて制限されるのでしょうか？</span>
+                <span class="ico" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" id="fa4" role="region">
+                <div class="faq-a-inner">
+                  極端な食事制限は行いません。「食べながら整える」を基本に、生活に合わせた現実的な食習慣を一緒に作ります。専用アプリでの報告に、トレーナーがフィードバックを行います（※架空のサービス内容です）。
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" aria-expanded="false" aria-controls="fa5">
+                <span class="qmark" aria-hidden="true">Q</span>
+                <span class="qtext">無料カウンセリングでは何をしますか？</span>
+                <span class="ico" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" id="fa5" role="region">
+                <div class="faq-a-inner">
+                  目標やお悩み、生活リズムをお伺いし、あなたに合った進め方をご提案します（所要45分／オンライン可）。無理な勧誘は行いません。まずは気軽にお話しください。※本ページは架空サービスのポートフォリオサンプルのため、実際のご予約はできません。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 12. FINAL CTA ============ -->
+      <section
+        class="final sec-pad"
+        id="final-cta"
+        aria-labelledby="final-title"
+      >
+        <div class="wrap final-inner">
+          <span class="eyebrow reveal" style="justify-content: center"
+            >START TODAY</span
+          >
+          <h2 class="reveal d1" id="final-title">
+            3ヶ月後の自分に、<br /><span class="mark">賭ける</span
+            >なら、今日から。
+          </h2>
+          <p class="reveal d2">
+            迷っている時間も、身体は変わりません。まずは無料カウンセリングで、あなたの「変わる90日」の地図を描きにきてください。
+          </p>
+          <div class="final-cta reveal d2">
+            <a href="#final-cta" class="btn btn-lime"
+              >無料カウンセリングを予約<span class="arr" aria-hidden="true"
+                >›</span
+              ></a
+            >
+            <a href="#pricing" class="btn btn-ghost">料金をもう一度見る</a>
+          </div>
+          <div class="final-reassure reveal d3">
+            <span
+              ><span class="tick" aria-hidden="true">✓</span
+              >所要45分・オンライン可</span
+            >
+            <span
+              ><span class="tick" aria-hidden="true">✓</span
+              >無理な勧誘なし</span
+            >
+            <span
+              ><span class="tick" aria-hidden="true">✓</span
+              >当日キャンセルOK</span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ 13. FOOTER ============ -->
+    <footer class="site-foot">
+      <div class="wrap">
+        <div class="foot-top">
+          <div class="foot-brand">
+            <div class="logo">
+              <span class="dot" aria-hidden="true"></span>GRYND
+            </div>
+            <p>
+              完全個室・専属トレーナー・食事サポートの架空パーソナルトレーニングジム。本ページはWebデザイン／コーディングのスキルを示すための自主制作ポートフォリオサンプルです。
+            </p>
+          </div>
+          <div class="foot-cols">
+            <div class="foot-col">
+              <h4>Menu</h4>
+              <ul>
+                <li><a href="#reasons">選ばれる理由</a></li>
+                <li><a href="#ba">変化の実績</a></li>
+                <li><a href="#pricing">料金プラン</a></li>
+                <li><a href="#faq">よくある質問</a></li>
+              </ul>
+            </div>
+            <div class="foot-col">
+              <h4>Contact</h4>
+              <ul>
+                <li>渋谷スタジオ（架空）</li>
+                <li>平日 7:00–23:00（架空）</li>
+                <li>00-0000-0000（架空）</li>
+                <li><a href="#final-cta">無料カウンセリング</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tokushoho">
+          <h4>特定商取引法に基づく表記（架空・サンプル）</h4>
+          <div class="tk-grid">
+            <dl>
+              <dt>事業者名</dt>
+              <dd>株式会社グラインド（架空・サンプル）</dd>
+            </dl>
+            <dl>
+              <dt>運営責任者</dt>
+              <dd>石田 範昭（架空）</dd>
+            </dl>
+            <dl>
+              <dt>所在地</dt>
+              <dd>東京都渋谷区架空町1-2-3 グラインドビル5F（架空）</dd>
+            </dl>
+            <dl>
+              <dt>電話番号</dt>
+              <dd>00-0000-0000（受付 平日10:00-18:00 ／ 架空）</dd>
+            </dl>
+            <dl>
+              <dt>料金</dt>
+              <dd>各コースに記載（税込・別途入会金 ／ すべて架空）</dd>
+            </dl>
+            <dl>
+              <dt>支払方法</dt>
+              <dd>クレジットカード・銀行振込・各種分割（架空）</dd>
+            </dl>
+            <dl>
+              <dt>サービス提供時期</dt>
+              <dd>ご契約・初回カウンセリング後より開始（架空）</dd>
+            </dl>
+            <dl>
+              <dt>キャンセル</dt>
+              <dd>
+                契約後のクーリングオフは関連法令に準ずる（※架空の表記です）
+              </dd>
+            </dl>
+          </div>
+        </div>
+
+        <div class="foot-legal">
+          <p class="disc">
+            ※
+            本ページは架空のパーソナルトレーニングジム「GRYND」の自主制作ポートフォリオサンプルです。掲載のサービス・会社・価格・トレーナー・お客様の声・ビフォーアフター・所在地・実績数値はすべて<b>架空</b>であり、実在のサービスや効果・成果を示すものではありません。トレーニングの効果には個人差があり、特定の結果を保証するものではありません（景品表示法に配慮した架空表記です）。
+          </p>
+          <div class="copy">
+            <span>GRYND — Personal Training Studio</span>
+            <span>Design &amp; Code Sample / 架空サービス</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============ STICKY MOBILE CTA ============ -->
+    <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+      <div class="scopy">
+        3ヶ月後の自分に、賭ける。<span>無料カウンセリング受付中</span>
+      </div>
+      <a href="#final-cta" class="btn btn-lime">予約する</a>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+        var reduce = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+
+        /* ---- Scroll reveal ---- */
+        var reveals = document.querySelectorAll(".reveal");
+        if (reduce || !("IntersectionObserver" in window)) {
+          reveals.forEach(function (el) {
+            el.classList.add("in");
+          });
+        } else {
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                  e.target.classList.add("in");
+                  io.unobserve(e.target);
+                }
+              });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+          );
+          reveals.forEach(function (el) {
+            io.observe(el);
+          });
+          /* Fallback: reveal above-the-fold elements after layout.
+             IntersectionObserver's first callback can miss already-in-view
+             items, leaving the hero blank until the first scroll. Double rAF
+             guarantees layout is settled before we measure. */
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              reveals.forEach(function (el) {
+                var r = el.getBoundingClientRect();
+                if (r.top < window.innerHeight && r.bottom > 0) {
+                  el.classList.add("in");
+                }
+              });
+            });
+          });
+        }
+
+        /* ---- FAQ accordion (max-height) ---- */
+        var qs = document.querySelectorAll(".faq-q");
+        qs.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var open = btn.getAttribute("aria-expanded") === "true";
+            var panel = document.getElementById(
+              btn.getAttribute("aria-controls"),
+            );
+            btn.setAttribute("aria-expanded", String(!open));
+            panel.style.maxHeight = open ? "0px" : panel.scrollHeight + "px";
+          });
+        });
+        window.addEventListener("resize", function () {
+          document
+            .querySelectorAll('.faq-q[aria-expanded="true"]')
+            .forEach(function (btn) {
+              var panel = document.getElementById(
+                btn.getAttribute("aria-controls"),
+              );
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            });
+        });
+
+        /* ---- Sticky mobile CTA: show after hero, hide at final CTA ---- */
+        var sticky = document.getElementById("stickyCta");
+        var hero = document.querySelector(".hero");
+        var finalCta = document.getElementById("final-cta");
+        var pastHero = false,
+          atFinal = false;
+
+        function syncSticky() {
+          if (window.innerWidth > 880) {
+            sticky.classList.remove("show");
+            sticky.setAttribute("aria-hidden", "true");
+            return;
+          }
+          if (pastHero && !atFinal) {
+            sticky.classList.add("show");
+            sticky.setAttribute("aria-hidden", "false");
+          } else {
+            sticky.classList.remove("show");
+            sticky.setAttribute("aria-hidden", "true");
+          }
+        }
+        if ("IntersectionObserver" in window) {
+          new IntersectionObserver(
+            function (es) {
+              pastHero = !es[0].isIntersecting;
+              syncSticky();
+            },
+            { threshold: 0 },
+          ).observe(hero);
+          new IntersectionObserver(
+            function (es) {
+              atFinal = es[0].isIntersecting;
+              syncSticky();
+            },
+            { threshold: 0.05 },
+          ).observe(finalCta);
+        }
+        window.addEventListener("resize", syncSticky);
+      })();
+    </script>
+  </body>
+</html>

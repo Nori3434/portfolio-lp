@@ -1,0 +1,2886 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      GREENA
+      グリーナ｜足りない野菜、ごくっと習慣に。国産大麦若葉のグリーンスムージー
+    </title>
+    <meta
+      name="description"
+      content="国産大麦若葉とフルーツをブレンドしたグリーンスムージー GREENA（グリーナ）。不足しがちな野菜を、毎日おいしく手軽に。水や牛乳に溶かすだけ。定期初回¥980・送料無料・返金保証。※架空商品・自主制作ポートフォリオサンプル"
+    />
+    <meta name="theme-color" content="#3FA34D" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fbfdf7;
+        --cream: #f3f8ea;
+        --mint: #eaf5e2;
+        --line: #dcebcb;
+        --line: #d7ead0;
+        --ink: #2c3a2a;
+        --ink-70: rgba(44, 58, 42, 0.72);
+        --ink-50: rgba(44, 58, 42, 0.52);
+        --green: #3fa34d;
+        --green-d: #2f8a3d;
+        --green-dd: #246b2f;
+        --leaf: #8bc34a;
+        --leaf-l: #aed581;
+        --citrus: #ffcb3d;
+        --citrus-d: #f5b400;
+        --berry: #ef6a6a;
+        --white: #ffffff;
+        --round: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+        --sans: "Noto Sans JP", sans-serif;
+        --maxw: 1120px;
+        --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+        --shadow: 0 18px 44px -22px rgba(47, 138, 61, 0.42);
+        --shadow-sm: 0 8px 22px -14px rgba(47, 138, 61, 0.4);
+        --sample-h: 34px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        font-family: var(--sans);
+        color: var(--ink);
+        background: var(--bg);
+        line-height: 1.9;
+        letter-spacing: 0.012em;
+        overflow-x: hidden;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        font-family: inherit;
+        cursor: pointer;
+        border: 0;
+        background: none;
+      }
+      ::selection {
+        background: var(--leaf-l);
+        color: var(--green-dd);
+      }
+      :focus-visible {
+        outline: 3px solid var(--green);
+        outline-offset: 3px;
+        border-radius: 6px;
+      }
+
+      /* ===== helpers ===== */
+      .wrap {
+        max-width: var(--maxw);
+        margin-inline: auto;
+        padding-inline: 22px;
+      }
+      .narrow {
+        max-width: 760px;
+        margin-inline: auto;
+        padding-inline: 22px;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--round);
+        font-weight: 700;
+        font-size: 0.74rem;
+        letter-spacing: 0.16em;
+        color: var(--green);
+        background: var(--mint);
+        padding: 6px 15px 5px;
+        border-radius: 999px;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 13px;
+        height: 13px;
+        background: var(--leaf);
+        border-radius: 60% 60% 60% 0;
+        transform: rotate(-12deg);
+        flex: none;
+      }
+      h2.sec-title {
+        font-family: var(--round);
+        font-weight: 900;
+        font-size: clamp(1.55rem, 5.6vw, 2.45rem);
+        line-height: 1.42;
+        letter-spacing: 0.01em;
+        word-break: auto-phrase;
+        color: var(--ink);
+      }
+      .sec-title b {
+        color: var(--green);
+      }
+      .sec-title .u {
+        background: linear-gradient(transparent 62%, var(--citrus) 62%);
+        padding: 0 1px;
+      }
+      .lede {
+        font-size: clamp(0.96rem, 2.5vw, 1.05rem);
+        color: var(--ink-70);
+        line-height: 2;
+      }
+      .note {
+        font-size: 0.72rem;
+        color: var(--ink-50);
+        line-height: 1.7;
+        letter-spacing: 0.01em;
+      }
+      section {
+        position: relative;
+      }
+      .pad {
+        padding-block: clamp(56px, 9vw, 96px);
+      }
+      .center {
+        text-align: center;
+      }
+
+      /* ===== reveal ===== */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.9s var(--ease),
+          transform 0.9s var(--ease);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      .reveal.d1 {
+        transition-delay: 0.09s;
+      }
+      .reveal.d2 {
+        transition-delay: 0.18s;
+      }
+      .reveal.d3 {
+        transition-delay: 0.27s;
+      }
+      .reveal.d4 {
+        transition-delay: 0.36s;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          scroll-behavior: auto !important;
+        }
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+        }
+        .float,
+        .sway,
+        .bub {
+          animation: none !important;
+        }
+      }
+
+      /* ===== sample bar (fixed top) ===== */
+      .sample-bar {
+        position: fixed;
+        inset: 0 0 auto 0;
+        z-index: 200;
+        height: var(--sample-h);
+        background: repeating-linear-gradient(
+          -45deg,
+          #2c3a2a,
+          #2c3a2a 11px,
+          #374a34 11px,
+          #374a34 22px
+        );
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        padding-inline: 12px;
+        text-align: center;
+      }
+      .sample-bar b {
+        color: var(--citrus);
+        font-weight: 700;
+      }
+      .sample-bar span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      /* ===== header ===== */
+      .site-head {
+        position: sticky;
+        top: var(--sample-h);
+        z-index: 150;
+        background: rgba(251, 253, 247, 0.86);
+        backdrop-filter: saturate(1.4) blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      .head-in {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        height: 62px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-family: var(--round);
+        font-weight: 900;
+        font-size: 1.28rem;
+        letter-spacing: 0.04em;
+        color: var(--green-dd);
+      }
+      .brand .mark {
+        width: 30px;
+        height: 30px;
+        flex: none;
+      }
+      .brand small {
+        font-family: var(--round);
+        font-weight: 700;
+        font-size: 0.6rem;
+        letter-spacing: 0.18em;
+        color: var(--leaf);
+        align-self: flex-end;
+        margin-bottom: 4px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        font-family: var(--round);
+        font-weight: 700;
+        text-align: center;
+        border-radius: 999px;
+        transition:
+          transform 0.25s var(--ease),
+          box-shadow 0.25s var(--ease),
+          background 0.25s var(--ease);
+        line-height: 1.25;
+      }
+      .btn-cta {
+        background: var(--citrus);
+        color: var(--green-dd);
+        padding: 11px 22px;
+        font-size: 0.92rem;
+        box-shadow: 0 9px 0 -2px var(--citrus-d);
+      }
+      .btn-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 0 -2px var(--citrus-d);
+      }
+      .btn-cta:active {
+        transform: translateY(2px);
+        box-shadow: 0 5px 0 -2px var(--citrus-d);
+      }
+      .head-cta {
+        padding: 9px 18px;
+        font-size: 0.82rem;
+      }
+      .head-cta .arr {
+        font-size: 0.78em;
+      }
+      .head-cta .cta-short {
+        display: none;
+      }
+
+      /* big primary cta with arrow */
+      .btn-big {
+        background: linear-gradient(
+          180deg,
+          var(--green) 0%,
+          var(--green-d) 100%
+        );
+        color: #fff;
+        font-size: clamp(1.04rem, 3.4vw, 1.22rem);
+        padding: 18px 40px;
+        box-shadow:
+          0 12px 0 -2px var(--green-dd),
+          var(--shadow);
+        position: relative;
+      }
+      .btn-big:hover {
+        transform: translateY(-2px);
+        box-shadow:
+          0 14px 0 -2px var(--green-dd),
+          var(--shadow);
+      }
+      .btn-big:active {
+        transform: translateY(3px);
+        box-shadow:
+          0 7px 0 -2px var(--green-dd),
+          var(--shadow);
+      }
+      .btn-big .sub {
+        font-size: 0.7em;
+        font-weight: 500;
+        opacity: 0.92;
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            120% 80% at 78% 8%,
+            #fff8d9 0%,
+            rgba(255, 248, 217, 0) 46%
+          ),
+          radial-gradient(
+            100% 90% at 8% 100%,
+            #e2f3d7 0%,
+            rgba(226, 243, 215, 0) 52%
+          ),
+          var(--bg);
+        padding-top: clamp(34px, 5vw, 56px);
+        padding-bottom: clamp(40px, 6vw, 72px);
+      }
+      .hero-deco {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        overflow: hidden;
+      }
+      .hero-deco .blob {
+        position: absolute;
+        border-radius: 46% 54% 58% 42% / 50% 44% 56% 50%;
+        opacity: 0.5;
+      }
+      .hero-deco .b1 {
+        width: 320px;
+        height: 320px;
+        right: -90px;
+        top: 40px;
+        background: #d8efc9;
+      }
+      .hero-deco .b2 {
+        width: 220px;
+        height: 220px;
+        left: -70px;
+        bottom: -40px;
+        background: #fdeeb4;
+        opacity: 0.55;
+      }
+      .hero-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1.02fr 0.98fr;
+        align-items: center;
+        gap: clamp(20px, 4vw, 46px);
+      }
+      .hero-copy {
+        max-width: 560px;
+      }
+      .hero h1 {
+        font-family: var(--round);
+        font-weight: 900;
+        font-size: clamp(2.05rem, 7.4vw, 3.45rem);
+        line-height: 1.32;
+        letter-spacing: 0.005em;
+        margin: 16px 0 0;
+        color: var(--ink);
+        word-break: auto-phrase;
+      }
+      .hero h1 .g {
+        color: var(--green);
+      }
+      .hero h1 .pop {
+        position: relative;
+        white-space: nowrap;
+      }
+      .hero h1 .pop::after {
+        content: "";
+        position: absolute;
+        left: -2%;
+        right: -2%;
+        bottom: 8%;
+        height: 38%;
+        background: var(--citrus);
+        opacity: 0.85;
+        border-radius: 8px;
+        z-index: -1;
+      }
+      .hero-sub {
+        margin-top: 18px;
+        font-size: clamp(0.96rem, 2.6vw, 1.08rem);
+        color: var(--ink-70);
+        line-height: 1.95;
+      }
+      .hero-cta-row {
+        margin-top: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 14px 18px;
+      }
+      .hero-price {
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+        line-height: 1.1;
+      }
+      .hero-price .lbl {
+        font-family: var(--round);
+        font-weight: 700;
+        font-size: 0.78rem;
+        color: var(--berry);
+        background: #fdecec;
+        padding: 3px 9px;
+        border-radius: 999px;
+        margin-bottom: 6px;
+        white-space: nowrap;
+      }
+      .hero-price .yen {
+        font-family: var(--round);
+        font-weight: 900;
+        color: var(--green-dd);
+        line-height: 1.12;
+      }
+      .hero-price .yen .big {
+        font-size: clamp(2.6rem, 9vw, 3.4rem);
+        letter-spacing: -0.01em;
+      }
+      .hero-price .yen .small {
+        font-size: 1.1rem;
+      }
+      .hero-price .yen .tax {
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: var(--ink-50);
+      }
+      .hero-trust {
+        margin-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 10px;
+      }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-family: var(--round);
+        font-weight: 700;
+        font-size: 0.76rem;
+        color: var(--green-d);
+        background: var(--white);
+        border: 1.5px solid var(--line);
+        padding: 6px 13px;
+        border-radius: 999px;
+      }
+      .chip svg {
+        width: 14px;
+        height: 14px;
+        flex: none;
+      }
+
+      /* hero art */
+      .hero-art {
+        position: relative;
+        justify-self: center;
+        width: min(100%, 460px);
+        aspect-ratio: 1 / 1;
+      }
+      .hero-art .stage {
+        width: 100%;
+        height: 100%;
+      }
+      .rank-badge {
+        position: absolute;
+        top: -6px;
+        right: -2px;
+        width: clamp(96px, 22%, 126px);
+        z-index: 4;
+        filter: drop-shadow(0 8px 14px rgba(245, 180, 0, 0.4));
+        animation: sway 5.5s ease-in-out infinite;
+      }
+      .float {
+        animation: float 6s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
+      }
+      @keyframes sway {
+        0%,
+        100% {
+          transform: rotate(-7deg);
+        }
+        50% {
+          transform: rotate(5deg);
+        }
+      }
+      .bub {
+        transform-origin: center;
+        animation: bub 3.6s ease-in-out infinite;
+      }
+      @keyframes bub {
+        0%,
+        100% {
+          transform: translateY(0);
+          opacity: 0.85;
+        }
+        50% {
+          transform: translateY(-6px);
+          opacity: 1;
+        }
+      }
+
+      /* ===== problem ===== */
+      .problem {
+        background: var(--cream);
+      }
+      .check-list {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+      .check {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: var(--white);
+        border: 1.5px solid var(--line);
+        border-radius: 18px;
+        padding: 16px 18px;
+        box-shadow: var(--shadow-sm);
+      }
+      .check .ic {
+        width: 40px;
+        height: 40px;
+        flex: none;
+      }
+      .check p {
+        font-family: var(--round);
+        font-weight: 700;
+        font-size: clamp(0.92rem, 2.4vw, 1rem);
+        line-height: 1.5;
+      }
+      .problem-bridge {
+        margin-top: 34px;
+        text-align: center;
+        font-family: var(--round);
+        font-weight: 900;
+        font-size: clamp(1.15rem, 4vw, 1.6rem);
+        line-height: 1.6;
+        color: var(--green-dd);
+      }
+      .problem-bridge .hl {
+        color: var(--green);
+      }
+      .down-arrow {
+        width: 40px;
+        margin: 18px auto 0;
+      }
+
+      /* ===== ingredients ===== */
+      .ing-grid {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+      .ing-card {
+        background: var(--white);
+        border-radius: 22px;
+        border: 1.5px solid var(--line);
+        padding: 26px 24px 24px;
+        box-shadow: var(--shadow-sm);
+        position: relative;
+        overflow: hidden;
+      }
+      .ing-card .corner {
+        position: absolute;
+        top: -26px;
+        right: -26px;
+        width: 88px;
+        height: 88px;
+        background: var(--mint);
+        border-radius: 50%;
+        opacity: 0.8;
+      }
+      .ing-fig {
+        width: 74px;
+        height: 74px;
+        position: relative;
+        z-index: 1;
+      }
+      .ing-card h3 {
+        font-family: var(--round);
+        font-weight: 900;
+        font-size: 1.18rem;
+        margin: 14px 0 4px;
+        color: var(--green-dd);
+      }
+      .ing-card .jp {
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: var(--leaf);
+        font-family: var(--round);
+      }
+      .ing-card p {
+        margin-top: 11px;
+        font-size: 0.92rem;
+        color: var(--ink-70);
+        line-height: 1.92;
+      }
+      .ing-card .tag {
+        display: inline-block;
+        margin-top: 14px;
+        font-family: var(--round);
+        font-weight: 700;
+        font-size: 0.74rem;
+        color: var(--green-d);
+        background: var(--mint);
+        padding: 4px 12px;
+        border-radius: 999px;
+      }
+
+      /* ===== how / easy ===== */
+      .easy {
+        background: linear-gradient(180deg, var(--bg) 0%, var(--mint) 100%);
+      }
+      .steps {
+        margin-top: 42px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        position: relative;
+      }
+      .step {
+        background: var(--white);
+        border-radius: 22px;
+        border: 1.5px solid var(--line);
+        padding: 30px 22px 26px;
+        text-align: center;
+        box-shadow: var(--shadow-sm);
+        position: relative;
+      }
+      .step .n {
+        position: absolute;
+        top: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 38px;
+        height: 38px;
+        background: var(--citrus);
+        color: var(--green-dd);
+        font-family: var(--round);
+        font-weight: 900;
+        font-size: 1.1rem;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 4px 0 -1px var(--citrus-d);
+      }
+      .step .step-fig {
+        width: 84px;
+        height: 84px;
+        margin: 10px auto 0;
+      }
+      .step h4 {
+        font-family: var(--round);
+        font-weight: 900;
+        font-size: 1.05rem;
+        margin-top: 14px;
+        color: var(--green-dd);
+      }
+      .step p {
+        font-size: 0.86rem;
+        color: var(--ink-70);
+        margin-top: 7px;
+        line-height: 1.8;
+      }
+      .flavor-row {
+        margin-top: 34px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+      .flavor {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        background: var(--white);
+        border: 1.5px solid var(--line);
+        border-radius: 999px;
+        padding: 9px 18px 9px 12px;
+        font-family: var(--round);
+        font-weight: 700;
+        font-size: 0.9rem;
+        box-shadow: var(--shadow-sm);
+      }
+      .flavor .dot {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        flex: none;
+      }
+
+      /* ===== habit graph ===== */
+      .graph-wrap {
+        background: var(--white);
+        border: 1.5px solid var(--line);
+        border-radius: 26px;
+        padding: clamp(22px, 4vw, 40px);
+        margin-top: 38px;
+        box-shadow: var(--shadow);
+      }
+      .graph-wrap figure {
+        margin: 0;
+      }
+      .graph-wrap .g-top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 8px 16px;
+        margin-bottom: 18px;
+      }
+      .graph-wrap .g-top h3 {
+        font-family: var(--round);
+        font-weight: 900;
+        font-size: clamp(1.1rem, 3.4vw, 1.4rem);
+        color: var(--green-dd);
+      }
+      .graph-svg {
+        width: 100%;
+        height: auto;
+      }
+      .g-cap {
+        margin-top: 14px;
+        text-align: right;
+      }
+
+      /* ===== voices ===== */
+      .voices {
+        background: var(--cream);
+      }
+      .voice-grid {
+        margin-top: 38px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+      .voice {
+        background: var(--white);
+        border-radius: 22px;
+        border: 1.5px solid var(--line);
+        padding: 24px 24px 22px;
+        box-shadow: var(--shadow-sm);
+      }
+      .voice .stars {
+        display: flex;
+        gap: 3px;
+        margin-bottom: 12px;
+      }
+      .voice .stars svg {
+        width: 18px;
+        height: 18px;
+      }
+      .voice q {
+        display: block;
+        font-family: var(--round);
+        font-weight: 700;
+        font-size: 1.02rem;
+        line-height: 1.7;
+        color: var(--ink);
+        quotes: none;
+      }
+      .voice p {
+        margin-top: 10px;
+        font-size: 0.88rem;
+        color: var(--ink-70);
+        line-height: 1.85;
+      }
+      .voice .who {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+      }
+      .voice .ava {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        flex: none;
+      }
+      .voice .who b {
+        font-family: var(--round);
+        font-weight: 700;
+        font-size: 0.86rem;
+        display: block;
+      }
+      .voice .who span {
+        font-size: 0.74rem;
+        color: var(--ink-50);
+      }
+
+      /* ===== ranking / media ===== */
+      .rank-sec {
+        background: var(--white);
+      }
+      .rank-cards {
+        margin-top: 36px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .rank-card {
+        text-align: center;
+        background: var(--bg);
+        border: 1.5px solid var(--line);
+        border-radius: 22px;
+        padding: 26px 18px 22px;
+        position: relative;
+      }
+      .rank-card .crown {
+        width: 56px;
+        height: 56px;
+        margin: 0 auto 8px;
+      }
+      .rank-card .place {
+        font-family: var(--round);
+        font-weight: 900;
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        color: var(--citrus-d);
+      }
+      .rank-card h4 {
+        font-family: var(--round);
+        font-weight: 900;
+        font-size: 1rem;
+        margin-top: 4px;
+        color: var(--green-dd);
+        line-height: 1.5;
+      }
+      .rank-card p {
+        font-size: 0.8rem;
+        color: var(--ink-70);
+        margin-top: 6px;
+        line-height: 1.7;
+      }
+      .media-row {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px 16px;
+      }
+      .media-logo {
+        font-family: var(--round);
+        font-weight: 900;
+        font-size: 0.92rem;
+        letter-spacing: 0.04em;
+        color: var(--ink-50);
+        background: var(--cream);
+        border: 1.5px solid var(--line);
+        border-radius: 12px;
+        padding: 10px 20px;
+      }
+
+      /* ===== offer ===== */
+      .offer {
+        background: linear-gradient(165deg, #f1f9e9 0%, #e6f4da 100%);
+      }
+      .offer-card {
+        margin-top: 36px;
+        background: var(--white);
+        border-radius: 28px;
+        border: 2px solid var(--leaf-l);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        position: relative;
+      }
+      .offer-ribbon {
+        background: linear-gradient(90deg, var(--green) 0%, var(--leaf) 100%);
+        color: #fff;
+        text-align: center;
+        font-family: var(--round);
+        font-weight: 900;
+        font-size: clamp(0.92rem, 3vw, 1.12rem);
+        letter-spacing: 0.04em;
+        padding: 13px 16px;
+      }
+      .offer-body {
+        padding: clamp(26px, 5vw, 42px);
+        text-align: center;
+      }
+      .offer-price {
+        display: inline-flex;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        line-height: 1.12;
+        margin-top: 6px;
+      }
+      .offer-price .was {
+        font-family: var(--round);
+        font-weight: 700;
+        color: var(--ink-50);
+        font-size: 1.05rem;
+        text-decoration: line-through;
+        text-decoration-color: var(--berry);
+        margin-bottom: 10px;
+      }
+      .offer-price .off {
+        font-family: var(--round);
+        font-weight: 900;
+        font-size: 0.92rem;
+        color: #fff;
+        background: var(--berry);
+        padding: 5px 13px;
+        border-radius: 999px;
+        margin-bottom: 12px;
+      }
+      .offer-now {
+        font-family: var(--round);
+        font-weight: 900;
+        color: var(--green-dd);
+        line-height: 1.12;
+        display: inline-flex;
+        align-items: flex-end;
+        gap: 2px;
+      }
+      .offer-now .lead {
+        font-size: 1.05rem;
+        margin-right: 4px;
+        margin-bottom: 9px;
+      }
+      .offer-now .num {
+        font-size: clamp(3.4rem, 13vw, 5rem);
+        letter-spacing: -0.02em;
+        line-height: 1;
+      }
+      .offer-now .yen2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+      }
+      .offer-now .tax2 {
+        font-size: 0.72rem;
+        font-weight: 500;
+        color: var(--ink-50);
+        margin-bottom: 12px;
+        margin-left: 2px;
+      }
+      .offer-feats {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        max-width: 560px;
+        margin-inline: auto;
+      }
+      .offer-feat {
+        background: var(--mint);
+        border-radius: 16px;
+        padding: 16px 10px 14px;
+      }
+      .offer-feat svg {
+        width: 30px;
+        height: 30px;
+        margin: 0 auto 7px;
+      }
+      .offer-feat b {
+        font-family: var(--round);
+        font-weight: 700;
+        font-size: 0.82rem;
+        color: var(--green-dd);
+        line-height: 1.45;
+        display: block;
+      }
+      .offer-cta {
+        margin-top: 30px;
+      }
+      .offer-fine {
+        margin-top: 16px;
+      }
+
+      /* ===== faq ===== */
+      .faq-list {
+        margin-top: 34px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .faq-item {
+        background: var(--white);
+        border: 1.5px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .faq-q {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        text-align: left;
+        padding: 18px 20px;
+        font-family: var(--round);
+        font-weight: 700;
+        font-size: clamp(0.96rem, 2.5vw, 1.05rem);
+        color: var(--ink);
+        line-height: 1.55;
+      }
+      .faq-q .qmark {
+        width: 28px;
+        height: 28px;
+        flex: none;
+        background: var(--green);
+        color: #fff;
+        border-radius: 9px;
+        display: grid;
+        place-items: center;
+        font-family: var(--round);
+        font-weight: 900;
+        font-size: 0.95rem;
+      }
+      .faq-q .plus {
+        margin-left: auto;
+        width: 22px;
+        height: 22px;
+        flex: none;
+        position: relative;
+        transition: transform 0.4s var(--ease);
+      }
+      .faq-q .plus::before,
+      .faq-q .plus::after {
+        content: "";
+        position: absolute;
+        background: var(--green);
+        border-radius: 2px;
+        inset: 0;
+        margin: auto;
+      }
+      .faq-q .plus::before {
+        width: 100%;
+        height: 2.5px;
+      }
+      .faq-q .plus::after {
+        width: 2.5px;
+        height: 100%;
+      }
+      .faq-q[aria-expanded="true"] .plus {
+        transform: rotate(135deg);
+      }
+      .faq-a {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.45s var(--ease);
+      }
+      .faq-a-in {
+        padding: 0 20px 20px 62px;
+        font-size: 0.92rem;
+        color: var(--ink-70);
+        line-height: 1.92;
+      }
+
+      /* ===== footer ===== */
+      .foot {
+        background: var(--ink);
+        color: rgba(255, 255, 255, 0.78);
+        padding-block: 52px 110px;
+        font-size: 0.82rem;
+      }
+      .foot-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--round);
+        font-weight: 900;
+        font-size: 1.3rem;
+        letter-spacing: 0.04em;
+        color: #fff;
+      }
+      .foot-brand .mark {
+        width: 30px;
+        height: 30px;
+      }
+      .foot-lede {
+        margin-top: 12px;
+        max-width: 420px;
+        line-height: 1.9;
+        color: rgba(255, 255, 255, 0.66);
+      }
+      .foot-law {
+        margin-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+        padding-top: 24px;
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 10px 18px;
+        font-size: 0.76rem;
+        line-height: 1.75;
+      }
+      .foot-law dt {
+        color: rgba(255, 255, 255, 0.55);
+        font-weight: 500;
+      }
+      .foot-law dd {
+        color: rgba(255, 255, 255, 0.82);
+      }
+      .foot-disc {
+        margin-top: 26px;
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.8;
+      }
+      .foot-copy {
+        margin-top: 18px;
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.42);
+      }
+
+      /* ===== sticky mobile cta ===== */
+      .sticky-cta {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 180;
+        background: rgba(251, 253, 247, 0.95);
+        backdrop-filter: blur(8px);
+        border-top: 1.5px solid var(--line);
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+        display: none;
+        align-items: center;
+        gap: 12px;
+        box-shadow: 0 -8px 24px -16px rgba(47, 138, 61, 0.5);
+        transform: translateY(110%);
+        transition: transform 0.4s var(--ease);
+      }
+      .sticky-cta.show {
+        transform: translateY(0);
+      }
+      .sticky-cta .s-price {
+        flex: none;
+        line-height: 1.1;
+      }
+      .sticky-cta .s-price small {
+        font-size: 0.62rem;
+        color: var(--berry);
+        font-weight: 700;
+        font-family: var(--round);
+      }
+      .sticky-cta .s-price b {
+        font-family: var(--round);
+        font-weight: 900;
+        color: var(--green-dd);
+        font-size: 1.32rem;
+        line-height: 1.12;
+        display: block;
+      }
+      .sticky-cta .btn {
+        flex: 1;
+        padding: 13px 10px;
+        font-size: 0.95rem;
+        box-shadow: 0 6px 0 -1px var(--green-dd);
+      }
+      .sticky-cta .btn:active {
+        transform: translateY(2px);
+        box-shadow: 0 3px 0 -1px var(--green-dd);
+      }
+
+      /* ===== responsive ===== */
+      @media (max-width: 900px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+        .rank-badge {
+          right: 2%;
+          width: clamp(84px, 24%, 110px);
+        }
+        .hero-copy {
+          max-width: 600px;
+          margin-inline: auto;
+          text-align: center;
+          order: 2;
+        }
+        .hero-cta-row,
+        .hero-trust {
+          justify-content: center;
+        }
+        .hero-art {
+          order: 1;
+          width: min(82%, 360px);
+        }
+        .eyebrow {
+          margin-inline: auto;
+        }
+      }
+      @media (max-width: 760px) {
+        .sticky-cta {
+          display: flex;
+        }
+        .ing-grid,
+        .voice-grid {
+          grid-template-columns: 1fr;
+        }
+        .steps {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        .rank-cards {
+          grid-template-columns: 1fr;
+        }
+        .offer-feats {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .foot-law {
+          grid-template-columns: 1fr;
+          gap: 2px 0;
+        }
+        .foot-law dt {
+          margin-top: 10px;
+        }
+      }
+      @media (max-width: 460px) {
+        .check-list {
+          grid-template-columns: 1fr;
+        }
+        .sample-bar {
+          font-size: 0.6rem;
+        }
+        .hero h1 {
+          font-size: clamp(1.9rem, 9vw, 2.4rem);
+        }
+        .head-cta {
+          padding: 9px 12px;
+          font-size: 0.74rem;
+        }
+        .head-cta .arr {
+          display: none;
+        }
+        .head-cta .cta-full {
+          display: none;
+        }
+        .head-cta .cta-short {
+          display: inline;
+        }
+        .brand {
+          font-size: 1.08rem;
+        }
+        .brand small {
+          display: none;
+        }
+        .brand .mark {
+          width: 26px;
+          height: 26px;
+        }
+        .eyebrow {
+          font-size: 0.68rem;
+          letter-spacing: 0.08em;
+          max-width: 100%;
+        }
+        .hero-art {
+          width: min(88%, 320px);
+        }
+        .rank-badge {
+          top: 8px;
+          right: 4%;
+          width: 90px;
+        }
+        .btn-big {
+          padding: 16px 26px;
+          width: 100%;
+        }
+        .hero-cta-row {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .hero-price {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ① SAMPLE BAR -->
+    <div class="sample-bar" role="note">
+      <span
+        >◆ 架空商品・自主制作ポートフォリオサンプル ／
+        <b>実在の商品・効能を示すものではありません</b></span
+      >
+    </div>
+
+    <!-- ② HEADER -->
+    <header class="site-head">
+      <div class="wrap head-in">
+        <a class="brand" href="#top" aria-label="GREENA ホーム">
+          <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="20" fill="#3FA34D" />
+            <path d="M20 31C13 31 9 25 9 18c7 0 11 4 11 11Z" fill="#aed581" />
+            <path d="M20 31c0-9 5-14 12-14 0 8-5 14-12 14Z" fill="#FBFDF7" />
+            <path
+              d="M20 31V15"
+              stroke="#246B2F"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          GREENA <small>AOJIRU</small>
+        </a>
+        <a
+          class="btn btn-cta head-cta"
+          href="#offer"
+          aria-label="初回特価で試す"
+          ><span class="cta-full">初回特価で試す</span
+          ><span class="cta-short">初回特価</span>
+          <span class="arr" aria-hidden="true">›</span></a
+        >
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ③ HERO -->
+      <section class="hero" aria-labelledby="hero-h1">
+        <div class="hero-deco" aria-hidden="true">
+          <span class="blob b1"></span>
+          <span class="blob b2"></span>
+        </div>
+        <div class="wrap hero-grid">
+          <div class="hero-copy reveal in">
+            <span class="eyebrow">国産大麦若葉のグリーンスムージー</span>
+            <h1 id="hero-h1">
+              足りない野菜、<br /><span class="pop">ごくっと</span
+              ><span class="g">習慣</span>に。
+            </h1>
+            <p class="hero-sub">
+              忙しい毎日でも、コップ1杯で野菜不足にうれしい習慣を。<br />国産大麦若葉に果物の甘みをあわせた、青くささのない、ごくごく飲めるおいしさ。
+            </p>
+            <div class="hero-cta-row">
+              <div class="hero-price">
+                <span class="lbl">初回限定</span>
+                <span class="yen"
+                  ><span class="small">¥</span><span class="big">980</span
+                  ><span class="tax"> 税込/送料無料</span></span
+                >
+              </div>
+            </div>
+            <div class="hero-cta-row" style="margin-top: 14px">
+              <a class="btn btn-big" href="#offer"
+                >まずは初回特価で試す<span class="sub">
+                  ／ いつでも解約OK</span
+                ></a
+              >
+            </div>
+            <div class="hero-trust">
+              <span class="chip"
+                ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M5 12l4 4 10-10"
+                    stroke="#3fa34d"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+                >送料無料</span
+              >
+              <span class="chip"
+                ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M5 12l4 4 10-10"
+                    stroke="#3fa34d"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+                >返金保証</span
+              >
+              <span class="chip"
+                ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M5 12l4 4 10-10"
+                    stroke="#3fa34d"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+                >いつでも解約</span
+              >
+            </div>
+          </div>
+
+          <!-- HERO ART: pouch + glass + leaves, self-drawn -->
+          <div class="hero-art reveal in d1">
+            <!-- ranking badge (※イメージ) -->
+            <svg
+              class="rank-badge"
+              viewBox="0 0 120 120"
+              role="img"
+              aria-label="楽天グリーンスムージー部門 第1位（※イメージ・架空）"
+            >
+              <path
+                d="M60 4l11 8 14-2 5 13 13 6-4 14 7 12-10 10 1 14-14 3-8 11-13-6-13 6-8-11-14-3 1-14L4 73l7-12-4-14 13-6 5-13 14 2z"
+                fill="#FFCB3D"
+                stroke="#f5b400"
+                stroke-width="2"
+              />
+              <circle cx="60" cy="60" r="38" fill="#fff" />
+              <text
+                x="60"
+                y="42"
+                text-anchor="middle"
+                font-family="Zen Maru Gothic, sans-serif"
+                font-weight="700"
+                font-size="11"
+                fill="#2f8a3d"
+              >
+                ※イメージ
+              </text>
+              <text
+                x="60"
+                y="66"
+                text-anchor="middle"
+                font-family="Zen Maru Gothic, sans-serif"
+                font-weight="900"
+                font-size="30"
+                fill="#246b2f"
+              >
+                No.1
+              </text>
+              <text
+                x="60"
+                y="84"
+                text-anchor="middle"
+                font-family="Zen Maru Gothic, sans-serif"
+                font-weight="700"
+                font-size="9.5"
+                fill="#2f8a3d"
+              >
+                青汁ランキング
+              </text>
+            </svg>
+
+            <svg
+              class="stage float"
+              viewBox="0 0 460 460"
+              role="img"
+              aria-label="GREENA のパウチとグリーンスムージーのグラスのイラスト"
+            >
+              <defs>
+                <linearGradient id="liq" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#9ccc65" />
+                  <stop offset="1" stop-color="#5ba83f" />
+                </linearGradient>
+                <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#ffffff" stop-opacity="0.9" />
+                  <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.35" />
+                  <stop offset="1" stop-color="#dff0d2" stop-opacity="0.6" />
+                </linearGradient>
+                <linearGradient id="pouch" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#3fa34d" />
+                  <stop offset="1" stop-color="#2f8a3d" />
+                </linearGradient>
+              </defs>
+
+              <!-- soft plate -->
+              <ellipse
+                cx="230"
+                cy="408"
+                rx="170"
+                ry="26"
+                fill="#cfe8bf"
+                opacity="0.7"
+              />
+
+              <!-- leaves behind -->
+              <g>
+                <path
+                  d="M86 300c-34-6-58-40-54-78 38-4 70 22 74 60 1 9-11 19-20 18Z"
+                  fill="#8bc34a"
+                />
+                <path
+                  d="M86 300c4-38 32-66 70-66-2 38-30 66-66 66-2 0-4 0-4 0Z"
+                  fill="#aed581"
+                />
+                <path
+                  d="M74 224c40 8 64 38 70 76"
+                  stroke="#5ba83f"
+                  stroke-width="3"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+              </g>
+              <g>
+                <path
+                  d="M392 286c30-8 48-40 42-74-34 0-62 24-62 58 0 9 11 18 20 16Z"
+                  fill="#8bc34a"
+                  transform="scale(-1,1) translate(-784,0)"
+                />
+              </g>
+
+              <!-- POUCH (stand-up) -->
+              <g transform="translate(70 86)">
+                <path
+                  d="M14 36C14 20 26 14 44 14h78c18 0 30 6 30 22v224c0 20-10 30-30 32-22 2-56 2-78 0-20-2-30-12-30-32V36Z"
+                  fill="url(#pouch)"
+                />
+                <!-- top seal -->
+                <rect
+                  x="22"
+                  y="6"
+                  width="122"
+                  height="20"
+                  rx="6"
+                  fill="#246b2f"
+                />
+                <!-- gloss -->
+                <path
+                  d="M40 40c0-10 6-14 16-14"
+                  stroke="#ffffff"
+                  stroke-opacity="0.5"
+                  stroke-width="7"
+                  stroke-linecap="round"
+                  fill="none"
+                />
+                <!-- label card -->
+                <rect
+                  x="34"
+                  y="92"
+                  width="98"
+                  height="120"
+                  rx="14"
+                  fill="#FBFDF7"
+                />
+                <!-- leaf icon on label -->
+                <g transform="translate(83 124)">
+                  <path
+                    d="M0 18C-12 18-20 8-19-5 -6-6 2 4 0 18Z"
+                    fill="#aed581"
+                  />
+                  <path
+                    d="M0 18C2 4 12-4 24-3 23 11 13 18 0 18Z"
+                    fill="#3fa34d"
+                  />
+                  <path
+                    d="M0 18V0"
+                    stroke="#246b2f"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                  />
+                </g>
+                <text
+                  x="83"
+                  y="166"
+                  text-anchor="middle"
+                  font-family="Zen Maru Gothic, sans-serif"
+                  font-weight="900"
+                  font-size="21"
+                  letter-spacing="1.5"
+                  fill="#246b2f"
+                >
+                  GREENA
+                </text>
+                <text
+                  x="83"
+                  y="186"
+                  text-anchor="middle"
+                  font-family="Zen Maru Gothic, sans-serif"
+                  font-weight="700"
+                  font-size="9"
+                  letter-spacing="1"
+                  fill="#3fa34d"
+                >
+                  大麦若葉スムージー
+                </text>
+                <rect
+                  x="58"
+                  y="196"
+                  width="50"
+                  height="7"
+                  rx="3.5"
+                  fill="#FFCB3D"
+                />
+              </g>
+
+              <!-- GLASS (frosted, green liquid + bubbles) -->
+              <g transform="translate(232 150)">
+                <!-- glass body -->
+                <path
+                  d="M14 4h150l-14 196c-1 16-14 28-30 28H58c-16 0-29-12-30-28L14 4Z"
+                  fill="url(#glass)"
+                  stroke="#bfe0ab"
+                  stroke-width="2.5"
+                />
+                <!-- liquid -->
+                <path
+                  d="M27 70h124l-9 130c-1 14-12 24-26 24H62c-14 0-25-10-26-24L27 70Z"
+                  fill="url(#liq)"
+                />
+                <!-- liquid surface -->
+                <ellipse cx="89" cy="70" rx="62" ry="11" fill="#b6dd86" />
+                <ellipse
+                  cx="89"
+                  cy="69"
+                  rx="62"
+                  ry="9"
+                  fill="#a6d36f"
+                  opacity="0.7"
+                />
+                <!-- bubbles -->
+                <circle
+                  class="bub"
+                  cx="64"
+                  cy="110"
+                  r="6"
+                  fill="#eaf6da"
+                  opacity="0.9"
+                />
+                <circle
+                  class="bub"
+                  cx="108"
+                  cy="130"
+                  r="8"
+                  fill="#eaf6da"
+                  opacity="0.85"
+                  style="animation-delay: 0.6s"
+                />
+                <circle
+                  class="bub"
+                  cx="86"
+                  cy="160"
+                  r="5"
+                  fill="#eaf6da"
+                  opacity="0.9"
+                  style="animation-delay: 1.1s"
+                />
+                <circle
+                  class="bub"
+                  cx="120"
+                  cy="180"
+                  r="4"
+                  fill="#eaf6da"
+                  opacity="0.85"
+                  style="animation-delay: 1.6s"
+                />
+                <!-- glass highlight -->
+                <path
+                  d="M36 30l-4 150"
+                  stroke="#ffffff"
+                  stroke-opacity="0.75"
+                  stroke-width="7"
+                  stroke-linecap="round"
+                />
+                <!-- mint leaf garnish -->
+                <g transform="translate(150 56)">
+                  <path
+                    d="M0 0c14-6 28 2 30 18-16 4-30-4-30-18Z"
+                    fill="#8bc34a"
+                  />
+                  <path
+                    d="M0 0c-2 14 8 26 24 28C26 12 16 0 0 0Z"
+                    fill="#aed581"
+                  />
+                </g>
+                <!-- straw -->
+                <rect
+                  x="118"
+                  y="-26"
+                  width="11"
+                  height="120"
+                  rx="5.5"
+                  transform="rotate(13 123 34)"
+                  fill="#FFCB3D"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ④ PROBLEM -->
+      <section class="problem pad" aria-labelledby="prob-h">
+        <div class="wrap">
+          <div class="center reveal">
+            <span class="eyebrow">こんなお悩み、ありませんか？</span>
+            <h2 class="sec-title" id="prob-h" style="margin-top: 16px">
+              わかってはいるけど、<br /><span class="u"
+                >野菜って続かない。</span
+              >
+            </h2>
+          </div>
+          <div class="check-list">
+            <div class="check reveal d1">
+              <svg class="ic" viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="24" cy="24" r="22" fill="#fdeeb4" />
+                <path
+                  d="M16 24l5 5 11-11"
+                  stroke="#f5b400"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+              </svg>
+              <p>外食やコンビニが多く、野菜が足りていない気がする</p>
+            </div>
+            <div class="check reveal d2">
+              <svg class="ic" viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="24" cy="24" r="22" fill="#fdeeb4" />
+                <path
+                  d="M16 24l5 5 11-11"
+                  stroke="#f5b400"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+              </svg>
+              <p>サラダを買っても、結局食べきれずムダにしがち</p>
+            </div>
+            <div class="check reveal d1">
+              <svg class="ic" viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="24" cy="24" r="22" fill="#fdeeb4" />
+                <path
+                  d="M16 24l5 5 11-11"
+                  stroke="#f5b400"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+              </svg>
+              <p>朝は忙しくて、ゆっくり食事の準備をする時間がない</p>
+            </div>
+            <div class="check reveal d2">
+              <svg class="ic" viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="24" cy="24" r="22" fill="#fdeeb4" />
+                <path
+                  d="M16 24l5 5 11-11"
+                  stroke="#f5b400"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+              </svg>
+              <p>青汁は気になるけど「おいしくなさそう」で手が出ない</p>
+            </div>
+          </div>
+          <p class="problem-bridge reveal">
+            その「あと一歩」を、<br /><span class="hl">1杯のおいしさ</span
+            >でかなえます。
+          </p>
+          <svg class="down-arrow reveal" viewBox="0 0 40 40" aria-hidden="true">
+            <path
+              d="M20 6v22m0 0l-9-9m9 9l9-9"
+              stroke="#8bc34a"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+          </svg>
+        </div>
+      </section>
+
+      <!-- ⑤ INGREDIENTS -->
+      <section class="pad" aria-labelledby="ing-h">
+        <div class="wrap">
+          <div class="center reveal">
+            <span class="eyebrow">GREENA のこだわり成分</span>
+            <h2 class="sec-title" id="ing-h" style="margin-top: 16px">
+              畑の<b>おいしいところ</b>を、<br />まるごとブレンド。
+            </h2>
+            <p
+              class="lede"
+              style="margin-top: 14px; max-width: 600px; margin-inline: auto"
+            >
+              野菜の栄養補給をサポートする素材を、飲みやすさにこだわって配合しました。
+            </p>
+          </div>
+          <div class="ing-grid">
+            <!-- 大麦若葉 -->
+            <div class="ing-card reveal d1">
+              <span class="corner" aria-hidden="true"></span>
+              <svg class="ing-fig" viewBox="0 0 74 74" aria-hidden="true">
+                <circle cx="37" cy="37" r="34" fill="#eaf5e2" />
+                <path
+                  d="M37 60c-16 0-26-12-26-28 16 0 26 12 26 28Z"
+                  fill="#8bc34a"
+                />
+                <path
+                  d="M37 60c0-16 10-28 26-28 0 16-10 28-26 28Z"
+                  fill="#aed581"
+                />
+                <path
+                  d="M28 48c4-10 14-18 26-20"
+                  stroke="#5ba83f"
+                  stroke-width="2.4"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M37 60V24"
+                  stroke="#246b2f"
+                  stroke-width="2.6"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <h3>国産大麦若葉</h3>
+              <span class="jp">OOMUGI WAKABA</span>
+              <p>
+                九州産にこだわって育てた大麦若葉を使用。食物繊維やビタミン、ミネラルなどを含む、GREENAのベースとなる青葉です。
+              </p>
+              <span class="tag"># 食物繊維・ビタミン</span>
+            </div>
+            <!-- ケール -->
+            <div class="ing-card reveal d2">
+              <span class="corner" aria-hidden="true"></span>
+              <svg class="ing-fig" viewBox="0 0 74 74" aria-hidden="true">
+                <circle cx="37" cy="37" r="34" fill="#eaf5e2" />
+                <path
+                  d="M37 16c8 4 12 10 12 18 6-4 13-3 17 2-2 9-10 14-18 13 2 7-1 14-8 17-7-3-10-10-8-17-8 1-16-4-18-13 4-5 11-6 17-2 0-8 4-14 12-18Z"
+                  fill="#5ba83f"
+                />
+                <path
+                  d="M37 64V30"
+                  stroke="#246b2f"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <h3>ケール</h3>
+              <span class="jp">KALE</span>
+              <p>
+                緑黄色野菜として知られるケールをプラス。βカロテンやビタミンCなどを含み、毎日の野菜の偏りをやさしくサポートします。
+              </p>
+              <span class="tag"># 緑黄色野菜</span>
+            </div>
+            <!-- 乳酸菌 -->
+            <div class="ing-card reveal d1">
+              <span class="corner" aria-hidden="true"></span>
+              <svg class="ing-fig" viewBox="0 0 74 74" aria-hidden="true">
+                <circle cx="37" cy="37" r="34" fill="#eaf5e2" />
+                <circle cx="30" cy="32" r="11" fill="#aed581" />
+                <circle cx="46" cy="40" r="9" fill="#8bc34a" />
+                <circle cx="34" cy="48" r="7" fill="#5ba83f" />
+                <circle cx="30" cy="32" r="4" fill="#fff" />
+                <circle cx="46" cy="40" r="3.4" fill="#fff" />
+                <circle cx="34" cy="48" r="2.6" fill="#fff" />
+              </svg>
+              <h3>植物性乳酸菌</h3>
+              <span class="jp">LACTIC ACID</span>
+              <p>
+                植物由来の乳酸菌を100億個（1杯あたり※配合量目安）配合。毎日のすこやかな食習慣に寄り添う、うれしい一杯に。
+              </p>
+              <span class="tag"># 毎日の習慣に</span>
+            </div>
+            <!-- フルーツ -->
+            <div class="ing-card reveal d2">
+              <span class="corner" aria-hidden="true"></span>
+              <svg class="ing-fig" viewBox="0 0 74 74" aria-hidden="true">
+                <circle cx="37" cy="37" r="34" fill="#eaf5e2" />
+                <circle cx="32" cy="42" r="15" fill="#FFCB3D" />
+                <circle cx="48" cy="38" r="11" fill="#ef6a6a" />
+                <path
+                  d="M32 27c0-5 4-8 9-7"
+                  stroke="#5ba83f"
+                  stroke-width="3"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M44 27c4-2 8 0 9 4"
+                  stroke="#5ba83f"
+                  stroke-width="3"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <h3>11種の果実</h3>
+              <span class="jp">FRUITS</span>
+              <p>
+                りんご・バナナ・マンゴーなど11種の果実をブレンド。青葉の風味をやわらげ、ごくごく飲める自然な甘みに仕上げました。
+              </p>
+              <span class="tag"># 自然な甘み</span>
+            </div>
+          </div>
+          <p class="note center reveal" style="margin-top: 18px">
+            ※成分・配合に関する記載はすべて架空サンプルの設定です。特定の効果・効能を保証するものではありません。
+          </p>
+        </div>
+      </section>
+
+      <!-- ⑥ EASY / HOW -->
+      <section class="easy pad" aria-labelledby="easy-h">
+        <div class="wrap">
+          <div class="center reveal">
+            <span class="eyebrow">飲みやすさ・続けやすさ</span>
+            <h2 class="sec-title" id="easy-h" style="margin-top: 16px">
+              溶かすだけ、<span class="u">3秒</span>のかんたん習慣。
+            </h2>
+          </div>
+          <div class="steps">
+            <div class="step reveal d1">
+              <span class="n">1</span>
+              <svg class="step-fig" viewBox="0 0 84 84" aria-hidden="true">
+                <circle cx="42" cy="42" r="40" fill="#eaf5e2" />
+                <rect
+                  x="26"
+                  y="22"
+                  width="32"
+                  height="44"
+                  rx="8"
+                  fill="#3fa34d"
+                />
+                <rect
+                  x="32"
+                  y="16"
+                  width="20"
+                  height="10"
+                  rx="4"
+                  fill="#246b2f"
+                />
+                <rect
+                  x="32"
+                  y="38"
+                  width="20"
+                  height="20"
+                  rx="4"
+                  fill="#FBFDF7"
+                />
+                <path
+                  d="M48 50l-6 6-4-4"
+                  stroke="#3fa34d"
+                  stroke-width="3"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <h4>1包あける</h4>
+              <p>
+                個包装スティックだから、毎回フレッシュで持ち運びもらくらく。
+              </p>
+            </div>
+            <div class="step reveal d2">
+              <span class="n">2</span>
+              <svg class="step-fig" viewBox="0 0 84 84" aria-hidden="true">
+                <circle cx="42" cy="42" r="40" fill="#eaf5e2" />
+                <path
+                  d="M28 26h28l-3 34c-.4 5-4 8-9 8h-4c-5 0-8.6-3-9-8l-3-34Z"
+                  fill="#fff"
+                  stroke="#bfe0ab"
+                  stroke-width="2"
+                />
+                <path
+                  d="M32 42h20l-2 18c-.3 4-3 6-7 6h-2c-4 0-6.7-2-7-6l-2-18Z"
+                  fill="#8bc34a"
+                />
+                <path
+                  d="M50 20c4 4 4 10 0 14"
+                  stroke="#FFCB3D"
+                  stroke-width="3.5"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M44 16c5 5 5 13 0 18"
+                  stroke="#FFCB3D"
+                  stroke-width="3.5"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <h4>水や牛乳に注ぐ</h4>
+              <p>約100mlに溶かすだけ。豆乳やヨーグルトとの相性も抜群です。</p>
+            </div>
+            <div class="step reveal d3">
+              <span class="n">3</span>
+              <svg class="step-fig" viewBox="0 0 84 84" aria-hidden="true">
+                <circle cx="42" cy="42" r="40" fill="#eaf5e2" />
+                <path
+                  d="M34 30h22l-3 30c-.3 4-3 7-7 7h-2c-4 0-6.7-3-7-7l-3-30Z"
+                  fill="#8bc34a"
+                  stroke="#5ba83f"
+                  stroke-width="2"
+                />
+                <ellipse cx="45" cy="30" rx="11" ry="3" fill="#aed581" />
+                <path
+                  d="M53 24c5 2 8 8 7 14"
+                  stroke="#246b2f"
+                  stroke-width="3"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <circle cx="33" cy="48" r="2.6" fill="#FBFDF7" />
+                <circle cx="50" cy="56" r="2" fill="#FBFDF7" />
+              </svg>
+              <h4>ごくっと、習慣に</h4>
+              <p>
+                青くささをおさえたフルーティーな味わい。毎日おいしく続きます。
+              </p>
+            </div>
+          </div>
+          <div class="flavor-row reveal">
+            <span class="flavor"
+              ><span class="dot" style="background: #8bc34a"></span
+              >すっきり抹茶風味</span
+            >
+            <span class="flavor"
+              ><span class="dot" style="background: #ffcb3d"></span
+              >はちみつバナナ</span
+            >
+            <span class="flavor"
+              ><span class="dot" style="background: #ef6a6a"></span
+              >ベリーミックス</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ⑦ HABIT GRAPH -->
+      <section class="pad" aria-labelledby="graph-h">
+        <div class="wrap narrow" style="max-width: 880px">
+          <div class="center reveal">
+            <span class="eyebrow">続けやすさのヒミツ</span>
+            <h2 class="sec-title" id="graph-h" style="margin-top: 16px">
+              「おいしい」から、<span class="u">続く。</span>
+            </h2>
+            <p class="lede" style="margin-top: 14px">
+              おいしさにこだわると、習慣はぐっと続けやすくなります。下のグラフは、継続イメージを示したサンプルです。
+            </p>
+          </div>
+          <div class="graph-wrap reveal">
+            <figure>
+              <div class="g-top">
+                <h3>飲み続けたくなる「継続率」イメージ</h3>
+                <span class="note">縦軸：継続している人の割合（イメージ）</span>
+              </div>
+              <svg
+                class="graph-svg"
+                viewBox="0 0 720 320"
+                role="img"
+                aria-label="継続率の推移イメージグラフ。1か月後から12か月後にかけて、おいしいスムージーは継続率がゆるやかに推移するイメージを示したサンプル。"
+              >
+                <!-- grid -->
+                <g stroke="#e3efd8" stroke-width="1.5">
+                  <line x1="64" y1="40" x2="688" y2="40" />
+                  <line x1="64" y1="110" x2="688" y2="110" />
+                  <line x1="64" y1="180" x2="688" y2="180" />
+                  <line x1="64" y1="250" x2="688" y2="250" />
+                </g>
+                <!-- baseline -->
+                <line
+                  x1="64"
+                  y1="250"
+                  x2="688"
+                  y2="250"
+                  stroke="#c7e0b6"
+                  stroke-width="2.5"
+                />
+                <!-- y labels -->
+                <g
+                  font-family="Zen Maru Gothic, sans-serif"
+                  font-size="13"
+                  font-weight="700"
+                  fill="#8aa07f"
+                >
+                  <text x="52" y="45" text-anchor="end">100</text>
+                  <text x="52" y="115" text-anchor="end">75</text>
+                  <text x="52" y="185" text-anchor="end">50</text>
+                  <text x="52" y="255" text-anchor="end">25</text>
+                </g>
+                <!-- area under GREENA line -->
+                <path
+                  d="M104 92 L244 80 L384 70 L524 62 L664 56 L664 250 L104 250 Z"
+                  fill="#3fa34d"
+                  opacity="0.1"
+                />
+                <!-- comparison (一般的なサンプル) dashed, declines -->
+                <polyline
+                  points="104,120 244,150 384,186 524,214 664,236"
+                  fill="none"
+                  stroke="#c9b27a"
+                  stroke-width="3"
+                  stroke-dasharray="6 7"
+                  stroke-linecap="round"
+                />
+                <!-- GREENA line -->
+                <polyline
+                  points="104,92 244,80 384,70 524,62 664,56"
+                  fill="none"
+                  stroke="#3fa34d"
+                  stroke-width="4.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <!-- points -->
+                <g fill="#3fa34d">
+                  <circle cx="104" cy="92" r="6" />
+                  <circle cx="244" cy="80" r="6" />
+                  <circle cx="384" cy="70" r="6" />
+                  <circle cx="524" cy="62" r="6" />
+                  <circle
+                    cx="664"
+                    cy="56"
+                    r="7"
+                    stroke="#fff"
+                    stroke-width="2.5"
+                  />
+                </g>
+                <!-- x labels -->
+                <g
+                  font-family="Zen Maru Gothic, sans-serif"
+                  font-size="13"
+                  font-weight="700"
+                  fill="#8aa07f"
+                >
+                  <text x="104" y="278" text-anchor="middle">1か月</text>
+                  <text x="244" y="278" text-anchor="middle">3か月</text>
+                  <text x="384" y="278" text-anchor="middle">6か月</text>
+                  <text x="524" y="278" text-anchor="middle">9か月</text>
+                  <text x="664" y="278" text-anchor="middle">12か月</text>
+                </g>
+                <!-- legend -->
+                <g
+                  font-family="Zen Maru Gothic, sans-serif"
+                  font-size="13"
+                  font-weight="700"
+                >
+                  <rect
+                    x="64"
+                    y="296"
+                    width="18"
+                    height="6"
+                    rx="3"
+                    fill="#3fa34d"
+                  />
+                  <text x="88" y="303" fill="#2f8a3d">
+                    GREENA（おいしい習慣）
+                  </text>
+                  <rect
+                    x="300"
+                    y="296"
+                    width="18"
+                    height="6"
+                    rx="3"
+                    fill="#c9b27a"
+                  />
+                  <text x="324" y="303" fill="#8aa07f">
+                    一般的な続けにくい例
+                  </text>
+                </g>
+              </svg>
+              <figcaption class="note g-cap">
+                ※イメージ図です。効果・継続を保証するものではありません（架空サンプル）。
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⑧ VOICES -->
+      <section class="voices pad" aria-labelledby="voice-h">
+        <div class="wrap">
+          <div class="center reveal">
+            <span class="eyebrow">お客様の声</span>
+            <h2 class="sec-title" id="voice-h" style="margin-top: 16px">
+              続けている方から、<br /><span class="u">うれしい声。</span>
+            </h2>
+            <p class="note" style="margin-top: 12px">
+              ※架空サンプル・個人の感想です。効果・効能を示すものではありません。
+            </p>
+          </div>
+          <div class="voice-grid">
+            <div class="voice reveal d1">
+              <div class="stars" aria-label="5段階評価のイメージ">
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+              </div>
+              <q>青汁のイメージが変わりました</q>
+              <p>
+                正直あまり期待していなかったのですが、フルーツの甘みでとても飲みやすい。朝のコーヒー代わりに、すっかり習慣になっています。
+              </p>
+              <div class="who">
+                <svg class="ava" viewBox="0 0 42 42" aria-hidden="true">
+                  <circle cx="21" cy="21" r="21" fill="#aed581" />
+                  <circle cx="21" cy="17" r="8" fill="#fff" />
+                  <path d="M7 40c2-9 7-13 14-13s12 4 14 13Z" fill="#fff" />
+                </svg>
+                <div>
+                  <b>A.K さん（30代・会社員）</b><span>※架空サンプル</span>
+                </div>
+              </div>
+            </div>
+            <div class="voice reveal d2">
+              <div class="stars" aria-label="5段階評価のイメージ">
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+              </div>
+              <q>忙しい朝の味方です</q>
+              <p>
+                仕事と育児でバタバタの毎日。シェイカーいらずでサッと作れるので、野菜が足りないかなと思う日に手軽に取り入れられて助かっています。
+              </p>
+              <div class="who">
+                <svg class="ava" viewBox="0 0 42 42" aria-hidden="true">
+                  <circle cx="21" cy="21" r="21" fill="#FFCB3D" />
+                  <circle cx="21" cy="17" r="8" fill="#fff" />
+                  <path d="M7 40c2-9 7-13 14-13s12 4 14 13Z" fill="#fff" />
+                </svg>
+                <div>
+                  <b>M.S さん（40代・主婦）</b><span>※架空サンプル</span>
+                </div>
+              </div>
+            </div>
+            <div class="voice reveal d1">
+              <div class="stars" aria-label="5段階評価のイメージ">
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                    opacity="0.45"
+                  />
+                </svg>
+              </div>
+              <q>家族みんなで飲んでいます</q>
+              <p>
+                野菜が苦手な子どもも、これなら牛乳に混ぜておいしそうに飲んでくれます。個包装で衛生的なのも、続けやすいポイントだと感じます。
+              </p>
+              <div class="who">
+                <svg class="ava" viewBox="0 0 42 42" aria-hidden="true">
+                  <circle cx="21" cy="21" r="21" fill="#8bc34a" />
+                  <circle cx="21" cy="17" r="8" fill="#fff" />
+                  <path d="M7 40c2-9 7-13 14-13s12 4 14 13Z" fill="#fff" />
+                </svg>
+                <div>
+                  <b>T.N さん（30代・会社員）</b><span>※架空サンプル</span>
+                </div>
+              </div>
+            </div>
+            <div class="voice reveal d2">
+              <div class="stars" aria-label="5段階評価のイメージ">
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path
+                    d="M10 1l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9 4.8 17.6l1-5.8L1.5 7.7l5.9-.9z"
+                    fill="#FFCB3D"
+                  />
+                </svg>
+              </div>
+              <q>定期便だから続けられる</q>
+              <p>
+                自分ではなかなか買い忘れてしまうタイプなので、毎月届く定期便がちょうどいい。解約もいつでもできる安心感があって始めやすかったです。
+              </p>
+              <div class="who">
+                <svg class="ava" viewBox="0 0 42 42" aria-hidden="true">
+                  <circle cx="21" cy="21" r="21" fill="#ef6a6a" />
+                  <circle cx="21" cy="17" r="8" fill="#fff" />
+                  <path d="M7 40c2-9 7-13 14-13s12 4 14 13Z" fill="#fff" />
+                </svg>
+                <div>
+                  <b>Y.H さん（50代・自営業）</b><span>※架空サンプル</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⑨ RANKING / MEDIA -->
+      <section class="rank-sec pad" aria-labelledby="rank-h">
+        <div class="wrap">
+          <div class="center reveal">
+            <span class="eyebrow">ランキング・メディア掲載</span>
+            <h2 class="sec-title" id="rank-h" style="margin-top: 16px">
+              うれしい<b>3冠</b>を達成。
+            </h2>
+            <p class="note" style="margin-top: 12px">
+              ※すべてイメージ・架空サンプルです。実在の調査・媒体ではありません。
+            </p>
+          </div>
+          <div class="rank-cards">
+            <div class="rank-card reveal d1">
+              <svg class="crown" viewBox="0 0 56 56" aria-hidden="true">
+                <path
+                  d="M8 42h40l3-24-12 9-11-16-11 16-12-9 3 24Z"
+                  fill="#FFCB3D"
+                  stroke="#f5b400"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <rect
+                  x="8"
+                  y="42"
+                  width="40"
+                  height="7"
+                  rx="3"
+                  fill="#f5b400"
+                />
+              </svg>
+              <span class="place">満足度</span>
+              <h4>飲みやすさ<br />No.1</h4>
+              <p>※イメージ／自社調べ（架空）</p>
+            </div>
+            <div class="rank-card reveal d2">
+              <svg class="crown" viewBox="0 0 56 56" aria-hidden="true">
+                <path
+                  d="M8 42h40l3-24-12 9-11-16-11 16-12-9 3 24Z"
+                  fill="#FFCB3D"
+                  stroke="#f5b400"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <rect
+                  x="8"
+                  y="42"
+                  width="40"
+                  height="7"
+                  rx="3"
+                  fill="#f5b400"
+                />
+              </svg>
+              <span class="place">続けやすさ</span>
+              <h4>リピートしたい<br />No.1</h4>
+              <p>※イメージ／自社調べ（架空）</p>
+            </div>
+            <div class="rank-card reveal d3">
+              <svg class="crown" viewBox="0 0 56 56" aria-hidden="true">
+                <path
+                  d="M8 42h40l3-24-12 9-11-16-11 16-12-9 3 24Z"
+                  fill="#FFCB3D"
+                  stroke="#f5b400"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <rect
+                  x="8"
+                  y="42"
+                  width="40"
+                  height="7"
+                  rx="3"
+                  fill="#f5b400"
+                />
+              </svg>
+              <span class="place">ギフト</span>
+              <h4>贈りたい青汁<br />No.1</h4>
+              <p>※イメージ／自社調べ（架空）</p>
+            </div>
+          </div>
+          <div class="media-row reveal">
+            <span class="media-logo">GREEN LIFE マガジン</span>
+            <span class="media-logo">朝かつ TIMES</span>
+            <span class="media-logo">ウェルネス百科</span>
+            <span class="media-logo">naturas web</span>
+          </div>
+          <p class="note center reveal" style="margin-top: 14px">
+            ※メディア名はすべて架空です。掲載実績を示すものではありません。
+          </p>
+        </div>
+      </section>
+
+      <!-- ⑩ OFFER -->
+      <section class="offer pad" id="offer" aria-labelledby="offer-h">
+        <div class="wrap narrow" style="max-width: 720px">
+          <div class="center reveal">
+            <span class="eyebrow">定期コース 初回限定オファー</span>
+            <h2 class="sec-title" id="offer-h" style="margin-top: 16px">
+              はじめての方は、<br /><span class="u">特別価格でどうぞ。</span>
+            </h2>
+          </div>
+          <div class="offer-card reveal">
+            <div class="offer-ribbon">毎月お届け定期コース ／ 初回 81%OFF</div>
+            <div class="offer-body">
+              <div class="offer-price">
+                <span class="was">通常 ¥5,184</span>
+                <span class="off">81%OFF</span>
+              </div>
+              <div class="offer-now">
+                <span class="lead">初回</span>
+                <span class="yen2">¥</span>
+                <span class="num">980</span>
+                <span class="tax2">税込/30包</span>
+              </div>
+              <div class="offer-feats">
+                <div class="offer-feat">
+                  <svg viewBox="0 0 30 30" aria-hidden="true">
+                    <circle cx="15" cy="15" r="14" fill="#3fa34d" />
+                    <path
+                      d="M8 15l4 4 10-10"
+                      stroke="#fff"
+                      stroke-width="3"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <b>全国<br />送料無料</b>
+                </div>
+                <div class="offer-feat">
+                  <svg viewBox="0 0 30 30" aria-hidden="true">
+                    <circle cx="15" cy="15" r="14" fill="#3fa34d" />
+                    <path
+                      d="M8 15l4 4 10-10"
+                      stroke="#fff"
+                      stroke-width="3"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <b>30日間<br />返金保証</b>
+                </div>
+                <div class="offer-feat">
+                  <svg viewBox="0 0 30 30" aria-hidden="true">
+                    <circle cx="15" cy="15" r="14" fill="#3fa34d" />
+                    <path
+                      d="M8 15l4 4 10-10"
+                      stroke="#fff"
+                      stroke-width="3"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <b>2回目<br />以降も20%OFF</b>
+                </div>
+                <div class="offer-feat">
+                  <svg viewBox="0 0 30 30" aria-hidden="true">
+                    <circle cx="15" cy="15" r="14" fill="#3fa34d" />
+                    <path
+                      d="M8 15l4 4 10-10"
+                      stroke="#fff"
+                      stroke-width="3"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <b>いつでも<br />解約OK</b>
+                </div>
+              </div>
+              <div class="offer-cta">
+                <a class="btn btn-big" href="#offer"
+                  >初回 ¥980 で始める<span class="sub">
+                    ／ 回数しばりなし</span
+                  ></a
+                >
+              </div>
+              <p class="note offer-fine">
+                ※価格・条件はすべて架空サンプルの設定です。2回目以降は通常価格の20%OFF（¥4,147税込）でのお届けイメージ。次回お届け予定日の10日前までにご連絡でいつでも解約・休止が可能、という想定の表記です。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⑪ FAQ -->
+      <section class="pad" aria-labelledby="faq-h">
+        <div class="wrap narrow">
+          <div class="center reveal">
+            <span class="eyebrow">よくあるご質問</span>
+            <h2 class="sec-title" id="faq-h" style="margin-top: 16px">FAQ</h2>
+          </div>
+          <div class="faq-list">
+            <div class="faq-item reveal">
+              <button
+                class="faq-q"
+                aria-expanded="false"
+                aria-controls="fa1"
+                id="fq1"
+              >
+                <span class="qmark" aria-hidden="true">Q</span>
+                どんな味ですか？青汁は苦手なのですが…
+                <span class="plus" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" id="fa1" role="region" aria-labelledby="fq1">
+                <div class="faq-a-in">
+                  果実をブレンドしているため、青くささをおさえたフルーティーな味わいに仕上げています（架空サンプルの設定です）。水だけでなく、牛乳や豆乳で割るといっそうまろやかにお楽しみいただけます。
+                </div>
+              </div>
+            </div>
+            <div class="faq-item reveal">
+              <button
+                class="faq-q"
+                aria-expanded="false"
+                aria-controls="fa2"
+                id="fq2"
+              >
+                <span class="qmark" aria-hidden="true">Q</span>
+                いつ飲むのがおすすめですか？
+                <span class="plus" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" id="fa2" role="region" aria-labelledby="fq2">
+                <div class="faq-a-in">
+                  飲むタイミングに決まりはありません。朝食の置きかえや、間食、リフレッシュしたいときなど、ご自身の続けやすいタイミングで毎日の習慣に取り入れてください。
+                </div>
+              </div>
+            </div>
+            <div class="faq-item reveal">
+              <button
+                class="faq-q"
+                aria-expanded="false"
+                aria-controls="fa3"
+                id="fq3"
+              >
+                <span class="qmark" aria-hidden="true">Q</span>
+                定期コースはいつでも解約できますか？
+                <span class="plus" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" id="fa3" role="region" aria-labelledby="fq3">
+                <div class="faq-a-in">
+                  回数のおしばりはなく、初回のみでの解約も可能、という想定の表記です。次回お届け予定日の10日前までにマイページまたはお電話でご連絡いただく設定としています（架空サンプル）。
+                </div>
+              </div>
+            </div>
+            <div class="faq-item reveal">
+              <button
+                class="faq-q"
+                aria-expanded="false"
+                aria-controls="fa4"
+                id="fq4"
+              >
+                <span class="qmark" aria-hidden="true">Q</span>
+                子どもや妊娠中でも飲めますか？
+                <span class="plus" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" id="fa4" role="region" aria-labelledby="fq4">
+                <div class="faq-a-in">
+                  食品ですのでどなたでもお召し上がりいただけますが、お子さまや妊娠・授乳中の方、通院中・薬を服用中の方は、念のためかかりつけの医師にご相談のうえお楽しみください。
+                </div>
+              </div>
+            </div>
+            <div class="faq-item reveal">
+              <button
+                class="faq-q"
+                aria-expanded="false"
+                aria-controls="fa5"
+                id="fq5"
+              >
+                <span class="qmark" aria-hidden="true">Q</span>
+                アレルギーが心配です。原材料を教えてください。
+                <span class="plus" aria-hidden="true"></span>
+              </button>
+              <div class="faq-a" id="fa5" role="region" aria-labelledby="fq5">
+                <div class="faq-a-in">
+                  本ページは架空商品のサンプルのため、実在の原材料表示はございません。実際の商品では、原材料・アレルギー特定原材料等を商品パッケージおよび公式サイトに記載する想定です。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ⑫ FOOTER -->
+    <footer class="foot">
+      <div class="wrap">
+        <div class="foot-brand">
+          <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="20" fill="#3FA34D" />
+            <path d="M20 31C13 31 9 25 9 18c7 0 11 4 11 11Z" fill="#aed581" />
+            <path d="M20 31c0-9 5-14 12-14 0 8-5 14-12 14Z" fill="#FBFDF7" />
+            <path
+              d="M20 31V15"
+              stroke="#246B2F"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          GREENA
+        </div>
+        <p class="foot-lede">
+          足りない野菜を、毎日おいしく。国産大麦若葉のグリーンスムージーで、無理なく続く健康習慣を。
+        </p>
+
+        <dl class="foot-law">
+          <dt>販売事業者</dt>
+          <dd>株式会社グリーナ（架空）</dd>
+          <dt>運営責任者</dt>
+          <dd>緑川 葉子（架空）</dd>
+          <dt>所在地</dt>
+          <dd>〒000-0000 東京都架空区サンプル1-2-3（架空）</dd>
+          <dt>お問い合わせ</dt>
+          <dd>0120-000-000（架空）／ support@example-greena.test（架空）</dd>
+          <dt>販売価格</dt>
+          <dd>
+            各商品ページに記載（初回 ¥980 税込・2回目以降 ¥4,147
+            税込／いずれも架空設定）
+          </dd>
+          <dt>商品代金以外</dt>
+          <dd>送料無料（架空設定）</dd>
+          <dt>お支払い方法</dt>
+          <dd>クレジットカード／代金引換／後払い（架空設定）</dd>
+          <dt>引渡し時期</dt>
+          <dd>ご注文確認後5営業日以内に発送（架空設定）</dd>
+          <dt>返品・解約</dt>
+          <dd>
+            30日間返金保証。定期コースは回数しばりなし、次回お届け10日前までのご連絡で解約可（架空設定）
+          </dd>
+        </dl>
+
+        <p class="foot-disc">
+          ◆
+          本ページは実在しない架空商品「GREENA」の自主制作ポートフォリオサンプルです。掲載の商品・価格・ランキング・メディア掲載・お客様の声・成分情報・特定商取引法に基づく表記は、すべてデザイン表現を目的とした架空のものであり、実在の商品・事業者・効果効能を示すものではありません。健康食品であり、医薬品ではありません。記載は疾病の診断・治療・予防を目的としたものではなく、特定の効果・効能を保証するものでもありません。
+        </p>
+        <p class="foot-copy">
+          © 2026 GREENA (fictional). Portfolio sample. All visuals are CSS/SVG,
+          no photography used.
+        </p>
+      </div>
+    </footer>
+
+    <!-- STICKY MOBILE CTA -->
+    <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+      <div class="s-price">
+        <small>初回限定</small>
+        <b>¥980<span style="font-size: 0.6em; font-weight: 500"> 税込</span></b>
+      </div>
+      <a class="btn btn-big" href="#offer">初回特価で試す</a>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+        var reduce = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+
+        /* ---- Scroll reveal ---- */
+        var reveals = document.querySelectorAll(".reveal");
+        if (reduce || !("IntersectionObserver" in window)) {
+          reveals.forEach(function (el) {
+            el.classList.add("in");
+          });
+        } else {
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                  e.target.classList.add("in");
+                  io.unobserve(e.target);
+                }
+              });
+            },
+            { threshold: 0.1, rootMargin: "0px 0px -7% 0px" },
+          );
+          reveals.forEach(function (el) {
+            io.observe(el);
+          });
+          /* Fallback: reveal above-the-fold elements on load.
+             IntersectionObserver's initial callback can miss already in-view
+             items, leaving the hero blank until the first scroll. */
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              reveals.forEach(function (el) {
+                var r = el.getBoundingClientRect();
+                if (r.top < window.innerHeight && r.bottom > 0) {
+                  el.classList.add("in");
+                }
+              });
+            });
+          });
+        }
+
+        /* ---- FAQ accordion (max-height) ---- */
+        var qs = document.querySelectorAll(".faq-q");
+        qs.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var open = btn.getAttribute("aria-expanded") === "true";
+            var panel = document.getElementById(
+              btn.getAttribute("aria-controls"),
+            );
+            btn.setAttribute("aria-expanded", String(!open));
+            panel.style.maxHeight = open ? "0px" : panel.scrollHeight + "px";
+          });
+        });
+        window.addEventListener("resize", function () {
+          document
+            .querySelectorAll('.faq-q[aria-expanded="true"]')
+            .forEach(function (btn) {
+              var panel = document.getElementById(
+                btn.getAttribute("aria-controls"),
+              );
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            });
+        });
+
+        /* ---- Sticky mobile CTA: show after hero, hide at footer/offer ---- */
+        var sticky = document.getElementById("stickyCta");
+        var hero = document.querySelector(".hero");
+        var offer = document.getElementById("offer");
+        var pastHero = false,
+          atOffer = false;
+
+        function syncSticky() {
+          if (window.innerWidth > 760) {
+            sticky.classList.remove("show");
+            return;
+          }
+          if (pastHero && !atOffer) {
+            sticky.classList.add("show");
+            sticky.setAttribute("aria-hidden", "false");
+          } else {
+            sticky.classList.remove("show");
+            sticky.setAttribute("aria-hidden", "true");
+          }
+        }
+        if ("IntersectionObserver" in window) {
+          new IntersectionObserver(
+            function (es) {
+              pastHero = !es[0].isIntersecting;
+              syncSticky();
+            },
+            { rootMargin: "-40% 0px 0px 0px" },
+          ).observe(hero);
+          new IntersectionObserver(
+            function (es) {
+              atOffer = es[0].isIntersecting;
+              syncSticky();
+            },
+            { rootMargin: "0px 0px -10% 0px" },
+          ).observe(offer);
+          window.addEventListener("resize", syncSticky);
+        }
+      })();
+    </script>
+  </body>
+</html>
